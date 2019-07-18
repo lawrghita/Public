@@ -15,7 +15,7 @@ function setCookie(cookieName, cookieValue, cookieDayAlive) {
 }
 
 function valueCookie(cookieName) {
-    const location = "/";
+    // const location = "/";
     var decodedCookie = decodeURIComponent(document.cookie);
     // console.log(decodedCookie);
     var position = decodedCookie.search(cookieName);
@@ -31,13 +31,15 @@ function valueCookie(cookieName) {
     // console.log(decodedCookie," Check:",cookieName," Value:",value);
     return (value);
 }
-
+setCookie("username", "Laur", 30);
 
 if (valueCookie("username") == "") setCookie("username", "Laur", 30);
 
 ver = valueCookie("indexVersion");
+console.log(ver);
 
-if (ver == "") setCookie("indexVersion", ver, 30);
+if (ver == "" || ver =="NaN") {setCookie("indexVersion", 1, 30);
+document.getElementById("ver").innerHTML = ver;}
 else {
     ver++;
     setCookie("indexVersion", ver, 30);
