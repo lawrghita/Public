@@ -12,7 +12,7 @@ newLink="http://www.laurghita.eu";
 link.setAttribute('href',newLink);
 link.text=newLink;
 
-newImg="/img/ochii.jpg";
+newImg="https://raw.githubusercontent.com/lawrghita/Public/21ecac1d3dfd5e48323790374f0d824c5eb4f032/Javascript%20Lessons/02%20set_getAttribute/img/ochii.jpg";
 img.setAttribute('src',newImg);
 img.setAttribute('alt','Eyes');
 
