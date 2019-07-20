@@ -1,4 +1,5 @@
 # Public
- Public Javascript
- Using  <p>Github Desktop
-        <p>Visual Studio Code
+ Public Javascript using:
+ <li>Github Desktop
+ <li>Visual Studio Code
+ <li>GitHub + Gitpod.io
