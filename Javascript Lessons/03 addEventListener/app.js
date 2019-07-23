@@ -1,8 +1,10 @@
-"strict mode";
-button = document.querySelector("button");
-paragraph = document.querySelector("p");
-li = document.querySelectorAll("li");
-h5 = document.querySelector("h5");
+(function (window, document, undefined) {  /*setting a local scope*/
+    "use strict";                         /*no console debug*/
+  
+let button = document.querySelector("button");
+let paragraph = document.querySelector("p");
+let li = document.querySelectorAll("li");
+let h5 = document.querySelector("h5");
 
 console.log(button, paragraph, li,h5);
 
@@ -30,15 +32,18 @@ paragraph.addEventListener("mouseleave", function () {
 });
 
 // callback with parameters :
+let color1 = "green";
+let color2 = "red";
 li.forEach(function (item) {
     item.addEventListener("click", function () {
         if (this.style.color == color1)
             this.style.color = color2;
         else this.style.color = color1;
     });
-}, color1 = "green", color2 = "red");
+}, color1, color2);
 
 h5.addEventListener("mouseover", function() {
     h5.classList.toggle("blue");    
 });
 
+})(window, document);
