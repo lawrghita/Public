@@ -1,3 +1,4 @@
+"strict mode";
 button = document.querySelector("button");
 paragraph = document.querySelector("p");
 li = document.querySelectorAll("li");
@@ -15,6 +16,9 @@ button.addEventListener("click", function() {
 //      else paragraph.style.color="black";
 //      original = !original;
 // });
+
+// or this doing the same but more readable code:
+
 paragraph.addEventListener("mouseover", function() {
     paragraph.style.color = "red";
 });
@@ -22,17 +26,13 @@ paragraph.addEventListener("mouseleave", function() {
     paragraph.style.color = "black";
 });
 
-
+// callback with parameters :
 li.forEach(function(item) {
     item.addEventListener("click", function() {
-        if (this.style.color == "blue")
-            this.style.color = "black";
-        else this.style.color = "blue";
+        if (this.style.color == color1)
+            this.style.color = color2;
+        else this.style.color = color1;
     });
-});
+}, color1="green", color2="red");
 
 
-
-// addEventListener("click", function() {
-//     this.style.color = "blue";
-// });
