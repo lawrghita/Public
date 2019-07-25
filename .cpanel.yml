@@ -2,4 +2,5 @@
 deployment:
       tasks:
         - export DEPLOYPATH=/home2/laurghit/public_html/
-        - /bin/cp -R /home2/laurghit/repositories/Public $DEPLOYPATH
+        - /bin/cp index.html $DEPLOYPATH
+        - /bin/cp score.js $DEPLOYPATH
