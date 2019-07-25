@@ -1,4 +1,4 @@
-"use strict";  
+"use strict";
 let result = document.getElementById("result");
 let player1Score = document.getElementById("player1");
 let player2Score = document.getElementById("player2");
@@ -20,8 +20,8 @@ function increment(item){
     if (item.textContent == 3){
         item.style.color = "green";
         let winner = namePlayer2.textContent;
-        if (item.id="player1") winner = namePlayer1.textContent;
+        if (item.id=="player1") winner = namePlayer1.textContent;
         result.textContent="Winner is "+winner;
-        
+
     }
 };
