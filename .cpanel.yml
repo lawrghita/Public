@@ -1,0 +1,6 @@
+---
+deployment:
+      tasks:
+        - export DEPLOYPATH=/home2/laurghit/repositories/Public  # Add /<app_folder> if required
+        - /bin cp * $DEPLOYPATH                           #copy all from root
+        - /bin cp /img/* $DEPLOYPATH             #copy all from sub folder root
