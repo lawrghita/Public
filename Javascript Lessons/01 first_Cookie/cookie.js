@@ -43,3 +43,4 @@ setCookie("indexVersion", ver, 30);
 document.getElementById("ver").innerHTML = ver;
 var cookieShow = document.cookie;
 document.getElementById("cookie").innerHTML = cookieShow;
+

@@ -18,3 +18,5 @@ img.setAttribute('alt','Eyes');
 
 
 }, 2000);
+let thisLocation = window.location.href;
+console.log(thisLocation);
