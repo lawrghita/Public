@@ -17,7 +17,7 @@ player2Score.addEventListener("click", function () {
     increment(this);
 });
 reset.addEventListener("click", function () {
-    location.reload();
+    location = window.location;
 });
 
 function increment(item) {
