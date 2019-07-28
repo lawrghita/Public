@@ -1,11 +1,20 @@
 "use strict";
 let result = document.getElementById("result");
-let targeth = document.getElementById("targeth");
+let target = document.getElementById("target");
+let targetMinus = document.getElementById("target--");
+let targetPlus = document.getElementById("target++");
 let player1Score = document.getElementById("player1");
 let player2Score = document.getElementById("player2");
 let namePlayer1 = document.getElementById("namePlayer1");
 let namePlayer2 = document.getElementById("namePlayer2");
 let reset = document.getElementById("reset");
+
+targetMinus.addEventListener("click", function () {
+    if (parseInt(target.textContent) > 1) target.textContent--;
+});
+targetPlus.addEventListener("click", function () {
+    target.textContent++;
+});
 
 
 player1Score.textContent = 0;
@@ -22,8 +31,8 @@ reset.addEventListener("click", function () {
 
 function increment(item) {
     item.textContent = parseInt(item.textContent) + 1;
-    console.log(item.textContent, parseInt(targeth.textContent));
-    if (item.textContent == parseInt(targeth.textContent)) {
+    console.log(item.textContent, parseInt(target.textContent));
+    if (item.textContent == parseInt(target.textContent)) {
         player1Score.disabled = true;
         player2Score.disabled = true;
         item.style.color = "green";

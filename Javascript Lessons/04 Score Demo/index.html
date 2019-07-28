@@ -9,6 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       button {
+        font-size: 2rem;
+      }
+      #target {
+        margin: 0.5rem;
+      }
+      div button {
         font-size: 5rem;
       }
       span {
@@ -25,7 +31,10 @@
     </style>
   </head>
   <body>
-    <h2 id="result">First to <em id="targeth">5</em> !</h2>
+    <h2 id="result">
+      First to <button id="target--">&lt;</button><em id="target">5</em
+      ><button id="target++">&gt;</button> !
+    </h2>
     <div class="table-row">
       <span id="namePlayer1">Player Alfa </span> <button id="player1">0</button
       ><span>:</span><button id="player2">0</button>
