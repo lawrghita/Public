@@ -30,6 +30,8 @@ reset.addEventListener("click", function () {
 });
 
 function increment(item) {
+    targetMinus.disabled = true;
+    targetPlus.disabled = true;
     item.textContent = parseInt(item.textContent) + 1;
     console.log(item.textContent, parseInt(target.textContent));
     if (item.textContent == parseInt(target.textContent)) {
