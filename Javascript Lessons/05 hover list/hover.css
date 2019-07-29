@@ -1,0 +1,9 @@
+.green{
+    color: green;
+}
+.clicked{
+    text-decoration-line: line-through;
+    opacity: 0.5;
+}
+
+
