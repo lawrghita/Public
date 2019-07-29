@@ -14,6 +14,9 @@ id04.href = "Javascript%20Lessons/04%20Score%20Demo/index.html"
 const id05 = document.getElementById("JS05");
 id05.href = "Javascript%20Lessons/05%20hover%20list/index.html"
 
+const id06 = document.getElementById("JS06");
+id06.href = "Javascript%20Lessons/06%20MDN%20events%20counter/index.html"
+
 // console.log(id01,id02,id03,id04,id05);
 
 
