@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+  width: max-content;
+}
+.rows {
+  background-color: black;
+}
+td {
+  width: 5rem;
+  height: 5rem;
+  background-color: aqua;
+  border-radius: 1rem;
+}
