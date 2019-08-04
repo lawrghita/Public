@@ -1,13 +1,33 @@
 body {
   text-align: center;
-  width: max-content;
+}
+
+.line {
+display: flex;  
+
+}
+.line div {
+  width: 32%;
+  border: 1px solid black;
 }
 .rows {
   background-color: black;
 }
+
+.table {
+  width: 100%;
+}
+
+tr {
+  width: 30%;
+  align-content: center;
+}
+
 td {
-  width: 5rem;
+  width: 30%;
   height: 5rem;
-  background-color: aqua;
   border-radius: 1rem;
+}
+.hide{
+  display: none;
 }
