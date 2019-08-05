@@ -4,13 +4,12 @@ body {
 
 .line {
 display: flex;  
-
 }
 .line div {
   width: 32%;
   border: 1px solid black;
 }
-.rows {
+#rows {
   background-color: black;
 }
 
