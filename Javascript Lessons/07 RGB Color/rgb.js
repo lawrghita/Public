@@ -1,5 +1,8 @@
 "use strict";
-let cells = document.querySelectorAll('.show');;
+let rows = document.querySelector("#rows");
+const b = rows.getCom;
+console.log(rows, 'back');
+let cells = document.querySelectorAll('.show');
 //  document.querySelectorAll('.show');
 const rgbQuestion = document.getElementById("rgbQuestion");
 const reset = document.getElementById("reset");
@@ -36,16 +39,17 @@ function correct() {
     });
 }
 function error() {
-
-
 }
+
 function vclick() {
     const rgbClicked = this.style.backgroundColor.toUpperCase();
     console.log('clicked', this, rgbClicked, rgbQuestion.textContent);
     if (rgbClicked === rgbQuestion.textContent) correct();
     else {
         result.textContent = 'Try Again';
-        this.style.backgroundColor = 'black';
+        // this.style.backgroundColor = 'black';
+        this.style.backgroundColor = getComputedStyle(rows).backgroundColor;
+        // console.log('back',this.style.backgroundColor, rows, rows.style.backgroundColor);
     }
 }
 function initialize() {
@@ -56,7 +60,7 @@ function initialize() {
         const randGreen = Math.round((Math.random() * 255));
         const randBlue = Math.round((Math.random() * 255));
         cells[index].style = "background-color:rgb(" + randRed + ", " + randGreen + ", " + randBlue + ");";
-        cells[index].innerHTML = index + "<p>" + randRed + ", " + randGreen + ", " + randBlue;
+        // cells[index].innerHTML = index + "<p>" + randRed + ", " + randGreen + ", " + randBlue;
         cells[index].addEventListener('click', vclick);
     }
     console.log('cells', cells);
