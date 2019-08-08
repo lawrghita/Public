@@ -1,17 +1,19 @@
 body {
   text-align: center;
-  
 }
-.banner{
-  background-color: cornflowerblue;
+.banner {
+  width: 400px;
+  margin: 0 auto;
   background-color: cornflowerblue;
   color: #9bf4ff;
   box-shadow: 0px 0px 13px 2px black;
   text-shadow: 0 0 5px black;
 }
 .line {
-display: flex;  
-place-content: space-between;
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  place-content: space-between;
 }
 .line div {
   width: 32%;
@@ -20,7 +22,10 @@ place-content: space-between;
 }
 
 .table {
-  width: 100%;
+  width: 400px;
+  margin: 0 auto;
+}
+.rows {
 }
 
 tr {
@@ -33,6 +38,6 @@ td {
   height: 5rem;
   border-radius: 1rem;
 }
-.hide{
+.hide {
   display: none;
 }
