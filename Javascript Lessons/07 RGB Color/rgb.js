@@ -30,14 +30,14 @@ hard.addEventListener ('click', function () {
 
 // ***.........
 function correct () {
+    //** on correct guess, display CORRECT on middle and make all squares that color
   result.textContent = 'CORRECT';
   cells.forEach (cell => {
     cell.style.backgroundColor = rgbQuestion.textContent;
   });
 }
-function error () {}
 
-function vclick () {
+function actionClick () {
   const rgbClicked = this.style.backgroundColor.toUpperCase ();
   if (rgbClicked === rgbQuestion.textContent) correct ();
   else {
@@ -60,12 +60,12 @@ function initialize () {
       ', ' +
       randBlue +
       ');';
-    cells[index].addEventListener ('click', vclick);
+    cells[index].addEventListener ('click', actionClick);
   }
   console.log ('cells', cells);
-  randomRGB (cells);
+  choseRandomOneSquareRGB (cells);
 }
-function randomRGB (cells) {
+function choseRandomOneSquareRGB (cells) {
   const answerCell = Math.floor (Math.random () * cells.length);
   const randRed = cells[answerCell].style.backgroundColor;
   rgbQuestion.textContent = randRed.toUpperCase ();
