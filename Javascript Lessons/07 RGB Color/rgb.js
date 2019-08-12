@@ -30,7 +30,7 @@ hard.addEventListener ('click', function () {
 
 // ***.........
 function correct () {
-    //** on correct guess, display CORRECT on middle and make all squares that color
+    //** on correct guess, display CORRECT on middle and make all squares that color */
   result.textContent = 'CORRECT';
   cells.forEach (cell => {
     cell.style.backgroundColor = rgbQuestion.textContent;
@@ -46,6 +46,7 @@ function actionClick () {
   }
 }
 function initialize () {
+  //** restart all colors */
   cells = document.querySelectorAll ('.show');
   result.textContent = '';
   for (let index = 0; index < cells.length; index++) {
