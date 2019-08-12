@@ -1,13 +1,23 @@
 body {
   text-align: center;
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
 }
-.banner {
-  width: 400px;
-  margin: 0 auto;
-  background-color: cornflowerblue;
-  color: #9bf4ff;
-  box-shadow: 0px 0px 13px 2px black;
-  text-shadow: 0 0 5px black;
+#banner {
+  background-color: rgb(46, 121, 190);
+  color: white;
+  text-shadow: 0px 0px 4px black;
+  letter-spacing: 4px;
+}
+h1 {
+  line-height: 0rem;
+}
+.title {
+  line-height: 1.5rem;
+}
+#bannerLine {
+  background-color: white;
+  letter-spacing: 2px;
 }
 .line {
   width: 400px;
@@ -17,17 +27,20 @@ body {
 }
 .line div {
   width: 32%;
-  border: 1px solid black;
-  border-radius: 0.3rem;
+  color: rgb(37, 49, 158);
+  text-shadow: 0px 0px 0px black;
+  font-weight: bold;
+  /* border-radius: 0.3rem; */
+}
+
+#hard {
+  margin: 0.7rem;
 }
 
 .table {
   width: 400px;
   margin: 0 auto;
 }
-.rows {
-}
-
 tr {
   width: 30%;
   align-content: center;

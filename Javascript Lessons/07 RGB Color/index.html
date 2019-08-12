@@ -7,18 +7,27 @@
     <meta name="description" content />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="rgb.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <div class="banner">
-      <p>THE GREAT</p>
-      <div id="rgbQuestion"></div>
-      <p>GUESSING GAME</p>
-    </div>
-    <div class="line">
-      <div id="reset">NEW COLORS</div>
-      <div id="result">RESULT</div>
-      <div><span id="easy">EASY</span> / <span id="hard">HARD</span></div>
+    <div id="banner">
+      <span class="title">THE GREAT</span>
+      <h1 id="rgbQuestion"></h1>
+      <span class="title">GUESSING GAME</span>
+      <div id="bannerLine">
+        <div class="line">
+          <div class="hover" id="reset">NEW COLORS</div>
+          <div id="result">RESULT</div>
+          <div>
+            <span class="hover" id="easy">EASY</span
+            ><span class="hover" id="hard">HARD</span>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="rows">
       <table class="table">
