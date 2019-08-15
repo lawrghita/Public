@@ -3,7 +3,7 @@
     "name": "Color RGB Game 3",
     "icons": [
       {
-        "src": "/images/192.png",
+        "src": "/Javascript Lessons/07 RGB Color/images/192.png",
         "type": "image/png",
         "sizes": "192x261"
       },
@@ -16,5 +16,5 @@
     "start_url": "/index.html",
     "background_color": "#3367D6",
     "display": "standalone",
-    "theme_color": "#3367D6"
+    "theme_color": "#317EFB"
   }
