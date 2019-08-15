@@ -5,12 +5,12 @@
       {
         "src": "/images/192.png",
         "type": "image/png",
-        "sizes": "192x261"
+        "sizes": "192x192"
       },
       {
         "src": "/images/512.png",
         "type": "image/png",
-        "sizes": "512x697"
+        "sizes": "512x512"
       }
     ],
     "start_url": "/Javascript Lessons/07 RGB Color/index.html",
