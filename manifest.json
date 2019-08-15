@@ -3,17 +3,17 @@
     "name": "Color RGB Game",
     "icons": [
       {
-        "src": "images/Size192_25838407178_8de3459d7c_o.png",
-        "type": "image/jpg",
+        "src": "/images/Size192_25838407178_8de3459d7c_o.png",
+        "type": "image/png",
         "sizes": "141x192"
       },
       {
-        "src": "images/Size512_25838407178_8de3459d7c_o.png",
-        "type": "image/jpg",
+        "src": "/images/Size512_25838407178_8de3459d7c_o.png",
+        "type": "image/png",
         "sizes": "376x512"
       }
     ],
-    "start_url": "index.html",
+    "start_url": "/index.html",
     "background_color": "#3367D6",
     "display": "minimal-ui",
     "theme_color": "#3367D6"
