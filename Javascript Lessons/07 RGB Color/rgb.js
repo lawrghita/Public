@@ -1,6 +1,6 @@
 'use strict';
 const correctGuessMessage = "CORRECT";
-const choseText = "CHOSE:"
+const choseText = "CHOSE NOW:"
 const newColors = "REFRESH ?"
 let rows = document.querySelector('#rows');
 let cells = document.querySelectorAll('.show');
@@ -20,7 +20,6 @@ reset.addEventListener('click', function () {
         //** Inactivate the reset till the correct color is chosen  */
         initialize();
     }
-
 });
 reset.addEventListener('mouseover', function () {
     if (result.textContent == correctGuessMessage) {
@@ -84,6 +83,7 @@ function initialize() {
     cells = document.querySelectorAll('.show');
     result.textContent = '';
     reset.textContent = choseText;
+    reset.classList.add("normalLineElement");
     for (let index = 0; index < cells.length; index++) {
         const randRed = Math.round(Math.random() * 255);
         const randGreen = Math.round(Math.random() * 255);
