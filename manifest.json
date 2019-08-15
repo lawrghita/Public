@@ -3,13 +3,13 @@
     "name": "Color RGB Game",
     "icons": [
       {
-        "src": "/images/favicon.ico",
-        "type": "image/ico",
+        "src": "/images/Size192_25838407178_8de3459d7c_o.jpg",
+        "type": "image/jpg",
         "sizes": "192x192"
       },
       {
-        "src": "/images/favicon.ico",
-        "type": "image/ico",
+        "src": "/images/Size512_25838407178_8de3459d7c_o.jpg",
+        "type": "image/jpg",
         "sizes": "512x512"
       }
     ],
