@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>RGB Demo</title>
+    <meta
+      name="description"
+      content="Author: Ghita Laurentiu, The Great Guessing Game"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="rgb.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>RGB Demo</title>
-	<meta name="description" content="Author: Ghita Laurentiu, The Great Guessing Game">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="rgb.css" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-	<div id="banner">
-		<span class="title">THE GREAT</span>
+  <body>
+    <div id="banner">
+      <div class="title">THE GREAT</div>
       <h1 id="rgbQuestion"></h1>
-      <span class="title">GUESSING GAME</span>
+      <div class="title">GUESSING GAME</div>
       <div id="bannerLine">
         <div class="line">
-          <div class="hover" id="reset">NEW COLORS</div>
-          <div id="result">RESULT</div>
+          <div class="normalLineElement" id="reset"></div>
+          <div class="normalLineElement" id="result">RESULT</div>
           <div>
-            <span class="hover" id="easy">EASY</span
-            ><span class="hover" id="hard">HARD</span>
+            <span class="normalLineElement" id="easy">EASY</span>
+            <span class="gameType" id="hard">HARD</span>
           </div>
         </div>
       </div>
