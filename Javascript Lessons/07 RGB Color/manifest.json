@@ -1,20 +1,20 @@
 {
-    "short_name": "RGB Guess2",
-    "name": "Color RGB Game",
+    "short_name": "RGB Guess 3",
+    "name": "Color RGB Game 3",
     "icons": [
       {
-        "src": "/images/Size192_25838407178_8de3459d7c_o.png",
+        "src": "/images/192.png",
         "type": "image/png",
-        "sizes": "141x192"
+        "sizes": "192x261"
       },
       {
-        "src": "/images/Size512_25838407178_8de3459d7c_o.png",
+        "src": "/images/512.png",
         "type": "image/png",
-        "sizes": "376x512"
+        "sizes": "512x697"
       }
     ],
     "start_url": "/index.html",
     "background_color": "#3367D6",
-    "display": "minimal-ui",
+    "display": "standalone",
     "theme_color": "#3367D6"
   }
