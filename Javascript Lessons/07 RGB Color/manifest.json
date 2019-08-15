@@ -1,9 +1,9 @@
 {
-    "short_name": "RGB Guess 4",
-    "name": "Color RGB Game 4",
+    "short_name": "RGB Guess 5",
+    "name": "Color RGB Game 5",
     "icons": [
       {
-        "src": "/Javascript Lessons/07 RGB Color/images/192.png",
+        "src": "/images/192.png",
         "type": "image/png",
         "sizes": "192x261"
       },
