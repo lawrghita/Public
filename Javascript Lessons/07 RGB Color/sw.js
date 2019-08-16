@@ -1,6 +1,7 @@
 'use strict';
 var cacheName = 'law-cache-v2.1';
 self.addEventListener('install', (event) => {
+   console.log('Install check',event)
     event.waitUntil(
       caches.open(cacheName).then((cache) => {
         return cache.addAll([
