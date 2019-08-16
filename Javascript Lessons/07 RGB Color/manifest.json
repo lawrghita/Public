@@ -13,8 +13,8 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "/Javascript Lessons/07 RGB Color",
+    "start_url": "/Javascript Lessons/07 RGB Color/",
     "background_color": "#3367D6",
-    "display": "fullscreen",
+    "display": "standalone",
     "theme_color": "#317EFB"
   }
