@@ -1,4 +1,40 @@
 'use strict';
+//** Service Worker area */
+// if ('serviceWorker' in navigator) {
+//     navigator.serviceWorker.register('./sw-test/sw.js', {
+//             scope: './sw-test/'
+//         })
+//         .then((reg) => {
+//             // registration worked
+//             console.log('Registration succeeded. Scope is ' + reg.scope);
+//         }).catch((error) => {
+//             // registration failed
+//             console.log('Registration failed with ' + error);
+//         });
+// } else {
+//     console.log('No serviceWorker activated in '+ navigator.appCodeName);
+// }
+
+//** Simple Workers area - for async  */
+
+if (window.Worker) {
+    //** Setting up an worker */
+    console.log(window.Worker, " Worker active");
+    var worker = new Worker('doWork.js');
+    worker.onerror = function (error) {
+        console.log('Worker error: ' + error.message + '\n');
+        throw error;
+    };
+    worker.onmessage = function (e) {
+        console.log('Message received from worker ', e.data);
+    }
+    worker.postMessage('BAAB'); // Send data to our worker
+    worker.postMessage('ABBA'); // Send data to our worker
+    // worker.terminate(); //Terminate the worker instant
+} else {
+    console.log(window.Worker, " Worker inactive");
+}
+
 const correctGuessMessage = "CORRECT";
 const choseText = "CHOSE NOW:"
 const newColors = "REFRESH ?"
@@ -16,8 +52,8 @@ const bannerBackgroundColor = getComputedStyle(banner).backgroundColor;
 initialize();
 
 reset.addEventListener('click', function () {
+    //** Inactivate the reset till the correct color is chosen  */
     if (result.textContent == correctGuessMessage) {
-        //** Inactivate the reset till the correct color is chosen  */
         initialize();
     }
 });
@@ -55,6 +91,8 @@ hard.addEventListener('click', function () {
     initialize();
 });
 
+
+
 // ***.........
 function correct() {
     'use strict';
@@ -76,6 +114,7 @@ function actionClick() {
         this.style.backgroundColor = getComputedStyle(rows).backgroundColor;
     }
 }
+
 function initialize() {
     'use strict';
     //** restart all colors */
@@ -100,6 +139,7 @@ function initialize() {
     }
     choseRandomOneSquareRGB(cells);
 }
+
 function choseRandomOneSquareRGB(cells) {
     'use strict';
     const answerCell = Math.floor(Math.random() * cells.length);
