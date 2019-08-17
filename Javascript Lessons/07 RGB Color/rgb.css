@@ -26,6 +26,7 @@ body {
 }
 #rgbQuestion {
   font-size: 3rem;
+  font-weight: bold;
 }
 div .title {
   font-size: 1.5rem;
@@ -52,8 +53,10 @@ div .title {
   width: 33%;
 }
 #easy_hard {
-  width: 34%;
+  /* eliminate te pixel white from right from 34% */
+  width: 37%; 
   display: flex;
+ 
 }
 #easy,
 #hard {

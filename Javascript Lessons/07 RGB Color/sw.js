@@ -1,5 +1,5 @@
 "use strict";
-var cacheName = "law-cache-v2.4.4";
+var cacheName = "law-cache-v3.0.0";
 self.addEventListener("install", event => {
   console.log("Install check", event);
   event.waitUntil(
@@ -11,6 +11,9 @@ self.addEventListener("install", event => {
           "./",
           "images/192.png",
           "images/512.png",
+          "fonts/open-sans-v17-latin-regular.ttf",
+          "fonts/open-sans-v17-latin-regular.woff",
+          "fonts/open-sans-v17-latin-regular.woff2",
           "rgb.js",
           "index.html",
           "doWork.js",
@@ -58,7 +61,7 @@ self.addEventListener("fetch", function(event) {
       .open(cacheName)
       .then(cache => cache.match(event.request, { ignoreSearch: true }))
       .then(response => {
-        console.log("Return:", response);
+        console.log("Return:", response, event.request);
         return response || fetch(event.request);
       })
       .catch(function(error) {

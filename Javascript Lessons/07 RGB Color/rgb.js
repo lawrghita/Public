@@ -1,22 +1,22 @@
 "use strict";
-/** Service Worker area DEACTIVATED*/
-// if ("serviceWorker" in navigator) {
-//   console.log("YES serviceWorker activated in " + navigator.appCodeName);
-//   navigator.serviceWorker
-//     .register("sw.js", {
-//       scope: "./"
-//     })
-//     .then(reg => {
-//       // registration worked
-//       console.log("Registration succeeded. Scope is " + reg.scope);
-//     })
-//     .catch(error => {
-//       // registration failed
-//       console.log("Registration failed with " + error);
-//     });
-// } else {
-//   console.log("No serviceWorker activated in " + navigator.appCodeName);
-// }
+/** Service Worker area ACTIVATED*/
+if ("serviceWorker" in navigator) {
+  console.log("YES serviceWorker activated in " + navigator.appCodeName);
+  navigator.serviceWorker
+    .register("sw.js", {
+      scope: "./"
+    })
+    .then(reg => {
+      // registration worked
+      console.log("Registration succeeded. Scope is " + reg.scope);
+    })
+    .catch(error => {
+      // registration failed
+      console.log("Registration failed with " + error);
+    });
+} else {
+  console.log("No serviceWorker activated in " + navigator.appCodeName);
+}
 
 //** Simple Workers area - for async  */
 
