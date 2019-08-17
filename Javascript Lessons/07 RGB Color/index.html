@@ -8,32 +8,42 @@
       name="description"
       content="Author: Ghita Laurentiu, The Great Guessing Game"
     />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="/Javascript Lessons/07 RGB Color/images/192.png"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="A RGB Guess 7" />
+    <meta name="apple-mobile-web-app-title" content="A RGB Guess 7" />
+    <meta name="theme-color" content="#317EFB" />
+    <meta name="msapplication-navbutton-color" content="#317EFB" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="msapplication-starturl"
+      content="/Javascript Lessons/07 RGB Color"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#317EFB"/>
-    <link rel="icon" sizes="192x192" href="/Javascript Lessons/07 RGB Color/images/192.png">
 
     <link href="rgb.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="manifest" href="/Javascript Lessons/07 RGB Color/manifest.json" />
-
+    <link rel="manifest" href="manifest.json" />
   </head>
 
   <body>
-     <div id="banner">
-      <div class="title">THE GREAT</div>
+    <div id="banner">
+      <div class="title">THE GREAT 7</div>
       <h1 id="rgbQuestion"></h1>
       <div class="title">GUESSING GAME</div>
       <div id="bannerLine">
         <div class="line">
           <div class="normalLineElement" id="reset"></div>
           <div class="normalLineElement" id="result">RESULT</div>
-          <div>
-            <span class="normalLineElement" id="easy">EASY</span>
-            <span class="gameType" id="hard">HARD</span>
-          </div>
+          <div class="normalLineElement" id="easy">EASY</div>
+          <div class="gameType" id="hard">HARD</div>
         </div>
       </div>
     </div>
@@ -55,9 +65,8 @@
     </div>
 
     <script>
-      document.body.classList.remove('no-js');
+      document.body.classList.remove("no-js");
     </script>
     <script src="rgb.js" async defer></script>
-    <script src="sw.js" async defer></script>
   </body>
 </html>
