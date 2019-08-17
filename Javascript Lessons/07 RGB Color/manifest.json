@@ -1,20 +1,24 @@
-{
-    "short_name": "RGB Guess 6",
-    "name": "Color RGB Game 6",
-    "icons": [
-      {
-        "src": "/Javascript Lessons/07 RGB Color/images/192.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "/Javascript Lessons/07 RGB Color/images/512.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      }
-    ],
-    "start_url": "/Javascript Lessons/07 RGB Color/",
-    "background_color": "#3367D6",
-    "display": "standalone",
-    "theme_color": "#317EFB"
+  {
+    "name": "Color RGB Game",
+    "short_name": "A RGB Guess 8",
+    "description": "Demo for offline testing",
+        "icons": [
+          {
+            "src": "/Javascript Lessons/07 RGB Color/images/192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+          },
+          {
+            "src": "/Javascript Lessons/07 RGB Color/images/512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+          }
+        ],
+    "lang": "en-GB",
+    "start_url": "/Javascript Lessons/07 RGB Color",
+    "scope": "/Javascript Lessons/07 RGB Color",
+    "display": "minimal-ui",
+    "orientation": "portrait",
+    "theme_color": "#317EFB",
+    "background_color": "#3367D6"
   }

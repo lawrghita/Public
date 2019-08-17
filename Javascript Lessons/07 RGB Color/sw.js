@@ -19,6 +19,7 @@ self.addEventListener("install", event => {
         ]);
       })
       .then(function() {
+        self.skipWaiting();
         console.log("Worker: install Completed");
       })
   );
@@ -57,6 +58,7 @@ self.addEventListener("fetch", function(event) {
       .open(cacheName)
       .then(cache => cache.match(event.request, { ignoreSearch: true }))
       .then(response => {
+        console.log("Return:", response);
         return response || fetch(event.request);
       })
       .catch(function(error) {
