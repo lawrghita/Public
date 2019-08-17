@@ -1,64 +1,80 @@
 /* open-sans-regular - latin */
 @font-face {
-  font-family: 'Open Sans Regular';
+  font-family: "Open Sans Regular";
   /* font-style: normal;
   font-weight: 400; */
-  src: local('Open Sans Regular'), local('OpenSans-Regular'),
-       url('fonts/open-sans-v17-latin-regular.ttf') format('truetype'), 
-       url('fonts/open-sans-v17-latin-regular.woff2') format('woff2'), 
-       url('fonts/open-sans-v17-latin-regular.woff') format('woff'); 
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url("fonts/open-sans-v17-latin-regular.ttf") format("truetype"),
+    url("fonts/open-sans-v17-latin-regular.woff2") format("woff2"),
+    url("fonts/open-sans-v17-latin-regular.woff") format("woff");
+}
+html {
+  max-width: 600px;
+  margin: auto;
 }
 
 body {
   text-align: center;
   background-color: black;
-  font-family: 'Open Sans Regular';
+  font-family: "Open Sans Regular";
 }
 #banner {
   color: white;
   text-shadow: 0px 0px 4px black;
-  /* letter-spacing: 1.1%;  */
-  background-color:#317EFB;
+  letter-spacing: 1.1%;
+  background-color: #317efb;
 }
-.title {
+#rgbQuestion {
+  font-size: 3rem;
+}
+div .title {
+  font-size: 1.5rem;
   line-height: 1.5rem;
-  font-size: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 #bannerLine {
   background-color: white;
-  }
+}
 .line {
   margin: 0 auto;
   display: flex;
-  place-content: space-between;
-}
-.line div {
-  width: 32%;
+  line-height: 2rem;
+  /* place-content: center; */
   text-shadow: 0px 0px 0px black;
   font-weight: bold;
 }
+#reset {
+  width: 33%;
+}
+#result {
+  width: 33%;
+}
+#easy_hard {
+  width: 34%;
+  display: flex;
+}
+#easy,
 #hard {
-  margin: 0.7rem;
+  width: 50%;
 }
 .table {
-  /* width: 90%;
-  height: 60%; */
   margin: 0 auto;
 }
 td {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 10rem;
+  height: 6rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid rgba(255, 255, 255, 0.2);
 }
 .gameType {
-  background-color:#317EFB;
+  background-color: #317efb;
   color: white;
 }
 .normalLineElement {
   background-color: white;
-  color: #317EFB;
+  color: #317efb;
 }
 .hide {
   display: none;

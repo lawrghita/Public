@@ -18,8 +18,6 @@
 //   console.log("No serviceWorker activated in " + navigator.appCodeName);
 // }
 
-
-
 //** Simple Workers area - for async  */
 
 // if (window.Worker) {
@@ -104,7 +102,7 @@ function correct() {
   cells.forEach(cell => {
     cell.style.backgroundColor = rgbQuestion.textContent;
   });
-  banner.style.backgroundColor = rgbQuestion.textContent;
+  rgbQuestion.style.backgroundColor = rgbQuestion.textContent;
 }
 
 function actionClick() {
@@ -120,7 +118,7 @@ function actionClick() {
 function initialize() {
   "use strict";
   //** restart all colors */
-  banner.style.backgroundColor = bannerBackgroundColor;
+  rgbQuestion.style.backgroundColor = bannerBackgroundColor;
   cells = document.querySelectorAll(".show");
   result.textContent = "";
   reset.textContent = choseText;
