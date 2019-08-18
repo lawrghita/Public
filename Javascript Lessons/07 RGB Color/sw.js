@@ -42,32 +42,34 @@ self.addEventListener("activate", event => {
 
 self.addEventListener("fetch", function(event) {
   console.log("SW: fetch event in progress.4", event.request.url);
-  if (event.request.method !== "GET") {
-    /* If we don't block the event as shown below, then the request will go to
-         the network as usual.
-      */
+  if (
+    event.request.method === "GET" &&
+    event.request.headers.get("accept").indexOf("text/html") !== -1
+  ) {
+    console.log("Handling fetch event for", event.request.url);
+     /* Similar to event.waitUntil in that it blocks the fetch event on a promise.
+       Fulfillment result will be used as the response, and rejection will end in a
+       HTTP response indicating failure.
+    */
+    event.respondWith(
+      caches
+        .open(cacheName)
+        .then(cache => cache.match(event.request, { ignoreSearch: true }))
+        .then(response => {
+          console.log("Return:", response, event.request);
+          return response || fetch(event.request);
+        })
+        .catch(function(error) {
+          console.log("Error:", error);
+          return caches.match("index.html");
+        })
+    );
+  } else {
     console.log(
       "WORKER: fetch event ignored.",
       event.request.method,
       event.request.url
     );
-    return;
   }
-  /* Similar to event.waitUntil in that it blocks the fetch event on a promise.
-       Fulfillment result will be used as the response, and rejection will end in a
-       HTTP response indicating failure.
-    */
-  event.respondWith(
-    caches
-      .open(cacheName)
-      .then(cache => cache.match(event.request, { ignoreSearch: true }))
-      .then(response => {
-        console.log("Return:", response, event.request);
-        return response || fetch(event.request);
-      })
-      .catch(function(error) {
-        console.log("Error:", error);
-        return caches.match("index.html");
-      })
-  );
+ 
 });
