@@ -1,7 +1,7 @@
 "use strict";
 var cacheName = "law-cache-v3.0.0";
 self.addEventListener("install", event => {
-  console.log("Install check", event);
+  console.log(" SW Install check", event);
   event.waitUntil(
     caches
       .open(cacheName)
@@ -11,6 +11,7 @@ self.addEventListener("install", event => {
           "./",
           "images/192.png",
           "images/512.png",
+          "favicon.ico",
           "fonts/open-sans-v17-latin-regular.ttf",
           "fonts/open-sans-v17-latin-regular.woff",
           "fonts/open-sans-v17-latin-regular.woff2",
@@ -23,7 +24,7 @@ self.addEventListener("install", event => {
       })
       .then(function() {
         self.skipWaiting();
-        console.log("Worker: install Completed");
+        console.log(" SW: install Completed");
       })
   );
 });
@@ -40,7 +41,7 @@ self.addEventListener("activate", event => {
 // });
 
 self.addEventListener("fetch", function(event) {
-  console.log("WORKER: fetch event in progress.4", event.request.url);
+  console.log("SW: fetch event in progress.4", event.request.url);
   if (event.request.method !== "GET") {
     /* If we don't block the event as shown below, then the request will go to
          the network as usual.

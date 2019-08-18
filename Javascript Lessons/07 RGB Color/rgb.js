@@ -8,11 +8,11 @@ if ("serviceWorker" in navigator) {
     })
     .then(reg => {
       // registration worked
-      console.log("Registration succeeded. Scope is " + reg.scope);
+      console.log("SW Registration succeeded. Scope is " + reg.scope);
     })
     .catch(error => {
       // registration failed
-      console.log("Registration failed with " + error);
+      console.log("SW Registration failed with " + error);
     });
 } else {
   console.log("No serviceWorker activated in " + navigator.appCodeName);
