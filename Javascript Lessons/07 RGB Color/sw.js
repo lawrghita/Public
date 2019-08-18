@@ -1,5 +1,5 @@
 "use strict";
-var cacheName = "law-cache-v3.0.0";
+var cacheName = "law-cache-v3.0.1";
 self.addEventListener("install", event => {
   console.log(" SW Install check", event);
   event.waitUntil(
@@ -19,6 +19,7 @@ self.addEventListener("install", event => {
           "index.html",
           "doWork.js",
           "manifest.json",
+          "sw.js",
           "rgb.css"
         ]);
       })
