@@ -1,7 +1,9 @@
 "use strict";
 /** Service Worker area ACTIVATED*/
-if ("serviceWorker" in navigator) {
-  console.log("YES serviceWorker activated in " + navigator.appCodeName);
+
+//TODO put SW register in index.html
+/* if ("serviceWorker" in navigator) {
+  // console.log("YES serviceWorker activated in " + navigator.appCodeName);
   navigator.serviceWorker
     .register("sw.js", {
       scope: "/Javascript Lessons/07 RGB Color/"
@@ -16,7 +18,8 @@ if ("serviceWorker" in navigator) {
     });
 } else {
   console.log("No serviceWorker activated in " + navigator.appCodeName);
-}
+} */
+
 /** Simple Workers area - for async  */
 if (window.Worker) {
     //** Setting up an worker */

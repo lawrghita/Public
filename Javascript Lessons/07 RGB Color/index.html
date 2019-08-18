@@ -23,12 +23,15 @@
       href="/Javascript Lessons/07 RGB Color/favicon.ico"
     />
     <link href="rgb.css" rel="stylesheet" />
-    <link rel="manifest" href="/Javascript Lessons/07 RGB Color/manifest.json" />
+    <link
+      rel="manifest"
+      href="/Javascript Lessons/07 RGB Color/manifest.json"
+    />
   </head>
 
   <body>
     <div id="banner">
-      <div class="title">THE GREAT FINAL</div>
+      <div class="title">THE GREAT INSIDE</div>
       <div id="rgbQuestion"></div>
       <div class="title">GUESSING GAME</div>
       <div id="bannerLine">
@@ -61,6 +64,15 @@
 
     <script>
       document.body.classList.remove("no-js");
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js", {
+            scope: "/Javascript Lessons/07 RGB Color/"
+          })
+          .then(reg => {})
+          .catch(error => {});
+      } else {
+      }
     </script>
     <script src="rgb.js" async defer></script>
   </body>
