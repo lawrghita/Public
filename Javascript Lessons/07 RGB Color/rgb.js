@@ -4,7 +4,7 @@ if ("serviceWorker" in navigator) {
   console.log("YES serviceWorker activated in " + navigator.appCodeName);
   navigator.serviceWorker
     .register("sw.js", {
-      scope: "/"
+      scope: "/Javascript Lessons/07 RGB Color"
     })
     .then(reg => {
       // registration worked
