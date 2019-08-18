@@ -50,7 +50,7 @@ self.addEventListener("activate", function(event) {
 
 
 self.addEventListener("push", function() {
-  fetch("/updates")
+  fetch("/Javascript Lessons/07 RGB Color/manifest.json")
   .then(function(response) {
     return self.registration.showNotification(response.text());
   });
