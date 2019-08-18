@@ -71,7 +71,7 @@ self.addEventListener("fetch", function(event) {
         .open(cacheName)
         .then(cache => cache.match(event.request, { ignoreSearch: true }))
         .then(response => {
-          console.log("Return:", response, event.request);
+          console.log("Return:", response, event.request.credentials); //credentials: "omit"
           return response || fetch(event.request);
         })
         .catch(function(error) {
