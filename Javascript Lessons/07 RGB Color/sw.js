@@ -22,23 +22,39 @@ self.addEventListener("install", event => {
           "rgb.css"
         ]);
       })
-      .then(function() {
-        self.skipWaiting();
-        console.log(" SW: install Completed");
-      })
+      // .then(function() {
+      //   self.skipWaiting();
+      //   console.log(" SW: install Completed");
+      // })
   );
 });
 
-self.addEventListener("activate", event => {
-  event.waitUntil(self.clients.claim());
+// self.addEventListener("activate", event => {
+//   event.waitUntil(self.clients.claim());
+// });
+
+self.addEventListener("activate", function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (CACHE_NAME !== cacheName &&  cacheName.startsWith("law-cache-v")) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
 });
 
-// self.addEventListener('push', event => {
-//   console.log(event.target);
-//   event.waitUntil((event) => {
-//     console.log(event.request);
-//   });
-// });
+
+
+self.addEventListener("push", function() {
+  fetch("/updates")
+  .then(function(response) {
+    return self.registration.showNotification(response.text());
+  });
+});
 
 self.addEventListener("fetch", function(event) {
   console.log("SW: fetch event in progress.4", event.request.url);
