@@ -1,5 +1,5 @@
 "use strict";
-var cacheName = "law-cache-v3.0.1";
+var cacheName = "law-cache-v3.0.3";
 self.addEventListener("install", event => {
   console.log(" SW Install check", event);
   event.waitUntil(
@@ -30,23 +30,23 @@ self.addEventListener("install", event => {
   );
 });
 
-// self.addEventListener("activate", event => {
-//   event.waitUntil(self.clients.claim());
-// });
-
-self.addEventListener("activate", function(event) {
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if (CACHE_NAME !== cacheName &&  cacheName.startsWith("law-cache-v")) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
+self.addEventListener("activate", event => {
+  event.waitUntil(self.clients.claim());
 });
+
+// self.addEventListener("activate", function(event) {
+//   event.waitUntil(
+//     caches.keys().then(function(cacheNames) {
+//       return Promise.all(
+//         cacheNames.map(function(cacheName) {
+//           if (CACHE_NAME !== cacheName &&  cacheName.startsWith("law-cache-v")) {
+//             return caches.delete(cacheName);
+//           }
+//         })
+//       );
+//     })
+//   );
+// });
 
 
 
