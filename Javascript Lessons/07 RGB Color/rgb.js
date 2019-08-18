@@ -17,26 +17,24 @@ if ("serviceWorker" in navigator) {
 } else {
   console.log("No serviceWorker activated in " + navigator.appCodeName);
 }
-
-//** Simple Workers area - for async  */
-
-// if (window.Worker) {
-//     //** Setting up an worker */
-//     console.log(window.Worker, " Worker active");
-//     var worker = new Worker('doWork.js');
-//     worker.onerror = function (error) {
-//         console.log('Worker error: ' + error.message + '\n');
-//         throw error;
-//     };
-//     worker.onmessage = function (e) {
-//         console.log('Message received from worker ', e.data);
-//     }
-//     worker.postMessage('BAAB'); // Send data to our worker
-//     worker.postMessage('ABBA'); // Send data to our worker
-//     // worker.terminate(); //Terminate the worker instant
-// } else {
-//     console.log(window.Worker, " Worker inactive");
-// }
+/** Simple Workers area - for async  */
+if (window.Worker) {
+    //** Setting up an worker */
+    console.log(window.Worker, " Worker active");
+    var worker = new Worker('doWork.js');
+    worker.onerror = function (error) {
+        console.log('Worker error: ' + error.message + '\n');
+        throw error;
+    };
+    worker.onmessage = function (e) {
+        console.log('Message received from worker ', e.data);
+    }
+    worker.postMessage('BAAB'); // Send data to our worker
+    worker.postMessage('ABBA'); // Send data to our worker
+    // worker.terminate(); //Terminate the worker instant
+} else {
+    console.log(window.Worker, " Worker inactive");
+}
 
 const correctGuessMessage = "CORRECT";
 const choseText = "CHOSE NOW:";
