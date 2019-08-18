@@ -42,10 +42,7 @@ self.addEventListener("activate", event => {
 
 self.addEventListener("fetch", function(event) {
   console.log("SW: fetch event in progress.4", event.request.url);
-  if (
-    event.request.method === "GET" &&
-    event.request.headers.get("accept").indexOf("text/html") !== -1
-  ) {
+  if ( event.request.method === "GET" ) {
     console.log("Handling fetch event for", event.request.url);
      /* Similar to event.waitUntil in that it blocks the fetch event on a promise.
        Fulfillment result will be used as the response, and rejection will end in a
