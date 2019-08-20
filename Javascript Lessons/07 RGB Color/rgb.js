@@ -157,17 +157,30 @@ function choseRandomOneSquareRGB(cells) {
   "use strict";
   const answerCell = Math.floor(Math.random() * cells.length);
   const randRGB = cells[answerCell].style.backgroundColor;
-
-  
-  rgbQuestion.textContent = colorThis(randRGB.toUpperCase());
+  rgbQuestion.innerHTML = colorThis(randRGB.toUpperCase());
   return answerCell;
 }
 
-
-function colorThis(randRGB){
-  const colored = randRGB;
-  const justNumbers = randRGB.slice(randRGB.indexOf('(')+1, randRGB.indexOf(')'));
-  const colorArray = justNumbers.split(','), i = colorArray.length;
-  console.log(randRGB, justNumbers, colorArray);
+//** This function return an HTML code for a RGB(,,) where numbers are in color Red,Green,Blue */
+function colorThis(randRGB) {
+  let colored = randRGB;
+   // "RGB(190, 117, 109)"
+  const justNumbers = randRGB.slice(
+    randRGB.indexOf("(") + 1,
+    randRGB.indexOf(")")
+  );
+    //  => 190, 117, 109
+  const colorArray = justNumbers.split(","),
+    i = colorArray.length;
+    //  => {190, 117, 109}
+  colored =
+    "RGB(<span style='color:red'>" +
+    colorArray[0].trim() +
+    "</span>, <span style='color:green'>" +
+    colorArray[1].trim() +
+    "</span>, <span style='color:blue'>" +
+    colorArray[2].trim() +
+    "</span>)";
+  // => HTML definition in color for RGB(190, 117, 109) 
   return colored;
 }
