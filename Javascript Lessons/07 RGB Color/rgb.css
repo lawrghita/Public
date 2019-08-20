@@ -80,5 +80,13 @@ td {
   color: #317efb;
 }
 .hide {
-  display: none;
+/* display: none; */
+  visibility: hidden;
+opacity: 0;
+transition: visibility 0s 2s, opacity 2s linear;
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
 }

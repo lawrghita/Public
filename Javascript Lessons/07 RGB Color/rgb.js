@@ -1,6 +1,5 @@
 "use strict";
 /** Service Worker area ACTIVATED*/
-
 //TODO put SW register in index.html
 /* if ("serviceWorker" in navigator) {
   // console.log("YES serviceWorker activated in " + navigator.appCodeName);
@@ -22,21 +21,22 @@
 
 /** Simple Workers area - for async  */
 if (window.Worker) {
-    //** Setting up an worker */
-    console.log(window.Worker, " Worker active");
-    var worker = new Worker('doWork.js');
-    worker.onerror = function (error) {
-        console.log('Worker error: ' + error.message + '\n');
-        throw error;
-    };
-    worker.onmessage = function (e) {
-        console.log('Message received from worker ', e.data);
-    }
-    worker.postMessage('BAAB'); // Send data to our worker
-    worker.postMessage('ABBA'); // Send data to our worker
-    // worker.terminate(); //Terminate the worker instant
+  //** Setting up an worker */
+  // console.log(window.Worker, " Worker active");
+  var worker = new Worker("doWork.js");
+  worker.onerror = function(error) {
+    console.log("Worker error: " + error.message + "\n");
+    throw error;
+  };
+  worker.onmessage = function(e) {
+    console.log("Message received from worker ", e.data);
+  };
+  // worker.postMessage("BAAB"); // Send data to our worker
+  // worker.postMessage("ABBA"); // Send data to our worker
+
+  // worker.terminate(); //Terminate the worker instant
 } else {
-    console.log(window.Worker, " Worker inactive");
+  // console.log(window.Worker, " Worker inactive");
 }
 
 const correctGuessMessage = "CORRECT";
@@ -50,6 +50,7 @@ const reset = document.getElementById("reset");
 const result = document.getElementById("result");
 const easy = document.getElementById("easy");
 const hard = document.getElementById("hard");
+let easyShow = document.querySelectorAll("#show td");
 let hardHide = document.querySelectorAll("#hide td");
 const bannerBackgroundColor = getComputedStyle(banner).backgroundColor;
 
@@ -76,6 +77,9 @@ easy.addEventListener("click", function() {
   for (let index = 0; index < hardHide.length; index++) {
     hardHide[index].classList = "hide";
   }
+  for (let index = 0; index < easyShow.length; index++) {
+    easyShow[index].classList = "show";
+  }
   this.classList.add("gameType");
   this.classList.remove("normalLineElement");
   hard.classList.remove("gameType");
@@ -86,6 +90,9 @@ easy.addEventListener("click", function() {
 hard.addEventListener("click", function() {
   for (let index = 0; index < hardHide.length; index++) {
     hardHide[index].classList = "show";
+  }
+  for (let index = 0; index < easyShow.length; index++) {
+    easyShow[index].classList = "show";
   }
   this.classList.add("gameType");
   this.classList.remove("normalLineElement");
@@ -101,6 +108,8 @@ function correct() {
   result.textContent = correctGuessMessage;
   reset.textContent = newColors;
   cells.forEach(cell => {
+    cell.classList.remove("hide");
+    cell.classList.add("show");
     cell.style.backgroundColor = rgbQuestion.textContent;
   });
   rgbQuestion.style.backgroundColor = rgbQuestion.textContent;
@@ -112,7 +121,9 @@ function actionClick() {
   if (rgbClicked === rgbQuestion.textContent) correct();
   else {
     //** chose color on air */
-    this.style.backgroundColor = getComputedStyle(rows).backgroundColor;
+    // this.style.backgroundColor = getComputedStyle(rows).backgroundColor;
+    this.classList.remove("show");
+    this.classList.add("hide");
   }
 }
 
@@ -136,6 +147,7 @@ function initialize() {
       ", " +
       randBlue +
       ");";
+
     cells[index].addEventListener("click", actionClick);
   }
   choseRandomOneSquareRGB(cells);
@@ -144,7 +156,18 @@ function initialize() {
 function choseRandomOneSquareRGB(cells) {
   "use strict";
   const answerCell = Math.floor(Math.random() * cells.length);
-  const randRed = cells[answerCell].style.backgroundColor;
-  rgbQuestion.textContent = randRed.toUpperCase();
+  const randRGB = cells[answerCell].style.backgroundColor;
+
+  
+  rgbQuestion.textContent = colorThis(randRGB.toUpperCase());
   return answerCell;
+}
+
+
+function colorThis(randRGB){
+  const colored = randRGB;
+  const justNumbers = randRGB.slice(randRGB.indexOf('(')+1, randRGB.indexOf(')'));
+  const colorArray = justNumbers.split(','), i = colorArray.length;
+  console.log(randRGB, justNumbers, colorArray);
+  return colored;
 }
