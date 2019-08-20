@@ -54,9 +54,8 @@ div .title {
 }
 #easy_hard {
   /* eliminate te pixel white from right from 34% */
-  width: 37%; 
+  width: 37%;
   display: flex;
- 
 }
 #easy,
 #hard {
@@ -80,10 +79,10 @@ td {
   color: #317efb;
 }
 .hide {
-/* display: none; */
+  /* display: none; */
   visibility: hidden;
-opacity: 0;
-transition: visibility 0s 2s, opacity 2s linear;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
 }
 .show {
   visibility: visible;
