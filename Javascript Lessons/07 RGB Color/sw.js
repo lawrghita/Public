@@ -1,5 +1,5 @@
 "use strict";
-var cacheName = "law-cache-v3.0.4";
+var cacheName = "law-cache-v4.0.0";
 self.addEventListener("install", event => {
   // console.log(" SW Install check", event);
   event.waitUntil(

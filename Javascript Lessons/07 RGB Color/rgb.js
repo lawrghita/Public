@@ -164,7 +164,7 @@ function choseRandomOneSquareRGB(cells) {
   return answerCell;
 }
 
-//** This function return an HTML code for a RGB(,,) where numbers are in color Red,Green,Blue */
+//** This function return an HTML code for example RGB(190,117,109) where numbers are in color Red,Green,Blue */
 function colorThis(randRGB) {
   let colored = randRGB;
   // "RGB(190, 117, 109)"
