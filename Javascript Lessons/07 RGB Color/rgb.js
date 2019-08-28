@@ -41,7 +41,7 @@ if (window.Worker) {
 
 const correctGuessMessage = "CORRECT";
 const choseText = "CHOSE NOW:";
-const newColors = "REFRESH ?";
+const newColors = "REFRESH";
 let rows = document.querySelector("#rows");
 let cells = document.querySelectorAll(".show");
 const banner = document.querySelector("#banner");
@@ -107,6 +107,7 @@ function correct() {
   //** on correct guess, display CORRECT on middle and make all squares that color */
   result.textContent = correctGuessMessage;
   reset.textContent = newColors;
+  reset.classList.add("button");
   cells.forEach(cell => {
     cell.classList.remove("hide");
     cell.classList.add("show");
@@ -134,7 +135,9 @@ function initialize() {
   cells = document.querySelectorAll(".show");
   result.textContent = "";
   reset.textContent = choseText;
+  reset.classList.remove("button");
   reset.classList.add("normalLineElement");
+
   for (let index = 0; index < cells.length; index++) {
     const randRed = Math.round(Math.random() * 255);
     const randGreen = Math.round(Math.random() * 255);
