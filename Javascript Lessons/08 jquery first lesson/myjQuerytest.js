@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 var purpleBackground={
     background: "purple"
 }
@@ -13,7 +13,7 @@ var fontPink={
 }
 
 
-console.log($("div"));
+// console.log($("div"));
 
 $("div").css(purpleBackground);
 $(".highlight").css(wide200);
