@@ -1,3 +1,15 @@
-body{
-    color: blue;
+body {
+  color: blue;
+}
+.correct {
+  color: green;
+  font-size: 2rem;
+}
+.wrong {
+  color: red;
+  background: pink;
+}
+.done {
+  color: gray;
+  text-decoration: line-through;
 }
