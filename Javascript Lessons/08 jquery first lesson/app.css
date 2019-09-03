@@ -13,3 +13,11 @@ body {
   color: gray;
   text-decoration: line-through;
 }
+
+.tealsquare{
+  width: 100px;
+  height: 100px;
+  background: teal;
+  float:right;
+  margin: 3px;
+}

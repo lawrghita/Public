@@ -1,4 +1,5 @@
 // "use strict";
+// javascript objects:
 var purpleBackground = {
   background: "purple"
 };
@@ -15,13 +16,57 @@ var fontPink = {
   color: "pink"
 };
 
+
+var buttonRed = {
+  mouseenter: function(event) {
+    $(this).toggleClass("wrong");
+  },
+  mouseleave: function(event) {
+    $(this).toggleClass("wrong");
+  }
+};
+
+// effects  fadeToggle slideUp SlideDown
+$("#effect").on("mouseenter",function () {
+  $("span").fadeOut("slow");
+}).on("mouseleave",function () {
+  i=0;
+  $("span").fadeIn("slow", function () {
+    i++;
+    console.log("inside a callback wait and executed after fadein"+i);
+    $(this).remove(); //disapear till reload of page
+  });
+});
+
+// on()
+$("h2").on("click", function() {
+  $(this).css("color", "red");
+});
+
+$("input").on("keypress", function(event) {
+  console.log("On + keypress :", event);
+});
+
+// $("button")
+//   .on("mouseenter", function(event) {
+//     $(this).toggleClass("wrong");
+//   })
+//   .on("mouseleave", function(event) {
+//     $(this).toggleClass("wrong");
+//   });
+// equivalent with that but using objects already definited:
+$("button").on(buttonRed);   // apply an object declared before 
+$("h1").on(buttonRed);
+
 //Keypressed;
 $("input").keypress(function(event) {
-  console.log("keypress handler press " + this.value); //display the old value
-  console.log(event);
-  console.log("keypress handler Cod of the pressed key:" + event.which);
+  console.log("keypress handler press ", this.value); //display the old value
+  console.log(event, " keypress handler Cod of the pressed key:", event.which);
   if (event.which === 13) {
-   $("li").first().text(this.value).addClass("done");
+    $("li")
+      .first()
+      .text(this.value)
+      .addClass("done");
   }
 });
 
@@ -37,8 +82,7 @@ $("button").click(function() {
   console.log("Clicked:" + $(this).text());
 });
 $("input").change(function() {
-  console.log(this);
-  console.log(" Input change method... Typed:" + this.value);
+  console.log(this, " Input change method... Typed:", this.value);
 });
 
 // answer for a student question
