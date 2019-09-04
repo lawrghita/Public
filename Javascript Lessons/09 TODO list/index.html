@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TODO List</title>
+    <meta name="description" content="Author: Ghita Laurentiu, TODO list" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="TODO list" />
+    <meta name="theme-color" content="#317EFB" />
+    <meta name="msapplication-navbutton-color" content="#317EFB" />
+    <meta
+      name="msapplication-starturl"
+      content="/Javascript Lessons/09 TODO list/index.html"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      sizes="16x16"
+      href="/Javascript Lessons/09 TODO list/favicon.ico"
+    />
+    <link href="todo.css" rel="stylesheet" />
+    <link
+      rel="manifest"
+      href="/Javascript Lessons/09 TODO list/manifest.json"
+    />
+  </head>
+
+  <body>
+    <h1>TODO <span id="version"></span></h1>
+
+    <script>
+      document.body.classList.remove("no-js");
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js", {
+            scope: "/Javascript Lessons/09 TODO list/"
+          })
+          .then(reg => {})
+          .catch(error => {});
+      } else {
+      }
+    </script>
+    <script src="todo.js" async defer></script>
+  </body>
+</html>

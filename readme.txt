@@ -1,11 +1,1 @@
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	readme.txt
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-new line
+My way into Javascript

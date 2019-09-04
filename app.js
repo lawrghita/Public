@@ -23,5 +23,7 @@ id07.href = "Javascript%20Lessons/07%20RGB%20Color/index.html"
 const id08 = document.getElementById("JS08");
 id08.href = "Javascript%20Lessons/08%20jquery%20first%20lesson/index.html"
 
+const id09 = document.getElementById("JS09");
+id09.href = "Javascript%20Lessons/09%20TODO%20list/index.html"
 
 
