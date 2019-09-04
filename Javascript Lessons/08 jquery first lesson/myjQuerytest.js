@@ -26,15 +26,24 @@ var buttonRed = {
   }
 };
 
+//console log tips
+var looper;
+console.time("looper");
+
+console.log({wide200, wide500, fontPink});
+console.table([wide200, wide500, orangeBorder, purpleBackground, fontPink]);
+
+
 // effects  fadeToggle slideUp SlideDown
 $("#effect").on("mouseenter",function () {
   $("span").fadeOut("slow");
 }).on("mouseleave",function () {
-  i=0;
+  i=0; //strange reset, not reset on mouse stop
   $("span").fadeIn("slow", function () {
-    i++;
+    i++; //
     console.log("inside a callback wait and executed after fadein"+i);
-    $(this).remove(); //disapear till reload of page
+    // $(this).remove(); //disapear till reload of page
+
   });
 });
 
@@ -131,3 +140,5 @@ $("#third")
   .css(orangeBorder)
   .css(fontPink);
 $("div:first-of-type").css(fontPink);
+
+console.timeEnd("looper");
