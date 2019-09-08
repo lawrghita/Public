@@ -1,3 +1,23 @@
-body {
-    color: red;
+@font-face {
+  font-family: "Open Sans Regular";
+  /* font-style: normal;
+    font-weight: 400; */
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url("/Javascript Lessons/09 TODO list/assets/fonts/open-sans-v17-latin-regular.ttf")
+      format("truetype"),
+    url("/Javascript Lessons/09 TODO list/assets/fonts/open-sans-v17-latin-regular.woff2")
+      format("woff2"),
+    url("/Javascript Lessons/09 TODO list/assets/fonts/open-sans-v17-latin-regular.woff")
+      format("woff");
+}
+#container {
+  border: 2px solid gray;
+  width: 360px;
+  font-family: "Open Sans Regular";
+  margin: 0 auto;
+  user-select: none;
+}
+.completed {
+  color: "gray";
+  text-decoration: "line-through";
 }
