@@ -1,5 +1,5 @@
 "use strict";
-var cacheName = "law-cache-v0.0.1";
+var cacheName = "law-cache-v0.0.2";
 self.addEventListener("install", event => {
   console.log(" SW Install check", event);
   event.waitUntil(
@@ -9,17 +9,17 @@ self.addEventListener("install", event => {
         return cache.addAll([
           "/",
           "./",
-          "images/192.png",
-          "images/512.png",
+          "assets/images/192.png",
+          "assets/images/512.png",
           "favicon.ico",
-          "fonts/open-sans-v17-latin-regular.ttf",
-          "fonts/open-sans-v17-latin-regular.woff",
-          "fonts/open-sans-v17-latin-regular.woff2",
-          "todo.js",
+          "assets/fonts/open-sans-v17-latin-regular.ttf",
+          "assets/fonts/open-sans-v17-latin-regular.woff",
+          "assets/fonts/open-sans-v17-latin-regular.woff2",
+          "assets/js/todo.js",
           "index.html",
           "manifest.json",
           "sw.js",
-          "todo.css"
+          "assets/css/todo.css"
         ]);
       })
       .then(function() {
