@@ -18,6 +18,6 @@
   user-select: none;
 }
 .completed {
-  color: "gray";
-  text-decoration: "line-through";
+  color: gray;
+  text-decoration: line-through;
 }
