@@ -1,6 +1,6 @@
 let version = document.querySelector("#version");
 const time = document.lastModified;
-version.textContent = "v.0.6 ";
+version.textContent = "v.0.7 ";
 console.log(time);
 
 // const colorClicked = "rgb(128, 128, 0)"; //set up color for TODOs finalized - gray?
