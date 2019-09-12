@@ -4,19 +4,19 @@
     "description": "TODO for offline testing",
         "icons": [
           {
-            "src": "/Javascript Lessons/09 TODO list/assets/images/192.png",
+            "src": "assets/images/192.png",
             "type": "image/png",
             "sizes": "192x192"
           },
           {
-            "src": "/Javascript Lessons/09 TODO list/assets/images/512.png",
+            "src": "assets/images/512.png",
             "type": "image/png",
             "sizes": "512x512"
           }
         ],
     "lang": "en-GB",
-    "start_url": "/Javascript Lessons/09 TODO list/index.html",
-    "scope": "/Javascript Lessons/09 TODO list",
+    "start_url": "./index.html",
+    "scope": "./",
     "display": "minimal-ui",
     "orientation": "portrait",
     "theme_color": "#317EFB",

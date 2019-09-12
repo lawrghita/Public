@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -11,25 +11,25 @@
     <meta name="msapplication-navbutton-color" content="#317EFB" />
     <meta
       name="msapplication-starturl"
-      content="/Javascript Lessons/09 TODO list/index.html"
+      content="index.html"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="icon"
       sizes="16x16"
-      href="/Javascript Lessons/09 TODO list/favicon.ico"
+      href="favicon.ico"
     />
-    <link href="/Javascript Lessons/09 TODO list/assets/css/todo.css" rel="stylesheet" />
+    <link href="todo.css" rel="stylesheet" />
     <link
       rel="manifest"
-      href="/Javascript Lessons/09 TODO list/manifest.json"
+      href="manifest.json"
     />
     <link
       rel="apple-touch-icon"
-      href="/Javascript Lessons/09 TODO list/assets/images/192.png"
+      href="assets/images/192.png"
     />
     <script
-      src="/Javascript Lessons/09 TODO list/assets/js/lib/jquery-3.4.1.js"
+      src="assets/js/lib/jquery-3.4.1.js"
       type="text/javascript"
     ></script>
   </head>
@@ -54,13 +54,13 @@
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
           .register("sw.js", {
-            scope: "/Javascript Lessons/09 TODO list/"
+            scope: ""
           })
           .then(reg => {})
           .catch(error => {});
       } else {
       }
     </script>
-    <script src="/Javascript Lessons/09 TODO list/assets/js/todo.js" async defer></script>
+    <script src="assets/js/todo.js" async defer></script>
   </body>
 </html>

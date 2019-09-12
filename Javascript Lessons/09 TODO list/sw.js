@@ -1,5 +1,5 @@
-"use strict";
-var cacheName = "law-cache-v0.0.4";
+// "use strict";
+var cacheName = "todo-cache-v0.0.5";
 self.addEventListener("install", event => {
   console.log(" SW Install check", event);
   event.waitUntil(
@@ -7,19 +7,16 @@ self.addEventListener("install", event => {
       .open(cacheName)
       .then(cache => {
         return cache.addAll([
-          "/",
-          "./",
           "assets/images/192.png",
           "assets/images/512.png",
           "favicon.ico",
           "assets/fonts/open-sans-v17-latin-regular.ttf",
-          "assets/fonts/open-sans-v17-latin-regular.woff",
-          "assets/fonts/open-sans-v17-latin-regular.woff2",
           "assets/js/todo.js",
+          "assets/js/lib/jquery-3.4.1.js",
           "index.html",
           "manifest.json",
           "sw.js",
-          "assets/css/todo.css"
+          "todo.css"
         ]);
       })
       .then(function() {
@@ -35,7 +32,7 @@ self.addEventListener("activate", event => {
 
 
 self.addEventListener("push", function() {
-  fetch("/Javascript Lessons/07 RGB Color/manifest.json")
+  fetch("manifest.json")
   .then(function(response) {
     return self.registration.showNotification(response.text());
   });
