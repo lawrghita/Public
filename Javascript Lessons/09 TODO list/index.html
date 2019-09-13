@@ -1,66 +1,74 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
     <title>TODO List</title>
-    <meta name="description" content="Author: Ghita Laurentiu, TODO list" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="application-name" content="TODO list" />
-    <meta name="theme-color" content="#317EFB" />
-    <meta name="msapplication-navbutton-color" content="#317EFB" />
+    <meta content="Author: Ghita Laurentiu, TODO list" name="description"/>
+    <meta content="yes" name="mobile-web-app-capable"/>
+    <meta content="TODO list" name="application-name"/>
+    <meta content="#317EFB" name="theme-color"/>
+    <meta content="#317EFB" name="msapplication-navbutton-color"/>
     <meta
-      name="msapplication-starturl"
-      content="index.html"
+            content="index.html"
+            name="msapplication-starturl"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <link
-      rel="icon"
-      sizes="16x16"
-      href="favicon.ico"
+            href="favicon.ico"
+            rel="icon"
+            sizes="16x16"
     />
-    <link href="todo.css" rel="stylesheet" />
+    <link href="todo.css" rel="stylesheet"/>
     <link
-      rel="manifest"
-      href="manifest.json"
+            href="manifest.json"
+            rel="manifest"
     />
     <link
-      rel="apple-touch-icon"
-      href="assets/images/192.png"
+            href="assets/images/192.png"
+            rel="apple-touch-icon"
     />
     <script
-      src="assets/js/lib/jquery-3.4.1.js"
-      type="text/javascript"
+            src="assets/js/lib/jquery-3.4.1.js"
+            type="text/javascript"
     ></script>
-  </head>
+</head>
 
-  <body>
-    
+<body>
+
 
 <div id="container">
-  <h1>TO-DO LIST <span id="version"></span></h1>
-  <input type="text">
-  <ul>
-    <li><span>X</span> Go to Laundry</li>
-    <li><span>X</span> Buy new clothes</li>
-    <li><span>X</span> Generate code</li>
-    <li><span>X</span> Visualize accounts</li>
-  </ul>
+    <h1>TO-DO LIST <img alt="add" id="plus" src="assets/images/plus-solid.svg"></h1>
+    <input placeholder="Add new one" type="text">
+    <ul>
+        <li><span><img alt="delete" class="delete" src="assets/images/calendar-times-regular.svg"></span> Go to Laundry
+            <img alt="check" class="check" src="assets/images/calendar-check-regular.svg"></li>
+        <li><span><img alt="delete" class="delete" src="assets/images/calendar-times-regular.svg"></span> Buy new
+            clothes
+            <img alt="check" class="check" src="assets/images/calendar-check-regular.svg"></li>
+        <li><span><img alt="delete" class="delete" src="assets/images/calendar-times-regular.svg"></span> Generate code
+            <img alt="check" class="check" src="assets/images/calendar-check-regular.svg"></li>
+        <li><span><img alt="delete" class="delete" src="assets/images/calendar-times-regular.svg"></span> Visualize
+            accounts
+            <img alt="check" class="check" src="assets/images/calendar-check-regular.svg"></li>
+    </ul>
 </div>
 
 
-    <script>
-      document.body.classList.remove("no-js");
-      if ("serviceWorker" in navigator) {
+<script>
+    document.body.classList.remove("no-js");
+    if ("serviceWorker" in navigator) {
         navigator.serviceWorker
-          .register("sw.js", {
-            scope: ""
-          })
-          .then(reg => {})
-          .catch(error => {});
-      } else {
-      }
-    </script>
-    <script src="assets/js/todo.js" async defer></script>
-  </body>
+            .register("sw.js", {
+                scope: ""
+            })
+            .then(reg => {
+            })
+            .catch(error => {
+            });
+    } else {
+    }
+</script>
+<script async defer src="assets/js/todo.js"></script>
+</body>
 </html>

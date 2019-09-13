@@ -1,11 +1,11 @@
 "use strict";
 let url = "https://developer.mozilla.org/en-US/docs/Web/Events";
 var xhr = new XMLHttpRequest();
-let myDiv = document.getElementById('id')
+let myDiv = document.getElementById('id');
 
 xhr.onload = function () {
   let xml = this.responseXML;
-  let eventAnchors = xml.querySelectorAll('tr td a')
+    let eventAnchors = xml.querySelectorAll('tr td a');
   let index = 0;
   while (index < eventAnchors.length) {
     let element = eventAnchors[index];
@@ -24,7 +24,7 @@ xhr.onload = function () {
     }
     index++;
   }
-}
+};
 xhr.open("GET", url);
 xhr.responseType = "document";
 let noEvent = 0;

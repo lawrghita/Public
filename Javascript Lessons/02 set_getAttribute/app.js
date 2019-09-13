@@ -1,4 +1,4 @@
-const version="2.1"
+const version = "2.1";
 document.getElementById("ver").textContent = version;
 var link = document.querySelector('a');
 var img = document.querySelector('img');

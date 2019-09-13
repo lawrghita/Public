@@ -1,6 +1,6 @@
 function setCookie(cookieName, cookieValue, cookieDayAlive) {
     const location = "/";
-    const sameSite = "strict"
+    const sameSite = "strict";
     const today = new Date();
     var dayExpire = new Date();
     millisecondsOnDay = 24 * 60 * 60 * 1000;

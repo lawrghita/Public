@@ -43,4 +43,4 @@ function increment(item) {
         result.textContent = "Winner is " + winner;
         reset.style.display = "inline-block";
     }
-};
+}
