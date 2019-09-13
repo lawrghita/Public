@@ -1,6 +1,6 @@
 var version = document.querySelector("#version");
 var time = document.lastModified;
-version.textContent = "v.0.15 ";
+version.textContent = "v.0.16 Fri ";
 console.log(time);
 
 // const colorClicked = "rgb(128, 128, 0)"; //set up color for TODOs finalized - gray?
@@ -57,7 +57,7 @@ function setEvents4TODO(li, span) {
     $(this)
       .parent()
       .fadeOut(800, function() {
-        //callback function so wait for fadeOut funtion to finish
+        //callback function so wait for fadeOut function to finish
         // console.log("Fom call back", this, $(this).parent());
         $(this).remove(); // remove the entire line, parent of the span
       });
@@ -65,7 +65,7 @@ function setEvents4TODO(li, span) {
 }
 
 function anothersolution() {
-  // define an listener for an event click aplied to all existent AND FUTURE LI inside an UL on BODY
+  // define an listener for an event click applied to all existent AND FUTURE LI inside an UL on BODY
   $("ul").on("click", "li", function() {
     $(this).toggleClass(completed);
   });

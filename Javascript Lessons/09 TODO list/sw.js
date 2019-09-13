@@ -1,5 +1,5 @@
 // "use strict";
-var cacheName = "todo-cache-v0.0.5";
+var cacheName = "todo-cache-v0.0.16";
 self.addEventListener("install", event => {
   console.log(" SW Install check", event);
   event.waitUntil(
