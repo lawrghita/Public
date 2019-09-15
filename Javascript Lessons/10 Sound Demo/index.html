@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <title>TODO List</title>
-    <meta content="Author: Ghita Laurentiu, TODO list" name="description"/>
+    <title>Sound Demo</title>
+    <meta content="Author: Ghita Laurentiu, Sound Demo" name="description"/>
     <meta content="yes" name="mobile-web-app-capable"/>
     <meta content="TODO list" name="application-name"/>
     <meta content="#317EFB" name="theme-color"/>
@@ -28,32 +28,44 @@
             href="assets/images/192.png"
             rel="apple-touch-icon"
     />
+
     <script
-            src="assets/js/lib/jquery-3.4.1.js"
+            src="assets/js/lib/paper-full.js"
             type="text/javascript"
     ></script>
+    <script canvas="myCanvas" type="text/paperscript">
+
+        var canvas = document.getElementById("myCanvas");
+        var path = new Path();
+
+        path.strokeColor = 'black';
+        var start = new Point(100, 100);
+        path.moveTo(start);
+        path.lineTo(start + [100, -50]);
+        var myCircle = new Path.Circle(new Point(100, 70), 50);
+        myCircle.fillColor = "green";
+        var color = 0;
+        var rgbColor = "";
+        for (var x = 0; x < 600; x += 100) {
+            color += 40;
+            for (var y = 0; y < 600; y += 100) {
+                rgbColor = 'rgb(250, 2, ' + color + ')';
+                var pentagon = new Path.RegularPolygon(new Point(x, y), 5, 15);
+                pentagon.fillColor = rgbColor;
+            }
+        }
+
+
+    </script>
 </head>
 
 <body>
 
-
-<div id="container">
-    <h1>TO-DO LIST <img alt="add" id="plus" src="assets/images/plus-solid.svg"></h1>
-    <input placeholder="Add new one" type="text">
-    <ul>
-        <li><span><img alt="delete" class="delete" src="assets/images/calendar-times-regular.svg"></span> Go to Laundry
-            <img alt="check" class="check" src="assets/images/calendar-check-regular.svg"></li>
-        <li><span><img alt="delete" class="delete" src="assets/images/calendar-times-regular.svg"></span> Buy new
-            clothes
-            <img alt="check" class="check" src="assets/images/calendar-check-regular.svg"></li>
-        <li><span><img alt="delete" class="delete" src="assets/images/calendar-times-regular.svg"></span> Generate code
-            <img alt="check" class="check" src="assets/images/calendar-check-regular.svg"></li>
-        <li><span><img alt="delete" class="delete" src="assets/images/calendar-times-regular.svg"></span> Visualize
-            accounts
-            <img alt="check" class="check" src="assets/images/calendar-check-regular.svg"></li>
-    </ul>
-</div>
-
+<h1>Sound Demo <span id="version"></span></h1>
+<input id="btnSave" type="button" value="Save PNG"/>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet autem deleniti, libero maxime nulla numquam
+    recusandae tempora totam unde. Blanditiis facere, in laudantium magni obcaecati optio praesentium quia vel.</p>p>
+<canvas id="myCanvas" resize="true"></canvas>
 
 <script>
     document.body.classList.remove("no-js");

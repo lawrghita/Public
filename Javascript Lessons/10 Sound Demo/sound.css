@@ -4,106 +4,20 @@
     url("./assets/fonts/open-sans-v17-latin-regular.ttf") format("truetype");
 }
 
-body {
-    background: #89fffd; /* from ui gradients fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0b5a99, #89fffd); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0b5a99, #89fffd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-#container {
-    background: #89fffd;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    width: 360px;
-    font-family: "OpenSansRegular", serif;
-    margin: 100px auto;
-    user-select: none;
-}
-
-h1 {
-    background: #0b5a99;
-    color: aliceblue;
-    margin: 0;
-    padding: 2% 2% 2% 20px;
-    text-transform: uppercase;
-    font-weight: normal;
-    vertical-align: center;
-}
-
-#plus {
-    width: 40px;
-    float: right;
-    filter: invert(100%);
-}
-
-input {
-    color: midnightblue;
-
-    font-size: larger;
-    background: #89fffd;
-    width: 100%;
-    display: none;
-    box-sizing: border-box;
-    padding: 13px 13px 13px 20px;
-    border: 3px solid rgba(1, 1, 1, 0);
-
-}
-
-input:focus {
-    outline: #0b5a99 3px solid;
-    background: aliceblue;
-    padding: 14px 14px 12px 20px;
-}
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    /*border: rgba(11, 90, 153, 0.5) 1px solid;*/
-    background: aliceblue;
-    margin: 0;
-    height: 40px;
-    line-height: 40px;
-    color: midnightblue;
-    font-weight: bold;
-    font-size: larger;
-}
-
-li:nth-child(2n) {
-    background: #89fffd;
-}
-
-li:hover .delete {
-    width: 30px;
-    transition: all .9s;
-}
-
-.delete {
-    width: 0;
+body, html { /* full screen available*/
+    /*position: absolute;*/
     float: left;
-    padding-right: 10px;
-    padding-left: 1px;
-    padding-top: 2px;
-    filter: invert(0.5) sepia(41) saturate(100) hue-rotate(341deg)
+    height: 100%;
+    margin: 0;
+    font-family: "OpenSansRegular", serif;
 }
 
-.completed {
-    color: gray;
-    text-decoration: line-through;
-}
-
-.check {
-    width: 0;
-    float: right;
-    padding-right: 10px;
-    padding-left: 1px;
-    padding-top: 2px;
-    filter: invert(13%) sepia(66%) saturate(2405%) hue-rotate(229deg) brightness(92%) contrast(110%);
-}
-
-li.completed .check {
-    width: 30px;
+canvas {
+    float: left;
+    width: 100%;
+    height: 100%;
+    /*background: gray;*/
+    position: absolute;
+    display: block;
+    background-color: transparent;
 }
