@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <title>TODO List</title>
+    <meta content="Author: Ghita Laurentiu, TODO list" name="description"/>
+    <meta content="yes" name="mobile-web-app-capable"/>
+    <meta content="TODO list" name="application-name"/>
+    <meta content="#317EFB" name="theme-color"/>
+    <meta content="#317EFB" name="msapplication-navbutton-color"/>
+    <meta
+            content="index.html"
+            name="msapplication-starturl"
+    />
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link
+            href="favicon.ico"
+            rel="icon"
+            sizes="16x16"
+    />
+    <link href="sound.css" rel="stylesheet"/>
+    <link
+            href="manifest.json"
+            rel="manifest"
+    />
+    <link
+            href="assets/images/192.png"
+            rel="apple-touch-icon"
+    />
+    <script
+            src="assets/js/lib/jquery-3.4.1.js"
+            type="text/javascript"
+    ></script>
+</head>
+
+<body>
+
+
+<div id="container">
+    <h1>TO-DO LIST <img alt="add" id="plus" src="assets/images/plus-solid.svg"></h1>
+    <input placeholder="Add new one" type="text">
+    <ul>
+        <li><span><img alt="delete" class="delete" src="assets/images/calendar-times-regular.svg"></span> Go to Laundry
+            <img alt="check" class="check" src="assets/images/calendar-check-regular.svg"></li>
+        <li><span><img alt="delete" class="delete" src="assets/images/calendar-times-regular.svg"></span> Buy new
+            clothes
+            <img alt="check" class="check" src="assets/images/calendar-check-regular.svg"></li>
+        <li><span><img alt="delete" class="delete" src="assets/images/calendar-times-regular.svg"></span> Generate code
+            <img alt="check" class="check" src="assets/images/calendar-check-regular.svg"></li>
+        <li><span><img alt="delete" class="delete" src="assets/images/calendar-times-regular.svg"></span> Visualize
+            accounts
+            <img alt="check" class="check" src="assets/images/calendar-check-regular.svg"></li>
+    </ul>
+</div>
+
+
+<script>
+    document.body.classList.remove("no-js");
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+            .register("sw.js", {
+                scope: ""
+            })
+            .then(reg => {
+            })
+            .catch(error => {
+            });
+    } else {
+    }
+</script>
+<script async defer src="assets/js/sound.js"></script>
+</body>
+</html>

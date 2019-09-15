@@ -26,4 +26,7 @@ id08.href = "Javascript%20Lessons/08%20jquery%20first%20lesson/index.html";
 const id09 = document.getElementById("JS09");
 id09.href = "Javascript%20Lessons/09%20TODO%20list/index.html";
 
+const id10 = document.getElementById("JS10");
+id10.href = "Javascript%20Lessons/10%20Sound%20Demo/index.html";
+
 

@@ -1,0 +1,24 @@
+{
+  "name": "TODO List",
+  "short_name": "TODO",
+  "description": "TODO for offline testing",
+  "icons": [
+    {
+      "src": "assets/images/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/images/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "lang": "en-GB",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "minimal-ui",
+  "orientation": "portrait",
+  "theme_color": "#317EFB",
+  "background_color": "#3367D6"
+}
