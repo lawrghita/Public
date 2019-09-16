@@ -1,6 +1,6 @@
 const version = document.querySelector("#version");
 const time = document.lastModified;
-version.textContent = "v.0.3";
+version.textContent = "v.0.4";
 // var canvas=document.getElementById("myCanvas");
 // console.log(canvas);
 //
@@ -16,4 +16,5 @@ context.moveTo(0, 0);
 context.lineTo(400, 400);
 context.strokeStyle = "#ff0000";
 context.stroke();
+
 

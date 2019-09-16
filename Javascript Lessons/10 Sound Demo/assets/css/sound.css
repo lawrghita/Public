@@ -1,7 +1,7 @@
 @font-face {
     font-family: "OpenSansRegular";
     src: local("Open Sans Regular"), local("OpenSans-Regular"),
-    url("./assets/fonts/open-sans-v17-latin-regular.ttf") format("truetype");
+    url("../fonts/open-sans-v17-latin-regular.ttf") format("truetype");
 }
 
 body, html { /* full screen available*/

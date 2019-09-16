@@ -19,7 +19,7 @@
             rel="icon"
             sizes="16x16"
     />
-    <link href="sound.css" rel="stylesheet"/>
+    <link href="assets/css/sound.css" rel="stylesheet"/>
     <link
             href="manifest.json"
             rel="manifest"
@@ -33,38 +33,26 @@
             src="assets/js/lib/paper-full.js"
             type="text/javascript"
     ></script>
+    <script async defer src="assets/js/sound.js"></script>
     <script canvas="myCanvas" type="text/paperscript">
-
-        var canvas = document.getElementById("myCanvas");
-        var path = new Path();
-
-        path.strokeColor = 'black';
-        var start = new Point(100, 100);
-        path.moveTo(start);
-        path.lineTo(start + [100, -50]);
-        var myCircle = new Path.Circle(new Point(100, 70), 50);
-        myCircle.fillColor = "green";
-        var color = 0;
-        var rgbColor = "";
-        for (var x = 0; x < 600; x += 100) {
-            color += 40;
-            for (var y = 0; y < 600; y += 100) {
-                rgbColor = 'rgb(250, 2, ' + color + ')';
-                var pentagon = new Path.RegularPolygon(new Point(x, y), 5, 15);
-                pentagon.fillColor = rgbColor;
-            }
-        }
-
-
+   	// Create a Paper.js Path to draw a line into it:
+	var path = new Path();
+	// Give the stroke a color
+	path.strokeColor = 'black';
+	var start = new Point(100, 100);
+	// Move to start and draw a line from there
+	path.moveTo(start);
+	// Note the plus operator on Point objects.
+	// PaperScript does that for us, and much more!
+	path.lineTo(start + [ 100, -50 ]);
     </script>
 </head>
 
 <body>
 
 <h1>Sound Demo <span id="version"></span></h1>
-<input id="btnSave" type="button" value="Save PNG"/>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet autem deleniti, libero maxime nulla numquam
-    recusandae tempora totam unde. Blanditiis facere, in laudantium magni obcaecati optio praesentium quia vel.</p>p>
+    recusandae tempora totam unde. Blanditiis facere, in laudantium magni obcaecati optio praesentium quia vel.</p>
 <canvas id="myCanvas" resize="true"></canvas>
 
 <script>
@@ -81,6 +69,6 @@
     } else {
     }
 </script>
-<script async defer src="assets/js/sound.js"></script>
+
 </body>
 </html>
