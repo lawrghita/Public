@@ -1,7 +1,7 @@
 {
-  "name": "TODO List",
-  "short_name": "TODO",
-  "description": "TODO for offline testing",
+  "name": "Sound List",
+  "short_name": "Sound",
+  "description": "Soound for offline testing",
   "icons": [
     {
       "src": "assets/images/192.png",

@@ -1,5 +1,4 @@
-// "use strict";
-var cacheName = "todo-cache-v0.1.0";
+var cacheName = "sound-cache-v0.1.0";
 self.addEventListener("install", event => {
     console.log(" SW Install check", event);
     event.waitUntil(
@@ -12,7 +11,6 @@ self.addEventListener("install", event => {
                     "favicon.ico",
                     "assets/fonts/open-sans-v17-latin-regular.ttf",
                     "assets/js/sound.js",
-                    "assets/js/lib/jquery-3.4.1.js",
                     "assets/js/lib/paper-full.js",
                     "index.html",
                     "manifest.json",
@@ -30,7 +28,6 @@ self.addEventListener("install", event => {
 self.addEventListener("activate", event => {
     event.waitUntil(self.clients.claim());
 });
-
 
 self.addEventListener("push", function () {
     fetch("manifest.json")

@@ -28,32 +28,54 @@
             href="assets/images/192.png"
             rel="apple-touch-icon"
     />
-
     <script
             src="assets/js/lib/paper-full.js"
             type="text/javascript"
     ></script>
     <script async defer src="assets/js/sound.js"></script>
     <script canvas="myCanvas" type="text/paperscript">
-   	// Create a Paper.js Path to draw a line into it:
-	var path = new Path();
-	// Give the stroke a color
-	path.strokeColor = 'black';
-	var start = new Point(100, 100);
-	// Move to start and draw a line from there
-	path.moveTo(start);
-	// Note the plus operator on Point objects.
-	// PaperScript does that for us, and much more!
-	path.lineTo(start + [ 100, -50 ]);
+
+
+      var x = Math.floor(Math.random()*view.size.width)+1;
+      var y = Math.floor(Math.random()*view.size.height)+1;
+       var center = new Point(x,y);
+       var animatedCircle = new Path.Circle(center, 100);
+       animatedCircle.fillColor="transparent";  // first draw not showing
+
+    function onKeyDown(event){
+
+    //clear the canvas
+   project.activeLayer.removeChildren();
+   project.clear();
+
+        x = Math.floor(Math.random()*view.size.width)+1;
+        y = Math.floor(Math.random()*view.size.height)+1;
+        center = new Point(x,y);
+
+       animatedCircle = new Path.Circle(center, 100);
+       animatedCircle.fillColor="red";
+
+       var text = new paper.PointText(center);
+       text.content = "The "+event.key+" key was pressed "+view.size+" "+view.size.width;
+
+
+       }
+
+       function onFrame(event){
+        animatedCircle.fillColor.hue +=1;
+        animatedCircle.scale(0.9);
+       }
+
+
     </script>
 </head>
 
 <body>
-
+<canvas id="myCanvas" resize="true"></canvas>
 <h1>Sound Demo <span id="version"></span></h1>
+<h2>Html under transparent canvas defined in css</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet autem deleniti, libero maxime nulla numquam
     recusandae tempora totam unde. Blanditiis facere, in laudantium magni obcaecati optio praesentium quia vel.</p>
-<canvas id="myCanvas" resize="true"></canvas>
 
 <script>
     document.body.classList.remove("no-js");

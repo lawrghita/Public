@@ -4,20 +4,20 @@
     url("../fonts/open-sans-v17-latin-regular.ttf") format("truetype");
 }
 
-body, html { /* full screen available*/
-    /*position: absolute;*/
-    float: left;
+body, html {
     height: 100%;
     margin: 0;
     font-family: "OpenSansRegular", serif;
 }
 
 canvas {
-    float: left;
     width: 100%;
     height: 100%;
-    /*background: gray;*/
     position: absolute;
     display: block;
     background-color: transparent;
+}
+
+h1 {
+    color: red;
 }
