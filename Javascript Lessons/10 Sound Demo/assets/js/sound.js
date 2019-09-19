@@ -23,32 +23,36 @@ if (!true) {
 
 //*************** JUST FOR ERROR CHECKING
 
-    var x = Math.floor(Math.random() * view.size.width) + 1;
-    var y = Math.floor(Math.random() * view.size.height) + 1;
-    var center = new Point(x, y);
-    var animatedCircle = new Path.Circle(center, 100);
-    animatedCircle.fillColor = "transparent";  // first draw not showing
+    //clear the canvas
+    project.activeLayer.removeChildren();
+    project.clear();
 
-    function onKeyDown(event) {
-        //clear the canvas
-        project.activeLayer.removeChildren();
-        project.clear();
+    x = Math.floor(Math.random() * view.size.width) + 1;
+    y = Math.floor(Math.random() * view.size.height) + 1;
+    center = new Point(x, y);
+    animatedCircle = new Path.Circle(center, 100);
 
-        x = Math.floor(Math.random() * view.size.width) + 1;
-        y = Math.floor(Math.random() * view.size.height) + 1;
-        center = new Point(x, y);
+    //bitwise OR. Gives value in the range 0-255 which is then converted to base 16 (hex).
+    var randRED = (Math.random() * (256) | 0).toString(16);
+    console.log(Math.random() * (256), Math.random() * (256) | 0, Math.random() * (256) | 0.
+    toString(16)
+)
+    ;
+    var randGREEN = (Math.random() * (256) | 0).toString(16);
+    var randBLUE = (Math.random() * (256) | 0).toString(16);
+    animatedCircle.fillColor = "#" + randRED + randGREEN + randBLUE;
 
-        animatedCircle = new Path.Circle(center, 100);
-        animatedCircle.fillColor = "red";
+    var text = new paper.PointText(center);
+    //      text.content = "The "+event.key+" key was pressed "+view.size+" "+view.size.width;
 
-        var text = new paper.PointText(center);
-        text.content = "The " + event.key + " key was pressed " + view.size + " " + view.size.width;
-    }
 
-    function onFrame(event) {
-        animatedCircle.fillColor.hue += 1;
-        animatedCircle.scale(0.9);
-    }
+}
+
+function onFrame(event) {
+    animatedCircle.fillColor.hue += 1;
+    animatedCircle.scale(0.9);
+}
+
 
 //**************
 }
