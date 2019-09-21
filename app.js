@@ -29,4 +29,7 @@ id09.href = "Javascript%20Lessons/09%20TODO%20list/index.html";
 const id10 = document.getElementById("JS10");
 id10.href = "Javascript%20Lessons/10%20Sound%20Demo/index.html";
 
+const id11 = document.getElementById("JS11");
+id11.href = "Javascript%20Lessons/11%20TODO%20Workbox/redirect.html";
+
 
