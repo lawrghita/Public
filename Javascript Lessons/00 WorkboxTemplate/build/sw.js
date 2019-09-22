@@ -25,7 +25,7 @@ if (workbox) {
         },
         {
             "url": "index.html",
-            "revision": "6ab3431d87d4273dad7f3e3ff45db4d0"
+            "revision": "00d0031999235c161f13a38f67a7bbf5"
         },
         {
             "url": "install.js",

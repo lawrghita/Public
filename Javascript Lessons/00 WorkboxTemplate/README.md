@@ -114,6 +114,8 @@ In this Application, I use Workbox Command Line Interface - Node Module for [Wor
     ```    
 2. In `index.html` `<head>`
     ```
+        <meta name="Description" content="Put your description here.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta content="width=device-width, initial-scale=1" name="viewport">
         <meta content="A PWA Template" name="description">
         <meta content="yes" name="apple-mobile-web-app-capable">
