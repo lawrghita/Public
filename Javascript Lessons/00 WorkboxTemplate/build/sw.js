@@ -25,7 +25,7 @@ if (workbox) {
         },
         {
             "url": "index.html",
-            "revision": "00d0031999235c161f13a38f67a7bbf5"
+            "revision": "7c412b579c368a30965fb1e787fd60c4"
         },
         {
             "url": "install.js",
@@ -37,7 +37,7 @@ if (workbox) {
         },
         {
             "url": "manifest.json",
-            "revision": "d364660104f53b74ddeb3f9a6b12cf88"
+            "revision": "ce35f218cf7c311edb337dd642de67ac"
         },
         {
             "url": "images/icons/icon-128x128.png",
