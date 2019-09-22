@@ -33,8 +33,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/Javascript Lessons/00 WorkboxTemplate/build/index.html",
-  "scope": "/Javascript Lessons/00 WorkboxTemplate/build",
+  "start_url": "./build/index.html",
+  "scope": "./build",
   "display": "standalone",
   "background_color": "#3E4EB8",
   "theme_color": "#2F3BA2",
