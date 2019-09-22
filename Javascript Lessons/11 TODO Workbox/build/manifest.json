@@ -35,14 +35,8 @@
   ],
   "start_url": "index.html",
   "scope": "/",
-  "display": "standalone",
+  "display": "minimal-ui",
   "background_color": "#3E4EB8",
   "theme_color": "#2F3BA2",
-  "prefer_related_applications": true,
-  "related_applications": [
-    {
-      "platform": "play",
-      "id": "com.google.samples.apps.iosched"
-    }
-  ]
+  "prefer_related_applications": true
 }
