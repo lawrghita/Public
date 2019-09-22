@@ -16,7 +16,7 @@
  * limitations under the License
  */
 'use strict';
-var deferredPrompt;
+let deferredPrompt;
 
 // CODELAB: Add event listener for beforeinstallprompt event
 window.addEventListener('beforeinstallprompt', function saveBeforeInstallPromptEvent(evt) {
@@ -27,7 +27,7 @@ window.addEventListener('beforeinstallprompt', function saveBeforeInstallPromptE
     installButton.removeAttribute('hidden');
 });
 
-var installButton = document.getElementById('butInstall');
+let installButton = document.getElementById('butInstall');
 
 installButton.addEventListener('click', function installPWA() {
 // CODELAB: Add code show install prompt & hide the install button.
@@ -52,5 +52,6 @@ installButton.addEventListener('click', function installPWA() {
 window.addEventListener('appinstalled', function logAppInstalled(evt) {
 // CODELAB: Add code to log the event
         console.log('Workbox PWA Template was installed.', evt);
+        alert('Workbox PWA Template was installed. ' + evt);
     }
 );
