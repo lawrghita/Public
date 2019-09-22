@@ -37,7 +37,7 @@ if (workbox) {
         },
         {
             "url": "manifest.json",
-            "revision": "5a2dcf48c1338ec8051662df6dd770fc"
+            "revision": "175a8fe83ad8e81186caec0acb10d31a"
         },
         {
             "url": "images/icons/icon-128x128.png",
@@ -45,7 +45,7 @@ if (workbox) {
         },
         {
             "url": "images/icons/icon-144x144.png",
-            "revision": "2d97bd75d98ff5067f03985b83a164ff"
+            "revision": "92871c72b5ae91f05e62db1792e028b7"
         },
         {
             "url": "images/icons/icon-152x152.png",
