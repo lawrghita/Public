@@ -16,7 +16,7 @@ limitations under the License.
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js');
 
 if (workbox) {
-    console.log(`Yay! Workbox is loaded 🎉`);
+    console.log(`Yay! Workbox is loadeed 🎉`);
 
     workbox.precaching.precacheAndRoute([]);
 
@@ -61,6 +61,8 @@ if (workbox) {
 //         });
 //
 //     // first show quick the cache then try to update the cache from network
+//     //  The stale-while-revalidate strategy is ideal for certain types of data.
+//     //  It gets data on screen as quickly as possible, then updates that once the network has returned the latest data
 //     workbox.routing.registerRoute(
 //         new RegExp('/images/icon/(.*)icon(.*).(.*)'),
 //         new workbox.strategies.StaleWhileRevalidate({
