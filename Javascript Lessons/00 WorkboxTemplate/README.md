@@ -32,9 +32,9 @@ In this Application, I use Workbox Command Line Interface - Node Module for [Wor
      module.exports = {
       "globDirectory": "build/",
       "globPatterns": [
-          "index.html",
-          "offline.html",
-          "404.html"
+          "**/*.{html,js,css}",
+          "manifest.json",
+          "images/icons/*.png"
       ],
       "swSrc": "src/sw.js",
       "swDest": "build\\sw.js",
@@ -47,6 +47,7 @@ In this Application, I use Workbox Command Line Interface - Node Module for [Wor
       if (workbox) {
        console.log(`Yay! Workbox is loaded 🎉`);
         workbox.precaching.precacheAndRoute([]);
+        // check comments on my sw.js for cacheFirst/StaleWhileRevalidate/networkFirst
       } else {
        console.log(`Boo! Workbox didn't load 😬`);
      }
@@ -99,7 +100,8 @@ In this Application, I use Workbox Command Line Interface - Node Module for [Wor
           "type": "image/png"
         }
       ],
-      "start_url": "/index.html",
+      "start_url": "index.html",
+      "scope": "/",
       "display": "standalone",
       "background_color": "#3E4EB8",
       "theme_color": "#2F3BA2",
@@ -115,7 +117,6 @@ In this Application, I use Workbox Command Line Interface - Node Module for [Wor
 2. In `index.html` `<head>`
     ```
         <meta name="Description" content="Put your description here.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta content="width=device-width, initial-scale=1" name="viewport">
         <meta content="A PWA Template" name="description">
         <meta content="yes" name="apple-mobile-web-app-capable">
@@ -127,52 +128,54 @@ In this Application, I use Workbox Command Line Interface - Node Module for [Wor
     ```
  3.  In `index.html` `<body>` define a personalized install button for PWA:
      ```
-     <button id="butInstall">Install</button>
+     <button aria-hidden="true" hidden id="butInstall">Install</button>
      ```
  4. Create `install.js` with function code for PWA install button:
+    ```
+    'use strict';
+    let deferredPrompt;
+    // CODELAB: Add event listener for beforeinstallprompt event
+    window.addEventListener('beforeinstallprompt', function saveBeforeInstallPromptEvent(evt) {
+        evt.preventDefault();
+        deferredPrompt = evt;
+        console.log("beforeinstallprompt", deferredPrompt);
+        // CODELAB: Add code to save event & show the install button.
+        installButton.removeAttribute('hidden');
+    });
+    
+    let installButton = document.getElementById('butInstall');
+    installButton.addEventListener('click', function installPWA() {
+    // CODELAB: Add code show install prompt & hide the install button.
+        console.log("Prompt", deferredPrompt);
+        deferredPrompt.prompt();
+    // Hide the install button, it can't be called twice.
+        this.setAttribute('hidden', true);
+        // CODELAB: Log user response to prompt.
+        deferredPrompt.userChoice
+            .then((choice) => {
+                if (choice.outcome === 'accepted') {
+                    console.log('User accepted the A2HS prompt', choice);
+                } else {
+                    console.log('User dismissed the A2HS prompt', choice);
+                }
+                deferredPrompt = null;
+            });
+    });
+    // CODELAB: Add event listener for appinstalled event
+    window.addEventListener('appinstalled', function logAppInstalled(evt) {
+    // CODELAB: Add code to log the event
+            console.log('Workbox PWA Template was installed.', evt);
+            alert('Workbox PWA Template was installed. ' + evt);
+        }
+    );
      ```
-     'use strict';
-     let deferredPrompt;
-     const installButton = document.getElementById('butInstall');
-     
-     installButton.addEventListener('click', function installPWA(evt) {
-     // CODELAB: Add code show install prompt & hide the install button.
-         deferredPrompt.prompt();
-     // Hide the install button, it can't be called twice.
-         this.setAttribute('hidden', true);
-         // CODELAB: Log user response to prompt.
-         deferredPrompt.userChoice
-             .then((choice) => {
-                 if (choice.outcome === 'accepted') {
-                     console.log('User accepted the A2HS prompt', choice);
-                 } else {
-                     console.log('User dismissed the A2HS prompt', choice);
-                 }
-                 deferredPrompt = null;
-             });
-     });
-     
-     // CODELAB: Add event listener for beforeinstallprompt event
-     window.addEventListener('beforeinstallprompt', function saveBeforeInstallPromptEvent(evt) {
-         evt.preventDefault();
-         deferredPrompt = evt;
-         // CODELAB: Add code to save event & show the install button.
-         installButton.removeAttribute('hidden');
-     });
-     
-     // CODELAB: Add event listener for appinstalled event
-     window.addEventListener('appinstalled', function logAppInstalled(evt) {
-     // CODELAB: Add code to log the event
-             console.log('Workbox PWA Template was installed.', evt);
-         }
-     );
-     ```
- 5. In `index.html` `<body>` before service worker script:
+ 5. In `index.html` `<body>` before service worker script insert the call for point 4.:
      ```
      <script src="install.js"></script>
      ```
 ## Note
-All images are CCO
+- Very important, all the paths must point correctly on production deployment: *for example my icons from manifest point to the root/images... for the site production deployment*
+- All images are CCO
 ## License
 Copyright lawrghita
 
