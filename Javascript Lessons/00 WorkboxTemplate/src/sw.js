@@ -61,6 +61,8 @@ if (workbox) {
 //         });
 //
 //     // first show quick the cache then try to update the cache from network
+//     //  The stale-while-revalidate strategy is ideal for certain types of data.
+//     //  It gets data on screen as quickly as possible, then updates that once the network has returned the latest data
 //     workbox.routing.registerRoute(
 //         new RegExp('/images/icon/(.*)icon(.*).(.*)'),
 //         new workbox.strategies.StaleWhileRevalidate({

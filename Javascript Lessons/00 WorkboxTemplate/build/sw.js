@@ -21,15 +21,47 @@ if (workbox) {
     workbox.precaching.precacheAndRoute([
         {
             "url": "404.html",
-            "revision": "4efd3c676a9cb477da817ce9c222004b"
+            "revision": "aaad9f7c87f3d7512d8a7579dcc8a931"
         },
         {
             "url": "index.html",
-            "revision": "9b657cc58bea4701ea38da91e248bfba"
+            "revision": "6ab3431d87d4273dad7f3e3ff45db4d0"
+        },
+        {
+            "url": "install.js",
+            "revision": "e7f41894374a431acf4b5069aec6cf86"
         },
         {
             "url": "offline.html",
-            "revision": "a54cfd3d2a7386c04dfdcf4f79590649"
+            "revision": "0d8c51a202eb49c95e0f09dfa4472a83"
+        },
+        {
+            "url": "manifest.json",
+            "revision": "d364660104f53b74ddeb3f9a6b12cf88"
+        },
+        {
+            "url": "images/icons/icon-128x128.png",
+            "revision": "007dff90d9d50ed8b7c515c21a150f3e"
+        },
+        {
+            "url": "images/icons/icon-144x144.png",
+            "revision": "181de7e3f7715769f16c36b0a79d05be"
+        },
+        {
+            "url": "images/icons/icon-152x152.png",
+            "revision": "2a65930e10acb628ee982835936d0cf4"
+        },
+        {
+            "url": "images/icons/icon-192x192.png",
+            "revision": "8d61b836daff8134ec4f4b12743de4bc"
+        },
+        {
+            "url": "images/icons/icon-256x256.png",
+            "revision": "4acbfb4b5dc6fedb457376ba5371b9ae"
+        },
+        {
+            "url": "images/icons/icon-512x512.png",
+            "revision": "0f58cf2cd73f18eb0823fdc2b90fb0d2"
         }
     ]);
 
@@ -74,6 +106,8 @@ if (workbox) {
 //         });
 //
 //     // first show quick the cache then try to update the cache from network
+//     //  The stale-while-revalidate strategy is ideal for certain types of data.
+//     //  It gets data on screen as quickly as possible, then updates that once the network has returned the latest data
 //     workbox.routing.registerRoute(
 //         new RegExp('/images/icon/(.*)icon(.*).(.*)'),
 //         new workbox.strategies.StaleWhileRevalidate({

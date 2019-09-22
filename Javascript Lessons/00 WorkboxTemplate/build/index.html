@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Workbox TODO</title>
+
+    <!--    PWA Template-->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="A PWA Template" name="description">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="PWA Template" name="apple-mobile-web-app-title">
+    <meta content="#2F3BA2" name="theme-color"/>
+    <link href="manifest.json" rel="manifest">
+    <link href="images/icons/icon-152x152.png" rel="apple-touch-icon">
+
 </head>
 <body>
-<h1> Workbox TODO</h1>
+<h1>Workbox & PWA</h1>
+<button id="butInstall">Install</button>
+
+<script src="install.js"></script>
 <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
