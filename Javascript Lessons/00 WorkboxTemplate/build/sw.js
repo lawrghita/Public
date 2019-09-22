@@ -29,7 +29,7 @@ if (workbox) {
         },
         {
             "url": "install.js",
-            "revision": "861cf6eaae19993bb5e8b2158bec7ddc"
+            "revision": "8fdc3d9da9bca7712b47fd99d3574bea"
         },
         {
             "url": "offline.html",
@@ -37,11 +37,15 @@ if (workbox) {
         },
         {
             "url": "manifest.json",
-            "revision": "2ff2307ec39d4eed91f6082a6075dbfb"
+            "revision": "5a2dcf48c1338ec8051662df6dd770fc"
         },
         {
             "url": "images/icons/icon-128x128.png",
             "revision": "007dff90d9d50ed8b7c515c21a150f3e"
+        },
+        {
+            "url": "images/icons/icon-144x144.png",
+            "revision": "2d97bd75d98ff5067f03985b83a164ff"
         },
         {
             "url": "images/icons/icon-152x152.png",
