@@ -25,11 +25,11 @@ if (workbox) {
         },
         {
             "url": "index.html",
-            "revision": "7c412b579c368a30965fb1e787fd60c4"
+            "revision": "d3e23a9b8f520619ee001cfe5ce31643"
         },
         {
             "url": "install.js",
-            "revision": "8fdc3d9da9bca7712b47fd99d3574bea"
+            "revision": "7b9e34bf59f67c96fef998c5c918722b"
         },
         {
             "url": "offline.html",
