@@ -16,11 +16,22 @@
  * limitations under the License
  */
 'use strict';
-let deferredPrompt;
-const installButton = document.getElementById('butInstall');
+var deferredPrompt;
 
-installButton.addEventListener('click', function installPWA(evt) {
+// CODELAB: Add event listener for beforeinstallprompt event
+window.addEventListener('beforeinstallprompt', function saveBeforeInstallPromptEvent(evt) {
+    evt.preventDefault();
+    deferredPrompt = evt;
+    console.log("beforeinstallprompt", deferredPrompt);
+    // CODELAB: Add code to save event & show the install button.
+    installButton.removeAttribute('hidden');
+});
+
+var installButton = document.getElementById('butInstall');
+
+installButton.addEventListener('click', function installPWA() {
 // CODELAB: Add code show install prompt & hide the install button.
+    console.log("Prompt", deferredPrompt);
     deferredPrompt.prompt();
 // Hide the install button, it can't be called twice.
     this.setAttribute('hidden', true);
@@ -36,13 +47,6 @@ installButton.addEventListener('click', function installPWA(evt) {
         });
 });
 
-// CODELAB: Add event listener for beforeinstallprompt event
-window.addEventListener('beforeinstallprompt', function saveBeforeInstallPromptEvent(evt) {
-    evt.preventDefault();
-    deferredPrompt = evt;
-    // CODELAB: Add code to save event & show the install button.
-    installButton.removeAttribute('hidden');
-});
 
 // CODELAB: Add event listener for appinstalled event
 window.addEventListener('appinstalled', function logAppInstalled(evt) {

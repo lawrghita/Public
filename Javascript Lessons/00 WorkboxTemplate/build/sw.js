@@ -29,7 +29,7 @@ if (workbox) {
         },
         {
             "url": "install.js",
-            "revision": "e7f41894374a431acf4b5069aec6cf86"
+            "revision": "861cf6eaae19993bb5e8b2158bec7ddc"
         },
         {
             "url": "offline.html",
