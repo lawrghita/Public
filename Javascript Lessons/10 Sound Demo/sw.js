@@ -12,6 +12,8 @@ self.addEventListener("install", event => {
                     "assets/fonts/open-sans-v17-latin-regular.ttf",
                     "assets/js/sound.js",
                     "assets/js/lib/paper-full.js",
+                    "assets/js/lib/howler.js",
+                    "assets/*.mp3",
                     "index.html",
                     "manifest.json",
                     "sw.js",
