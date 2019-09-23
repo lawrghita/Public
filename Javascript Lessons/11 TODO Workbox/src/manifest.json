@@ -1,6 +1,6 @@
 {
-  "name": "PWA Template",
-  "short_name": "PWA Template",
+  "name": "TODO Workbox",
+  "short_name": "TODO Workbox",
   "icons": [
     {
       "src": "/images/icons/icon-128x128.png",
@@ -40,9 +40,5 @@
   "theme_color": "#2F3BA2",
   "prefer_related_applications": true,
   "related_applications": [
-    {
-      "platform": "play",
-      "id": "com.google.samples.apps.iosched"
-    }
   ]
 }

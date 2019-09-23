@@ -27,7 +27,7 @@ In this Application, I use Workbox Command Line Interface - Node Module for [Wor
                }
              </script>
      ```
-  8. crate a `workbox-config.js` file with
+  8. create a `workbox-config.js` file with
      ```
      module.exports = {
       "globDirectory": "build/",

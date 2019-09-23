@@ -1,8 +1,13 @@
 module.exports = {
     "globDirectory": "build/",
     "globPatterns": [
-        "**/*.{html,js,css}",
+        "**/*.{js,css}",
+        "404.html",
+        "offline.html",
         "manifest.json",
+        "fonts/open-sans-v17-latin-regular.ttf",
+        "icons/*.svg",
+        "images/*.{svg,png}",
         "images/icons/*.png"
     ],
     "swSrc": "src/sw.js",

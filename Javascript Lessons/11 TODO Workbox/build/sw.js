@@ -16,54 +16,54 @@ limitations under the License.
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js');
 
 if (workbox) {
-  console.log(`Yay! Workbox is loadeed 🎉`);
+    console.log(`Yay! Workbox is loadeed 🎉`);
 
     workbox.precaching.precacheAndRoute([
-      {
-        "url": "404.html",
-        "revision": "aaad9f7c87f3d7512d8a7579dcc8a931"
-      },
-      {
-        "url": "index.html",
-        "revision": "e4f039a6ecf2f01618216440932c273d"
-      },
-      {
-        "url": "install.js",
-        "revision": "07f0f114f6dcfe9d08455f53ea8cae1e"
-      },
-      {
-        "url": "offline.html",
-        "revision": "0d8c51a202eb49c95e0f09dfa4472a83"
-      },
-      {
-        "url": "manifest.json",
-        "revision": "175a8fe83ad8e81186caec0acb10d31a"
-      },
-      {
-        "url": "images/icons/icon-128x128.png",
-        "revision": "007dff90d9d50ed8b7c515c21a150f3e"
-      },
-      {
-        "url": "images/icons/icon-144x144.png",
-        "revision": "92871c72b5ae91f05e62db1792e028b7"
-      },
-      {
-        "url": "images/icons/icon-152x152.png",
-        "revision": "2a65930e10acb628ee982835936d0cf4"
-      },
-      {
-        "url": "images/icons/icon-192x192.png",
-        "revision": "8d61b836daff8134ec4f4b12743de4bc"
-      },
-      {
-        "url": "images/icons/icon-256x256.png",
-        "revision": "4acbfb4b5dc6fedb457376ba5371b9ae"
-      },
-      {
-        "url": "images/icons/icon-512x512.png",
-        "revision": "0f58cf2cd73f18eb0823fdc2b90fb0d2"
-      }
-    ]);
+  {
+    "url": "install.js",
+    "revision": "07f0f114f6dcfe9d08455f53ea8cae1e"
+  },
+  {
+    "url": "todo.css",
+    "revision": "0c05fb7e0c8d17fe7bb350140633b16f"
+  },
+  {
+    "url": "404.html",
+    "revision": "aaad9f7c87f3d7512d8a7579dcc8a931"
+  },
+  {
+    "url": "offline.html",
+    "revision": "0d8c51a202eb49c95e0f09dfa4472a83"
+  },
+  {
+    "url": "manifest.json",
+    "revision": "e5bf36cbf13d9f99668c1ef8b57bdcd8"
+  },
+  {
+    "url": "images/icons/icon-128x128.png",
+    "revision": "007dff90d9d50ed8b7c515c21a150f3e"
+  },
+  {
+    "url": "images/icons/icon-144x144.png",
+    "revision": "92871c72b5ae91f05e62db1792e028b7"
+  },
+  {
+    "url": "images/icons/icon-152x152.png",
+    "revision": "2a65930e10acb628ee982835936d0cf4"
+  },
+  {
+    "url": "images/icons/icon-192x192.png",
+    "revision": "8d61b836daff8134ec4f4b12743de4bc"
+  },
+  {
+    "url": "images/icons/icon-256x256.png",
+    "revision": "4acbfb4b5dc6fedb457376ba5371b9ae"
+  },
+  {
+    "url": "images/icons/icon-512x512.png",
+    "revision": "0f58cf2cd73f18eb0823fdc2b90fb0d2"
+  }
+]);
 
 //
 // // cache first
