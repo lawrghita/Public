@@ -19,7 +19,7 @@
             src="js/lib/jquery-3.4.1.js"
             type="text/javascript"
     ></script>
-    <!-- <link href="js/todo.css" rel="stylesheet"/> -->
+    <link href="todo.css" rel="stylesheet"/>
     <link
     href="favicon.ico"
     rel="icon"
@@ -27,24 +27,28 @@
 />
 </head>
 <body>
+<!--<button aria-hidden="true" hidden id="butInstall">Install</button>-->
+
     <div id="container">
-        <h1>TO-DO LIST <img alt="add" id="plus" src="images/plus-solid.svg"></h1>
-        <input placeholder="Add new one" type="text">
+        <h1>TO-DO LIST
+            <button id="butInstall">Install</button>
+            <img alt="add" id="plus" src="icons/plus-solid.svg"></h1>
+        <input maxlength="16" placeholder="Add new one" type="text">
         <ul>
-            <li><span><img alt="delete" class="delete" src="images/calendar-times-regular.svg"></span> Go to Laundry
-                <img alt="check" class="check" src="images/calendar-check-regular.svg"></li>
-            <li><span><img alt="delete" class="delete" src="images/calendar-times-regular.svg"></span> Buy new
+            <li><span><img alt="delete" class="delete" src="icons/calendar-times-regular.svg"></span> Go to Laundry
+                <img alt="check" class="check" src="icons/calendar-check-regular.svg"></li>
+            <li><span><img alt="delete" class="delete" src="icons/calendar-times-regular.svg"></span> Buy new
                 clothes
-                <img alt="check" class="check" src="images/calendar-check-regular.svg"></li>
-            <li><span><img alt="delete" class="delete" src="images/calendar-times-regular.svg"></span> Generate code
-                <img alt="check" class="check" src="images/calendar-check-regular.svg"></li>
-            <li><span><img alt="delete" class="delete" src="images/calendar-times-regular.svg"></span> Visualize
+                <img alt="check" class="check" src="icons/calendar-check-regular.svg"></li>
+            <li><span><img alt="delete" class="delete" src="icons/calendar-times-regular.svg"></span> Generate code
+                <img alt="check" class="check" src="icons/calendar-check-regular.svg"></li>
+            <li><span><img alt="delete" class="delete" src="icons/calendar-times-regular.svg"></span> Visualize
                 accounts
-                <img alt="check" class="check" src="images/calendar-check-regular.svg"></li>
+                <img alt="check" class="check" src="icons/calendar-check-regular.svg"></li>
         </ul>
     </div>
 
-<button aria-hidden="true" hidden id="butInstall">Install</button>
+
 
 <script src="install.js"></script>
 <script>
@@ -60,6 +64,6 @@
         });
     }
 </script>
-<script async defer src="js/todo.js"></script>
+<script async defer src="todo.js"></script>
 </body>
 </html>

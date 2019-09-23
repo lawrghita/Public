@@ -20,20 +20,20 @@ if (workbox) {
 
     workbox.precaching.precacheAndRoute([]);
 
-//
-// // cache first
-//     workbox.routing.registerRoute(
-//         new RegExp('/images/articles/'),
-//         workbox.strategies.cacheFirst({
-//             cacheName: 'images-cache',
-//             plugins: [
-//                 new workbox.expiration.Plugin({
-//                     maxEntries: 50,
-//                     maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
-//                 })
-//             ]
-//         })
-//     );
+
+// cache first
+    workbox.routing.registerRoute(
+        new RegExp('index.html'),
+        workbox.strategies.cacheFirst({
+            cacheName: 'index-cache',
+            plugins: [
+                new workbox.expiration.Plugin({
+                    // maxEntries: 50,
+                    maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+                })
+            ]
+        })
+    );
 //
 //
 //     //cache first for old html`s rare update
