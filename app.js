@@ -32,4 +32,8 @@ id10.href = "Javascript%20Lessons/10%20Sound%20Demo/index.html";
 const id11 = document.getElementById("JS11");
 id11.href = "Javascript%20Lessons/11%20TODO%20Workbox/redirect.html";
 
+const id12 = document.getElementById("JS12");
+id12.href = "Javascript%20Lessons/12%20Regex/index.html";
+
+
 
