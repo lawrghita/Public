@@ -1,0 +1,15 @@
+.code {
+    font-weight: bold;
+    color: magenta;
+}
+
+.input {
+    display: inline-block;
+    white-space: pre-wrap;
+}
+
+.result {
+    font-style: italic;
+    color: darkgreen;
+    border: darkgreen 1px solid;
+}
