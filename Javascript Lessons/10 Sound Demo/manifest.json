@@ -1,7 +1,7 @@
 {
   "name": "Sound List",
   "short_name": "Sound",
-  "description": "Soound for offline testing",
+  "description": "Sound for offline testing",
   "icons": [
     {
       "src": "assets/images/192.png",
