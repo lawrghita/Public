@@ -1,0 +1,28 @@
+MySQLstr="DRIVER={MySQL ODBC 3.51 Driver};SERVER=xxx.xxx.xxx.xxx;"+;
+"PORT=3306;DATABASE=somedatabase;USER="+alltrim(thisform.logidTxt.Value)+";"+;
+"PASSWORD="+alltrim(thisform.pwdTxt.Value)+";OPTION=3;"
+
+
+MySQLhandle=sqlstringconnect(MySQLstr)
+
+
+if MySQLhandle>0 then
+
+your good to go....
+
+else
+
+something's a mess
+
+ENDIF
+HRD_LOG = "TABLE_HRD_CONTACTS_V01" 
+
+msql = "SELECT * FROM &HRD_LOG WHERE Col_time_on BETWEEN '2015-01-01' AND '2015-12-31'"
+														
+IF SQLEXEC(xCon,msql,"cHRD") <= 0					
+   	MESSAGEBOX("Can't Call Database",0+16,"Error")
+  	SQLDISCONNECT(xCon)								
+	RETURN 
+ENDIF 
+
+BROWSE FONT 'verdana',12 
