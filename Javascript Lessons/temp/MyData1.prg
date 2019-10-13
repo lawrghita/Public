@@ -1,6 +1,6 @@
 * *********************************************************
 * *
-* * 13/10/2019             MYDATA1.DBC             18:49:26
+* * 13/10/2019             MYDATA1.DBC             20:44:03
 * *
 * *********************************************************
 * *
@@ -27,7 +27,7 @@ DisplayStatus([Finished.])
 
 FUNCTION MakeTable_VANZATOR
 ***** Table setup for VANZATOR *****
-CREATE TABLE 'VANZATOR.DBF' NAME 'VANZATOR' (ID C(6) NOT NULL, ;
+CREATE TABLE 'VANZATOR.DBF' NAME 'VANZATOR' (ID I NOT NULL, ;
                        NUME C(20) NOT NULL)
 
 ***** Create each index for VANZATOR *****
@@ -39,7 +39,7 @@ ENDFUNC
 FUNCTION MakeTable_CUMPARATOR
 ***** Table setup for CUMPARATOR *****
 CREATE TABLE 'CUMPARATOR.DBF' NAME 'CUMPARATOR' (ID I NOT NULL, ;
-                         ID_VANZ C(10) NOT NULL, ;
+                         ID_VANZ I NOT NULL, ;
                          NUME C(10) NOT NULL, ;
                          RAMURA C(10) NOT NULL)
 
@@ -55,7 +55,9 @@ FUNCTION MakeTable_COMENZI
 ***** Table setup for COMENZI *****
 CREATE TABLE 'COMENZI.DBF' NAME 'COMENZI' (ID I NOT NULL, ;
                       ID_CUMP I NOT NULL, ;
-                      SUMA Y NOT NULL)
+                      VALOARE Y NOT NULL, ;
+                      CANTITATE I NOT NULL CHECK (cantitate>9) ERROR "Cantitate trebuie mai mare sau egala cu 10" DEFAULT 10, ;
+                      DISCOUNT N(5, 2) NULL DEFAULT .NULL.)
 
 ***** Create each index for COMENZI *****
 INDEX ON ID_CUMP TAG ID_CUMP COLLATE 'MACHINE'
@@ -64,9 +66,10 @@ ALTER TABLE 'COMENZI' ADD PRIMARY KEY ID TAG ID COLLATE 'MACHINE'
 ***** Change properties for COMENZI *****
 DBSETPROP('COMENZI.ID', 'Field', 'Caption', "Identificator Comanda")
 DBSETPROP('COMENZI.ID_CUMP', 'Field', 'Caption', "Cod Cumparator")
-DBSETPROP('COMENZI.SUMA', 'Field', 'Caption', "Suma LEI")
-DBSETPROP('COMENZI.SUMA', 'Field', 'InputMask', "99999999")
-DBSETPROP('COMENZI.SUMA', 'Field', 'Format', "$")
+DBSETPROP('COMENZI.VALOARE', 'Field', 'Caption', "Suma LEI")
+DBSETPROP('COMENZI.VALOARE', 'Field', 'InputMask', "999999.99")
+DBSETPROP('COMENZI.VALOARE', 'Field', 'Format', "$")
+ALTER TABLE 'COMENZI' SET CHECK (valoare>0) ERROR "Valoarea mai mare ca 0"
 ENDFUNC
 
 *************** Begin Relations Setup **************

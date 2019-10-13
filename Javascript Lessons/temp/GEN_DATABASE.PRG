@@ -53,12 +53,13 @@ ENDFUNC
 
 FUNCTION MakeTable_VANZATOR
 ***** Table setup for VANZATOR *****
-CREATE TABLE 'VANZATOR.DBF' NAME 'VANZATOR' (ID I NOT NULL, ;
-                       NUME C(20) NOT NULL)
+CREATE TABLE 'VANZATOR.DBF' NAME 'VANZATOR' (;
+						ID I PRIMARY KEY, ;
+                       	NUME C(20) NOT NULL)
 
 ***** Create each index for VANZATOR *****
-ALTER TABLE 'VANZATOR' ADD PRIMARY KEY ID TAG ID 
-INDEX ON ID TAG ID CANDIDATE
+*ALTER TABLE 'VANZATOR' ADD PRIMARY KEY ID TAG ID 
+*INDEX ON ID TAG ID CANDIDATE
 ***** Change properties for VANZATOR *****
 ENDFUNC
 
@@ -71,17 +72,18 @@ ENDFUNC
 
 FUNCTION MakeTable_CUMPARATOR
 ***** Table setup for CUMPARATOR *****
-CREATE TABLE 'CUMPARATOR.DBF' NAME 'CUMPARATOR' (ID I NOT NULL, ;
+CREATE TABLE 'CUMPARATOR.DBF' NAME 'CUMPARATOR' (;
+						 ID I PRIMARY KEY, ;
                          ID_VANZ I NOT NULL, ;
                          NUME C(10) NOT NULL, ;
-                         RAMURA C(10) NOT NULL)
+                         RAMURA C(10) NOT NULL, ;
+                         FOREIGN KEY ID_VANZ TAG ID_VANZ REFERENCES VANZATOR)
 
 ***** Create each index for CUMPARATOR *****
-ALTER TABLE 'CUMPARATOR' ADD PRIMARY KEY ID TAG ID  
-INDEX ON ID TAG ID CANDIDATE
+*ALTER TABLE 'CUMPARATOR' ADD PRIMARY KEY ID TAG ID  
+*INDEX ON ID TAG ID CANDIDATE
 INDEX ON NUME TAG NUME CANDIDATE
-INDEX ON ID_VANZ TAG ID_VANZ  
-
+*INDEX ON ID_VANZ TAG ID_VANZ  
 
 ***** Change properties for CUMPARATOR *****
 ENDFUNC
@@ -96,29 +98,34 @@ ENDFUNC
 
 FUNCTION MakeTable_COMENZI
 ***** Table setup for COMENZI *****
-CREATE TABLE 'COMENZI.DBF' NAME 'COMENZI' (ID I NOT NULL, ;
-                      ID_CUMP I NOT NULL, ;
-                      VALOARE Y NOT NULL, ;
-                      CANTITATE I, ;
-                      DISCOUNT N(5,2) NULL)
+CREATE TABLE 'COMENZI.DBF' NAME 'COMENZI' (;
+					ID I PRIMARY KEY, ;
+                    ID_CUMP I NOT NULL, ;
+                    VALOARE Y NOT NULL, ;
+                    CANTITATE I DEFAULT 10 ;
+                                CHECK (CANTITATE > 9);
+                                ERROR "Cantitate trebuie mai mare sau egala cu 10", ;
+                    DISCOUNT N(5,2) NULL DEFAULT NULL,; 
+                    CHECK (VALOARE > 0) ERROR "Valoarea mai mare ca 0" ;
+                    )
 ***** Create each index for COMENZI *****
 INDEX ON ID_CUMP TAG ID_CUMP  
-ALTER TABLE 'COMENZI' ADD PRIMARY KEY ID TAG ID  
+*ALTER TABLE 'COMENZI' ADD PRIMARY KEY ID TAG ID  
 ***** Change properties for COMENZI *****
-*DBSETPROP('COMENZI.ID', 'Field', 'Caption', "Identificator Comanda")
-*DBSETPROP('COMENZI.ID_CUMP', 'Field', 'Caption', "Cod Cumparator")
-*DBSETPROP('COMENZI.VALOARE', 'Field', 'Caption', "Suma LEI")
+DBSETPROP('COMENZI.ID', 'Field', 'Caption', "Identificator Comanda")
+DBSETPROP('COMENZI.ID_CUMP', 'Field', 'Caption', "Cod Cumparator")
+DBSETPROP('COMENZI.VALOARE', 'Field', 'Caption', "Suma LEI")
 DBSETPROP('COMENZI.VALOARE', 'Field', 'InputMask', "999999.99")
 DBSETPROP('COMENZI.VALOARE', 'Field', 'Format', "$")
 ENDFUNC
 
 FUNCTION Initialize_COMENZI()
- APPEND BLANK
- REPLACE ID WITH 3, ID_CUMP WITH 1, VALOARE WITH 2.0000, CANTITATE WITH 10, DISCOUNT WITH NULL
- APPEND BLANK
- REPLACE ID WITH 1, ID_CUMP WITH 1, VALOARE WITH 5.5000, CANTITATE WITH 10, DISCOUNT WITH 1.60
- APPEND BLANK
- REPLACE ID WITH 2, ID_CUMP WITH 2, VALOARE WITH 3.5000, CANTITATE WITH 15, DISCOUNT WITH NULL
+INSERT INTO COMENZI (ID, ID_CUMP, VALOARE, CANTITATE, DISCOUNT) VALUES ;
+					( 3,	    1, 2.0000, 		  10,     NULL)
+INSERT INTO COMENZI (ID, ID_CUMP, VALOARE, CANTITATE, DISCOUNT) VALUES ;
+					( 1,	    1, 5.5000, 		  11,      1.6)
+INSERT INTO COMENZI (ID, ID_CUMP, VALOARE, CANTITATE, DISCOUNT) VALUES ;
+					( 2,	    2, 3.500, 		  15,     NULL)
 ENDFUNC
 
 
