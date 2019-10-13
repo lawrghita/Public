@@ -1,6 +1,6 @@
 * *********************************************************
 * *
-* * 13/10/2019             MYDATA1.DBC             18:49:26
+* * 13/10/2019             MYDATA1.DBC             17:59:42
 * *
 * *********************************************************
 * *
@@ -31,7 +31,7 @@ CREATE TABLE 'VANZATOR.DBF' NAME 'VANZATOR' (ID C(6) NOT NULL, ;
                        NUME C(20) NOT NULL)
 
 ***** Create each index for VANZATOR *****
-INDEX ON ID TAG ID CANDIDATE COLLATE 'MACHINE'
+ALTER TABLE 'VANZATOR' ADD PRIMARY KEY ID TAG ID COLLATE 'MACHINE'
 
 ***** Change properties for VANZATOR *****
 ENDFUNC
@@ -44,7 +44,7 @@ CREATE TABLE 'CUMPARATOR.DBF' NAME 'CUMPARATOR' (ID I NOT NULL, ;
                          RAMURA C(10) NOT NULL)
 
 ***** Create each index for CUMPARATOR *****
-INDEX ON ID TAG ID CANDIDATE COLLATE 'MACHINE'
+ALTER TABLE 'CUMPARATOR' ADD PRIMARY KEY ID TAG ID COLLATE 'MACHINE'
 INDEX ON NUME TAG NUME CANDIDATE COLLATE 'MACHINE'
 INDEX ON ID_VANZ TAG ID_VANZ COLLATE 'MACHINE'
 
