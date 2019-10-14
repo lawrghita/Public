@@ -26,8 +26,8 @@ MakeTable_COMENZI()
 Initialize_COMENZI()
 
 DisplayStatus([Creating persistent relations...])
-*MakeRelation_1()
-*MakeRelation_2()
+MakeRelation_1()
+MakeRelation_2()
 DisplayStatus([Finished.])
 
 MODIFY PROJECT "d:\javascript\public\javascript lessons\temp\myproj1.pjx" NOWAIT
@@ -101,7 +101,8 @@ FUNCTION MakeTable_COMENZI
 CREATE TABLE 'COMENZI.DBF' NAME 'COMENZI' (;
 					ID I PRIMARY KEY, ;
                     ID_CUMP I NOT NULL, ;
-                    VALOARE Y NOT NULL, ;
+                    VALOARE Y NOT NULL ;
+                              DEFAULT 0.01, ;
                     CANTITATE I DEFAULT 10 ;
                                 CHECK (CANTITATE > 9);
                                 ERROR "Cantitate trebuie mai mare sau egala cu 10", ;
@@ -115,7 +116,7 @@ INDEX ON ID_CUMP TAG ID_CUMP
 DBSETPROP('COMENZI.ID', 'Field', 'Caption', "Identificator Comanda")
 DBSETPROP('COMENZI.ID_CUMP', 'Field', 'Caption', "Cod Cumparator")
 DBSETPROP('COMENZI.VALOARE', 'Field', 'Caption', "Suma LEI")
-DBSETPROP('COMENZI.VALOARE', 'Field', 'InputMask', "999999.99")
+DBSETPROP('COMENZI.VALOARE', 'Field', 'InputMask', "999999.9999")
 DBSETPROP('COMENZI.VALOARE', 'Field', 'Format', "$")
 ENDFUNC
 
