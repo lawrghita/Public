@@ -19,6 +19,17 @@ SELECT 1
 BROWSE LAST SAVE NOWAIT 
 GO TOP 
 
+SQLSETPROP(0, "DISPLOGIN", 3 )
+lnHandle=SQLCONNECT('ServerMySQL_mydata1','Law', 'secret')
 
 
-
+IF lnHandle  > 0
+   ? SQLTABLES(lnHandle,"TABLES")
+   browse last nocaptions
+   SQLDISCONNECT(lnHandle)
+ELSE
+   =AERROR(laError)
+   MESSAGEBOX("Error at Connecting"+CHR(13)+;
+              "Description:"+laError[2])
+   QUIT
+ENDIF
