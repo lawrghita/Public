@@ -30,7 +30,7 @@ MakeRelation_1()
 MakeRelation_2()
 DisplayStatus([Finished.])
 
-MODIFY PROJECT "d:\javascript\public\javascript lessons\temp\myproj1.pjx" NOWAIT
+MODIFY PROJECT "myproj1.pjx" NOWAIT
 MODIFY DATABASE mydata1 NOWAIT
 MODIFY COMMAND prog1 NOWAIT
 MODIFY COMMAND GEN_DATABASE.PRG NOWAIT

@@ -1,6 +1,7 @@
 CLOSE ALL
 CLEAR
-MODIFY PROJECT "d:\javascript\public\javascript lessons\temp\myproj1.pjx" NOWAIT
+SET DEFAULT TO "C:\Users\MODEXIM4\Documents\GitHub\Public\Javascript Lessons\temp"
+MODIFY PROJECT "myproj1.pjx" NOWAIT
 
 DO gen_database.prg
 
@@ -20,7 +21,8 @@ BROWSE LAST SAVE NOWAIT
 GO TOP 
 
 SQLSETPROP(0, "DISPLOGIN", 3 )
-lnHandle=SQLCONNECT('ServerMySQL_mydata1')
+*lnHandle=SQLCONNECT('ServerMySQL_mydata1','Law', 'secret')
+lnHandle=SQLCONNECT('MySQLServerDataSource','Law', 'secret')
 
 
 IF lnHandle  > 0
