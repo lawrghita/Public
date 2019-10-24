@@ -102,7 +102,7 @@ CREATE TABLE 'COMENZI.DBF' NAME 'COMENZI' (;
 					ID I PRIMARY KEY, ;
                     ID_CUMP I NOT NULL, ;
                     VALOARE Y NOT NULL ;
-                              DEFAULT 0.01, ;
+                              DEFAULT 0.0001, ;
                     CANTITATE I DEFAULT 10 ;
                                 CHECK (CANTITATE > 9);
                                 ERROR "Cantitate trebuie mai mare sau egala cu 10", ;
