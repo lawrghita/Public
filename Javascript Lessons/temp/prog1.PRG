@@ -25,7 +25,7 @@ lnHandle=SQLCONNECT('ServerMySQL_mydata1','Law', 'secret')
 
 IF lnHandle  > 0
    ? SQLTABLES(lnHandle,"TABLES")
-   browse last nocaptions
+   browse last NOCAPTIONS TITLE 'MySqlServer'
    SQLDISCONNECT(lnHandle)
 ELSE
    =AERROR(laError)
