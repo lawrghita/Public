@@ -1,6 +1,6 @@
 CLOSE ALL
 CLEAR
-*SET DEFAULT TO "C:\Users\MODEXIM4\Documents\GitHub\Public\Javascript Lessons\temp"
+SET DEFAULT TO "C:\Users\MODEXIM4\Documents\GitHub\Public\Javascript Lessons\temp"
 MODIFY PROJECT "myproj1.pjx" NOWAIT
 
 DO gen_database.prg
