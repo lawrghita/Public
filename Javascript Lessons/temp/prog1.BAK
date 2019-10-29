@@ -1,0 +1,37 @@
+CLOSE ALL
+CLEAR
+SET DEFAULT TO "C:\Users\MODEXIM4\Documents\GitHub\Public\Javascript Lessons\temp"
+MODIFY PROJECT "myproj1.pjx" NOWAIT
+
+DO gen_database.prg
+
+*DO 'c:\Program Files (x86)\Microsoft Visual FoxPro 9\Tools\Gendbc\gendbc.prg' WITH 'MyData1.prg'
+*MODIFY COMMAND MyData1 NOWAIT
+
+MODIFY DATABASE mydata1 NOWAIT
+MODIFY COMMAND prog1 NOWAIT
+MODIFY COMMAND GEN_DATABASE.PRG NOWAIT 
+
+SELECT 3
+BROWSE LAST SAVE NOWAIT 
+SELECT 2
+BROWSE LAST SAVE NOWAIT 
+SELECT 1
+BROWSE LAST SAVE NOWAIT 
+GO TOP 
+
+SQLSETPROP(0, "DISPLOGIN", 3 )
+lnHandle=SQLCONNECT('ServerMySQL_mydata1','Law', 'secret')
+*lnHandle=SQLCONNECT('MySQLServerDataSource','Law', 'secret')  && name from ODBC connection defined
+
+
+IF lnHandle  > 0
+   ? SQLTABLES(lnHandle,"TABLES")
+   browse last NOCAPTIONS TITLE 'MySqlServer'
+   SQLDISCONNECT(lnHandle)
+ELSE
+   =AERROR(laError)
+   MESSAGEBOX("Error at Connecting"+CHR(13)+;
+              "Description:"+laError[2])
+   QUIT
+ENDIF
