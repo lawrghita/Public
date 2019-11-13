@@ -7,9 +7,13 @@ app
     res.send("Hello World Express");
   })
   .get("/bye", function(req, res) {
+    console.log("bye call");
     res.send("Good bye dWorld Express");
   })
   .get("/dog", function(req, res) {
-    res.send("MEOW dcat");
+    console.log("dog call");
+    res.send("MEOW cat");
   })
-  .listen(3000);
+  .listen(3000,function(){
+    console.log("Server has started");
+  });

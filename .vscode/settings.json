@@ -1,7 +1,3 @@
-{
-    "deepscan.enable": true
-}
-
 {  
     "liveServer.settings.https":   
     {
@@ -10,4 +6,4 @@
     "key": "D:\\https\\private.key", //full path of the private key  
     "passphrase": "12345"  
     }  
-    }
+}
