@@ -12,4 +12,9 @@ that function must be exported as module from inside the echo.js
 ...
 module.exports.init = function(text,count) {... ...}
 ...
+ 
+ to refres server under node on any change of server application
+ https://www.youtube.com/watch?v=GvLvrlOqq9g&feature=youtu.be
+ ```
+npm i -g nodemon
  ```
