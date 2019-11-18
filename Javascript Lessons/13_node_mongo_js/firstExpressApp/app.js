@@ -14,6 +14,19 @@ app
     console.log("dog call");
     res.send("MEOW cat");
   })
+  .get("/r/:subReddit", function(req, res) {
+   console.log(req);
+   console.log("any route with just one word subREddit:",req.params);
+    res.send("subReddit");
+  })
+  .get("/r/:subReddit/comments/:id/:title/", function(req, res) {
+    console.log("any route on that pattern",req.params.subReddit);
+    res.send("subReddit for comments");
+  })
+  .get("*", function (req, res) {
+    console.log("* call from anything processable but execute just one send");
+    res.send("Error 401 not other send exist thill this one");
+  })
   .listen(3000,function(){
     console.log("Server has started");
   });

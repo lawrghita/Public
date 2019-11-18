@@ -1,15 +1,5 @@
- to run node from any terminal in separate windows
+ to install nodemon who restart the server on any modification of app.js
  ```
-start node
- ```
-
-To run a function init(params) from inside a javascript file echo.js
-```
-node -e 'require("./echo").init("test",4)'
- ```
-that function must be exported as module from inside the echo.js
- ```
-...
-module.exports.init = function(text,count) {... ...}
-...
+$ npm i -g nodemon
+$ nodemon app.js
  ```
