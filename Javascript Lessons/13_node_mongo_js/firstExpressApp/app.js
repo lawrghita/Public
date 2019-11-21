@@ -16,16 +16,16 @@ app
   })
   .get("/r/:subReddit", function(req, res) {
    console.log(req);
-   console.log("any route with just one word subREddit:",req.params);
+   console.log("any route with just one word as parameter subREddit:",req.params);
     res.send("subReddit");
   })
   .get("/r/:subReddit/comments/:id/:title/", function(req, res) {
     console.log("any route on that pattern",req.params.subReddit);
-    res.send("subReddit for comments");
+    res.send("Comments make on "+req.params.subReddit+" by "+req.params.id+" with title "+req.params.title);
   })
   .get("*", function (req, res) {
     console.log("* call from anything processable but execute just one send");
-    res.send("Error 401 not other send exist thill this one");
+    res.send("Error 401 not other send defined to process this route & :parameters \'"+req.path+"\' till this message sent");
   })
   .listen(3000,function(){
     console.log("Server has started");
