@@ -7,29 +7,35 @@ app
     res.send("Hi there, welcome...!");
   })
   .get("/speak/:animal", function(req, res) {
-    console.log(req.params.animal);
-    switch (req.params.animal) {
+    let animal = req.params.animal;
+    console.log(animal);
+    switch (animal) {
       case "cow":
-        res.send("The " + req.params.animal + " says 'Moo'");
+        res.send("The " + animal + " says 'Moo'");
         break;
       case "pig":
-        res.send("The " + req.params.animal + " says 'Oink'");
+        res.send("The " + animal + " says 'Oink'");
         break;
       case "dog":
-        res.send("The " + req.params.animal + " says 'Woof'");
+        res.send("The " + animal + " says 'Woof'");
         break;
       default:
-        res.send("The " + req.params.animal + " says '???'");
+        res.send("The " + animal + " says '???'");
         break;
     }
   })
   .get("/repeat/:word/:number", function(req, res) {
-    console.log(req.params.word,req.params.number);
+
+    let message = req.params.word;
+    let number = req.params.number;
+    console.log(message,number);
     var response="";
-    for (let index = 0; index < req.params.number; index++) {
-      response += req.params.word+" "+index;
+    if (number>0 && number.isNumeric()) {
+    for (let index = 0; index < number; index++) {response += ` ${index}=`+message+" ";}
+    } else {
+      res.send(`"${number}" from ${req.path} not a positive number`)
     }
-    res.send(response); 
+    res.send(response);
   })
   .get("*", function(req, res) {
     res.send("Sorry Page not found at " + req.path);
