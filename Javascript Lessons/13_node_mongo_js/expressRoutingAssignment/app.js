@@ -27,7 +27,7 @@ app
     console.log(req.params.word,req.params.number);
     var response="";
     for (let index = 0; index < req.params.number; index++) {
-      response += req.params.word+" ";
+      response += req.params.word+" "+index;
     }
     res.send(response); 
   })

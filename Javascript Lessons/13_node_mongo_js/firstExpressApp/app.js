@@ -4,7 +4,7 @@ var app = express();
 
 app
   .get("/", function(req, res) {
-    res.send("Hello World Express at http://localhost:3000/ xx");
+    res.send("Hello World Express at http://localhost:3000/ x s");
   })
   .get("/bye", function(req, res) {
     console.log("bye call");
@@ -16,7 +16,7 @@ app
   })
   .get("/r/:subReddit", function(req, res) {
    console.log(req);
-   console.log("any route with just one word as parameter subREddit:",req.params);
+   console.log("any route with just one word as parameter subREddit:",req.params);U
     res.send("subReddit");
   })
   .get("/r/:subReddit/comments/:id/:title/", function(req, res) {
