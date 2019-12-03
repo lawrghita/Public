@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30d23ea4-21db-4c59-aef2-af2952b786b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/expressRoutingAssignment/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/expressRoutingAssignment/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejsFirst/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/facebookexamplepassport/express-4.x-facebook-example/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/facebookexamplepassport/express-4.x-facebook-example/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,11 +17,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/expressRoutingAssignment/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="7">
-              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejsFirst/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="24">
+                <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ejsFirst/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -48,6 +70,7 @@
         <option value="$PROJECT_DIR$/code.bat" />
         <option value="$PROJECT_DIR$/expressRoutingAssignment/readme.md" />
         <option value="$PROJECT_DIR$/expressRoutingAssignment/app.js" />
+        <option value="$PROJECT_DIR$/ejsFirst/readme.md" />
       </list>
     </option>
   </component>
@@ -73,6 +96,11 @@
             <path>
               <item name="13_node_mongo_js" type="b2602c69:ProjectViewProjectNode" />
               <item name="13_node_mongo_js" type="462c0819:PsiDirectoryNode" />
+              <item name="ejsFirst" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="13_node_mongo_js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="13_node_mongo_js" type="462c0819:PsiDirectoryNode" />
               <item name="expressRoutingAssignment" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -86,12 +114,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.10.0" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/git-bash.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ejsFirst" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.sburlyaev.cmd.plugin.PluginSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\13_node_mongo_js\ejsFirst" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -140,12 +173,12 @@
       <workItem from="1572463469898" duration="899000" />
       <workItem from="1572546950174" duration="18000" />
       <workItem from="1574969468922" duration="5278000" />
-      <workItem from="1575212144078" duration="3309000" />
+      <workItem from="1575212144078" duration="9314000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15013000" />
+    <option name="totallyTimeSpent" value="21018000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -157,17 +190,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="690" y="2" width="1235" height="1073" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49016392" visible="true" weight="0.39598998" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49016392" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.5098361" side_tool="true" visible="true" weight="0.24973656" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" weight="0.32967034" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="GraphQL" order="2" weight="0.32967034" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.33821872" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
@@ -229,7 +261,24 @@
     <entry file="file://$PROJECT_DIR$/expressRoutingAssignment/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7">
-          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejsFirst/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="24">
+            <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejsFirst/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
