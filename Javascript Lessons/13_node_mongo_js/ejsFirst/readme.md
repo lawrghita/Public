@@ -1,6 +1,15 @@
 ```javascript
 npm install express --save
+npm install ejs
 ```
+```javascript
+ res.render("index.ejs",{variable})
+```
+in index.ejs file use
+```html
+<%= variable //javascript code in fact %>
+``` 
+
 
 
 
