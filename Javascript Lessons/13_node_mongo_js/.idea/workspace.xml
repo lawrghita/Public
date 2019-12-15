@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30d23ea4-21db-4c59-aef2-af2952b786b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ejsFirst/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/ejsFirst/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsFirst/views/fall.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/ejsFirst/views/fall.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejsFirst/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/ejsFirst/views/home.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/facebookexamplepassport/express-4.x-facebook-example/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/facebookexamplepassport/express-4.x-facebook-example/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,51 +16,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.38928068">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/ejsFirst/app.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="384">
-                  <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.4064665">
-          <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/ejsFirst/views/home.ejs">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="24">
-                      <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/ejsFirst/views/fall.ejs">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="24">
-                      <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ejsFirst/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -72,17 +37,17 @@
         <option value="$PROJECT_DIR$/code.bat" />
         <option value="$PROJECT_DIR$/expressRoutingAssignment/readme.md" />
         <option value="$PROJECT_DIR$/expressRoutingAssignment/app.js" />
-        <option value="$PROJECT_DIR$/ejsFirst/views/home.ejs" />
         <option value="$PROJECT_DIR$/ejsFirst/readme.md" />
-        <option value="$PROJECT_DIR$/ejsFirst/app.js" />
         <option value="$PROJECT_DIR$/ejsFirst/views/fall.ejs" />
+        <option value="$PROJECT_DIR$/ejsFirst/app.js" />
+        <option value="$PROJECT_DIR$/ejsFirst/views/home.ejs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="469" />
+    <option name="x" value="413" />
     <option name="y" value="2" />
-    <option name="width" value="1456" />
+    <option name="width" value="1512" />
     <option name="height" value="1073" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -188,11 +153,12 @@
       <workItem from="1575394529456" duration="10760000" />
       <workItem from="1576089555565" duration="619000" />
       <workItem from="1576091495243" duration="2076000" />
+      <workItem from="1576428694424" duration="1611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34473000" />
+    <option name="totallyTimeSpent" value="36084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -204,10 +170,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="469" y="2" width="1456" height="1073" extended-state="0" />
+    <frame x="413" y="2" width="1512" height="1073" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49016392" weight="0.2045134" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49016392" visible="true" weight="0.02035278" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.5098361" side_tool="true" visible="true" weight="0.24973656" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -348,13 +314,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejsFirst/views/home.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ejsFirst/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -372,10 +331,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejsFirst/app.js">
+    <entry file="file://$PROJECT_DIR$/ejsFirst/views/home.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        <state relative-caret-position="24">
+          <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -383,6 +342,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejsFirst/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
         </state>
       </provider>
     </entry>
