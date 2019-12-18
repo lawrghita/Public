@@ -2,19 +2,27 @@
 npm install express --save
 npm install ejs
 ```
-```javascript
- res.render("index.ejs",{variable})
+
+  define location for public static files jpg, etc.:
 ```
-in index.ejs file use
-```html
-<%= variable //javascript code in fact %>
-``` 
+app.use(express.static('public'));
+```
+define view engine for server
+```
+app.set('view engine', 'ejs');
+```
+
+inside app.js::
+```javascript
+var variableDeclaredOnJS=1 ;
+var variable = 12;
+res.render("fall.ejs",{usedInEJSfile: variableDeclaredOnJS})
+res.render("index.ejs",{variable})
+```
+inside index.ejs:
+```
+<%= variable+usedInEJSfile // after = you put javascript code in fact %>
+```
+this will render the number 13 on screen
 
 
-
-
-  using template syntax for port variable attention is about \` character not '
-  ```
-  console.log(`Example app listening on port number ${port}!`);
-  ```
-  
