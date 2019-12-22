@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30d23ea4-21db-4c59-aef2-af2952b786b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/dogs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/love.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/posts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/post.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsFirst/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsFirst/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsFirst/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsFirst/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsFirst/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsFirst/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsFirst/public/images/icon-512x512.png" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsFirst/public/images/icon-512x512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsFirst/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsFirst/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsFirst/views/fall.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsFirst/views/fall.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsFirst/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsFirst/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/dogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/dogs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/love.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/dog.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/facebookexamplepassport/express-4.x-facebook-example/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/facebookexamplepassport/express-4.x-facebook-example/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,74 +20,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ejsLessons/ejsFirst/app.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="184">
-                  <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="36" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/dogs.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="192">
-                  <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/app.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/users.js">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/index.js">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ejsLessons/ejsFirst/readme.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor>
-                    <caret selection-end-line="4" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/love.ejs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/posts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/post.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -107,16 +55,18 @@
         <option value="$PROJECT_DIR$/ejsFirst/views/home.ejs" />
         <option value="$PROJECT_DIR$/ejsFirst/readme.md" />
         <option value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/readme.md" />
-        <option value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/app.js" />
         <option value="$PROJECT_DIR$/ejsLessons/ejsFirst/app.js" />
-        <option value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/dogs.js" />
         <option value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/love.ejs" />
+        <option value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/app.js" />
+        <option value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/dogs.js" />
+        <option value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/posts.js" />
+        <option value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/post.ejs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="598" />
-    <option name="width" value="1341" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="568" />
+    <option name="width" value="1359" />
     <option name="height" value="1073" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -150,20 +100,6 @@
               <item name="13_node_mongo_js" type="462c0819:PsiDirectoryNode" />
               <item name="ejsLessons" type="462c0819:PsiDirectoryNode" />
               <item name="ejsControlFlow" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="13_node_mongo_js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="13_node_mongo_js" type="462c0819:PsiDirectoryNode" />
-              <item name="ejsLessons" type="462c0819:PsiDirectoryNode" />
-              <item name="ejsControlFlow" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="13_node_mongo_js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="13_node_mongo_js" type="462c0819:PsiDirectoryNode" />
-              <item name="ejsLessons" type="462c0819:PsiDirectoryNode" />
-              <item name="ejsControlFlow" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -172,12 +108,6 @@
               <item name="ejsLessons" type="462c0819:PsiDirectoryNode" />
               <item name="ejsControlFlow" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="13_node_mongo_js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="13_node_mongo_js" type="462c0819:PsiDirectoryNode" />
-              <item name="ejsLessons" type="462c0819:PsiDirectoryNode" />
-              <item name="ejsFirst" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -190,7 +120,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.10.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/views" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -198,15 +128,16 @@
     <property name="settings.editor.selected.configurable" value="com.sburlyaev.cmd.plugin.PluginSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\13_node_mongo_js\ejsLessons\ejsControlFlow\views" />
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\13_node_mongo_js\ejsLessons\ejsControlFlow\routes" />
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\13_node_mongo_js\ejsFirst\views" />
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\13_node_mongo_js\ejsFirst" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\13_node_mongo_js\ejsLessons" />
       <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\13_node_mongo_js\ejsFirst\public\images" />
       <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\13_node_mongo_js\ejsFirst\public" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\13_node_mongo_js\ejsLessons\ejsControlFlow\routes" />
-      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\13_node_mongo_js\ejsFirst\views" />
-      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\13_node_mongo_js\ejsFirst" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -263,11 +194,12 @@
       <workItem from="1576428694424" duration="1611000" />
       <workItem from="1576694024852" duration="1468000" />
       <workItem from="1576942922384" duration="6807000" />
+      <workItem from="1577027085666" duration="3468000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44359000" />
+    <option name="totallyTimeSpent" value="47827000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -279,17 +211,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="598" y="0" width="1341" height="1073" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49016392" visible="true" weight="0.15886416" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49016392" visible="true" weight="0.10906217" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.5098361" side_tool="true" visible="true" weight="0.24973656" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" weight="0.32967034" />
       <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.4992948" weight="0.32919955" />
       <window_info anchor="bottom" id="GraphQL" order="2" sideWeight="0.49858958" weight="0.32919955" />
-      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49858958" visible="true" weight="0.32919955" />
+      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49858958" visible="true" weight="0.32087913" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5014104" side_tool="true" weight="0.32919955" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
@@ -452,16 +384,6 @@
         <state relative-caret-position="-4" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="264">
-            <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1770" />
@@ -473,6 +395,19 @@
     <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsFirst/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ejsLessons/ejsFirst/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -483,37 +418,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="264">
+            <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsFirst/app.js">
+    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/dog.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="36" />
+        <state relative-caret-position="120">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="96">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/dogs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        <state relative-caret-position="96">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/love.ejs">
+    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/posts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        <state relative-caret-position="240">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/post.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
