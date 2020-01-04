@@ -10,6 +10,7 @@ quickly create an application skeleton in this folder:
 express --view=ejs 
 npm install
 $ DEBUG=myapp:* npm start
+$ DEBUG=myapp:* nodemon start   //for restarting due to changes
 ```
 
 ```javascript

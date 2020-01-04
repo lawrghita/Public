@@ -1,2 +1,25 @@
-<h1>This is a post <%= postsToEJS %> </h1>
+<h1>The post.ejs page with parameter <i> <%= postsToEJS %><i> </h1>
+<ul>
+    <b>Post</b>&nbsp;&nbsp;&nbsp;::<i>Author</i>
+    <% for (var item=0;item<postsToEJS.length;item++){ %>
+    <li><b><%= postsToEJS[item].title %></b>::<i><%= postsToEJS[item].author %></i>
+        <%}%>
+</ul>
+or:
+<ul>
+    <b>Post</b>&nbsp;&nbsp;&nbsp;::<i>Author</i>
+    <% postsToEJS.forEach(function (post){%>
+    <li><b><%= post.title %></b>::<i><%= post.author %></i>
+        <%})%>
+</ul>
+
+Another solution:
+<ul>
+    <b>Post</b>&nbsp;&nbsp;&nbsp;::<i>Author</i>
+    <% Object.keys(postsToEJS).forEach(function (item){%>
+        <li><b><%= postsToEJS[item].title %></b>::<i><%= postsToEJS[item].author %></i>
+    <%})%>
+</ul>
+
+
 
