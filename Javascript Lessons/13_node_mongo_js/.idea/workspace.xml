@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30d23ea4-21db-4c59-aef2-af2952b786b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/posts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/post.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/dogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/dogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/love.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/dog.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/facebookexamplepassport/express-4.x-facebook-example/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/facebookexamplepassport/express-4.x-facebook-example/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/posts.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -195,11 +189,12 @@
       <workItem from="1576694024852" duration="1468000" />
       <workItem from="1576942922384" duration="6807000" />
       <workItem from="1577027085666" duration="3468000" />
+      <workItem from="1577641254363" duration="24000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47827000" />
+    <option name="totallyTimeSpent" value="47851000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -212,16 +207,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49016392" visible="true" weight="0.10906217" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49016392" visible="true" weight="0.12961012" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.5098361" side_tool="true" visible="true" weight="0.24973656" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" weight="0.32967034" />
       <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.4992948" weight="0.32919955" />
       <window_info anchor="bottom" id="GraphQL" order="2" sideWeight="0.49858958" weight="0.32919955" />
-      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49858958" visible="true" weight="0.32087913" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" sideWeight="0.49858958" visible="true" weight="0.32087913" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5014104" side_tool="true" weight="0.32919955" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
@@ -452,7 +446,7 @@
     <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/posts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
