@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= friendsTOejs %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1> Welcome to <%= friendsTOejs %></h1>
+    <% friendsTOejs.forEach(function(item){ %>
+      <li><%= item %></li>
+    <%})%>
+  </body>
+</html>
