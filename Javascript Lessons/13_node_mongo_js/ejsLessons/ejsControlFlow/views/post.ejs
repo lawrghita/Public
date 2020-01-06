@@ -1,3 +1,4 @@
+<% include partials/header.ejs %>
 <h1>The post.ejs page with parameter <i> <%= postsToEJS %><i> </h1>
 <ul>
     <b>Post</b>&nbsp;&nbsp;&nbsp;::<i>Author</i>
@@ -20,6 +21,4 @@ Another solution:
         <li><b><%= postsToEJS[item].title %></b>::<i><%= postsToEJS[item].author %></i>
     <%})%>
 </ul>
-
-
-
+<% include partials/footer.ejs %>
