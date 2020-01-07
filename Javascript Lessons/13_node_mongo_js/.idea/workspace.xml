@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30d23ea4-21db-4c59-aef2-af2952b786b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ejsLessons/PostRequests/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejsLessons/PostRequests/views/friends.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejsLessons/PostRequests/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/PostRequests/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/facebookexamplepassport/express-4.x-facebook-example/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/facebookexamplepassport/express-4.x-facebook-example/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,19 +17,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/posts.js">
+        <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="840">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -41,42 +29,10 @@
         <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="216">
-                <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+              <first_editor relative-caret-position="384">
+                <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/public/stylesheets/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/views/home.ejs">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/routes/home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -91,19 +47,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/views/friends.ejs">
+        <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/routes/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="120">
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -138,12 +85,12 @@
         <option value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/app.js" />
         <option value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/views/error.ejs" />
         <option value="$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/users.js" />
-        <option value="$PROJECT_DIR$/ejsLessons/PostRequests/readme.md" />
         <option value="$PROJECT_DIR$/ejsLessons/PostRequests/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/ejsLessons/PostRequests/routes/home.js" />
         <option value="$PROJECT_DIR$/ejsLessons/PostRequests/app.js" />
         <option value="$PROJECT_DIR$/ejsLessons/PostRequests/routes/friends.js" />
         <option value="$PROJECT_DIR$/ejsLessons/PostRequests/views/friends.ejs" />
+        <option value="$PROJECT_DIR$/ejsLessons/PostRequests/readme.md" />
       </list>
     </option>
   </component>
@@ -177,28 +124,7 @@
               <item name="13_node_mongo_js" type="b2602c69:ProjectViewProjectNode" />
               <item name="13_node_mongo_js" type="462c0819:PsiDirectoryNode" />
               <item name="ejsLessons" type="462c0819:PsiDirectoryNode" />
-              <item name="ejsControlFlow" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="13_node_mongo_js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="13_node_mongo_js" type="462c0819:PsiDirectoryNode" />
-              <item name="ejsLessons" type="462c0819:PsiDirectoryNode" />
               <item name="PostRequests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="13_node_mongo_js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="13_node_mongo_js" type="462c0819:PsiDirectoryNode" />
-              <item name="ejsLessons" type="462c0819:PsiDirectoryNode" />
-              <item name="PostRequests" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="13_node_mongo_js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="13_node_mongo_js" type="462c0819:PsiDirectoryNode" />
-              <item name="ejsLessons" type="462c0819:PsiDirectoryNode" />
-              <item name="PostRequests" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="13_node_mongo_js" type="b2602c69:ProjectViewProjectNode" />
@@ -306,11 +232,12 @@
       <workItem from="1578224645689" duration="3861000" />
       <workItem from="1578230380653" duration="4449000" />
       <workItem from="1578342052632" duration="3197000" />
+      <workItem from="1578427106741" duration="1506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64221000" />
+    <option name="totallyTimeSpent" value="65727000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -323,7 +250,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="588" y="2" width="1332" height="1059" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49016392" visible="true" weight="0.1901082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -510,16 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="264">
-            <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -596,6 +512,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/views/home.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
@@ -603,27 +529,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/users.js">
+    <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/views/friends.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="216">
-            <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        <state relative-caret-position="216">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -634,13 +543,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/views/home.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/routes/home.js">
+    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="53" />
+        <state relative-caret-position="192">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejsLessons/ejsControlFlow/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="264">
+            <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="384">
+            <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -651,10 +577,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/views/friends.ejs">
+    <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/routes/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        <state relative-caret-position="120">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="53" />
         </state>
       </provider>
     </entry>

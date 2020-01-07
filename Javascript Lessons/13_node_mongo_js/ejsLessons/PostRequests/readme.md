@@ -10,6 +10,9 @@ npm install -g express-generator
 express --view=ejs       //generate ejs skeleton
 npm install              //install dependencies
 $ DEBUG=myapp:* npm start
-$ DEBUG=myapp:* nodemon start   //for restarting due to changes
+```
+After set-up just the follow bash command is used
+```
+$ DEBUG=myapp:* nodemon start   //for automaticaly restarting due to changes
 ```
 
