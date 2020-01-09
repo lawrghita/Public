@@ -29,7 +29,11 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
+  var vpath=req.path.toString();
+  console.log(vpath);
+
   // set locals, only providing error in development
+  res.locals.vpath=vpath;    //pot transmite variabile personale si cu locals nu numai ca parametru prin functia render
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 

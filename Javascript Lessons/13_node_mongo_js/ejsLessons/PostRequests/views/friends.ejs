@@ -9,5 +9,9 @@
     <% friendsTOejs.forEach(function(item){ %>
       <li><%= item %></li>
     <%})%>
+    <form action="/friends/addfriend" method="POST">
+      <input type="text" name="namefriend" placeholder="name">
+      <button type="submit">I madse a friend</button>
+    </form>
   </body>
 </html>
