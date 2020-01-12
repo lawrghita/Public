@@ -3,7 +3,7 @@
   <head>
     <title><%= friendsTOejs %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+   </head>
   <body>
     <h1> Welcome to <%= friendsTOejs %></h1>
     <% friendsTOejs.forEach(function(item){ %>
@@ -11,7 +11,7 @@
     <%})%>
     <form action="/friends/addfriend" method="POST">
       <input type="text" name="namefriend" placeholder="name">
-      <button type="submit">I madse a friend</button>
+      <button type="submit">I made a friend</button>
     </form>
   </body>
 </html>
