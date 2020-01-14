@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30d23ea4-21db-4c59-aef2-af2952b786b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ejsLessons/PostRequests/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/PostRequests/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsLessons/PostRequests/routes/friends.js" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/PostRequests/routes/friends.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejsLessons/PostRequests/views/friends.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/ejsLessons/PostRequests/views/friends.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/facebookexamplepassport/express-4.x-facebook-example/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/facebookexamplepassport/express-4.x-facebook-example/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -56,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/routes/friends.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
+            <state relative-caret-position="504">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -278,12 +275,12 @@
       <workItem from="1578342052632" duration="3197000" />
       <workItem from="1578427106741" duration="1506000" />
       <workItem from="1578594724566" duration="7129000" />
-      <workItem from="1578838126226" duration="3914000" />
+      <workItem from="1578838126226" duration="4726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76770000" />
+    <option name="totallyTimeSpent" value="77582000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -648,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ejsLessons/PostRequests/routes/friends.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
+        <state relative-caret-position="504">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
