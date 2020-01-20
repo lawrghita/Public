@@ -1,5 +1,9 @@
 {
   "scripts": {
     "start": "nodemon first_request.js"
+  },
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
   }
 }

@@ -8,7 +8,7 @@ https://www.npmjs.com/package/request
 ```
 
 
-works once:
+works in command line like a REPL breakpointer, but once once (error somewhere):
 ```javascript
 npm install locus --save-dev
 require('locus');
@@ -25,3 +25,8 @@ put this in package.json
 ```
 and then you can run with ```npm start```
 
+This modules is installed via npm, --save for info in package-lock.json:
+```
+npm install --save request
+npm install --save request-promise
+```
