@@ -1,6 +1,7 @@
 const request = require('request');
 const rp = require('request-promise');
 const uri='https://jsonplaceholder.typicode.com/users/1';
+
 request(uri, function executeOnConnection(error, response, body) {   //callback function.... asyncron
     if (error) {
         console.log('Something is Wrong error: ', error); // Print the error if one occurred
@@ -14,7 +15,9 @@ request(uri, function executeOnConnection(error, response, body) {   //callback 
         console.log(`Latitude ${parsedBody.address["geo"].lat} for the ${parsedBody.name}`);
     }
 });
-rp(uri)
+
+
+rp(uri)  // a request-promise
 .then(function executed(htmlString) {
     console.log(`request-promise sometime executed before the normal request:`);
     console.log(JSON.parse(htmlString));
