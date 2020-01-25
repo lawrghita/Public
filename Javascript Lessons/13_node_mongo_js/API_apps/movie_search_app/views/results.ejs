@@ -1,4 +1,11 @@
 <h1>
-   Result page !
-   <%=data.toString()%>
+   Result Search Posters page !
 </h1>
+   <%data["Search"].forEach(function movieTitle(movie) { %>
+   <li>
+         <% if(movie["Poster"]!== "N/A") {%>
+                <img src="<%= movie["Poster"]%>" >
+                                       <%}%>
+         <%= movie["Title"] %>
+   </li>
+   <%})%>
