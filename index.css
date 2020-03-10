@@ -35,3 +35,6 @@ li:nth-child(2n) {
 #ref1, #ref2{
 color: red;
 }
+.hide {
+  display:none;  
+}
