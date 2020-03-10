@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/lawrghita/Public) 
+
 # Public
  My Public way into Javascript using:
  <li>Github Desktop
