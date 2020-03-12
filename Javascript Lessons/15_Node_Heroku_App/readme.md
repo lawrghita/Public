@@ -1,4 +1,6 @@
-```javascript
+# A simple node application hosted & deployed to heroku
+
+```
 npm init 
 npm install express ejs express-generator --save
 express --view=ejs
