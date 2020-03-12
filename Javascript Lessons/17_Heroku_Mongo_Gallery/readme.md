@@ -182,7 +182,7 @@ https://cloud.google.com/community/tutorials/mongodb-atlas-appengineflex-nodejs-
 
 Connection string:
 ```
-mongodb+srv://lawrghita:<password>@cluster0-8s7vx.gcp.mongodb.net/test?retryWrites=true&w=majority
+mongodb+srv://user:password@cluster0-8s7vx.gcp.mongodb.net/test?retryWrites=true&w=majority
 ```
 with folowing modification on example server.js code
 ```
