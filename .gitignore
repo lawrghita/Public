@@ -10,3 +10,4 @@ Javascript Lessons/14_Yelp_Like_App/.idea/*.*
 Javascript Lessons/15_Node_Heroku_App/debug.log
 Javascript Lessons/17_Heroku_Mongo_Gallery/.env
 Javascript Lessons/15_Node_Heroku_App/debug.log
+*.log

@@ -34,17 +34,63 @@ npm install nconf --save
 node server.js                      // to access the mongo server who is running in another separate instance with a test 
 ```
 http://127.0.0.1:8080/ entry point for mongodb server
-shell to remote database
+
+shell to my remote database from https://www.mongodb.com/
 ```
 mongo "mongodb+srv://cluster0-8s7vx.gcp.mongodb.net/gallery" --username mylawrusername
 ```
 
-the server.js test app can be deleted after we set a personalized for this app connection to mongo cluster
+the server.js test app can be deleted after we set a personalized javascript connection for this app to mongo cluster
 
 to run the main application 
 ```
 "start": "node ./bin/www"
 ```
+
+# Deploy this one to Heroku:
+You must set first an account at heroku site then follow:
+https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
+like this:
+1. After install https://cli-assets.heroku.com/heroku-x64.exe run:
+```
+>   c:\"Program Files"\heroku\bin\heroku
+>   c:\"Program Files"\heroku\bin\heroku login
+```
+2. You must make the following commands run clean by installing the associated applications 
+```
+node --version
+npm --version
+git --version
+```
+3. if you have the package.json filled with dependencies: 
+```
+heroku create
+```
+4. You will see in the web heroku account a personal name-app-numbers 
+for that app you run on his directory:
+```
+git init
+heroku git:remote -a name-app-numbers
+```
+5. to commit any modifications and deploy
+```
+git add .                                   
+git commit -am "make it better"
+git push heroku master
+heroku ps:scale web=1
+```
+
+6. FINAL go to https://name-app-numbers.herokuapp.com/
+or:
+```
+heroku open
+```
+7. If errors
+```
+heroku logs --tail
+```
+
+
 
 
 
@@ -232,7 +278,7 @@ on deploy check if cluster have beside the all IP acces also current IP acces on
 lsof -ti:8080 | xargs kill     /this command kill any process blocking 8080
 ``` 
 
-bootstrap 4 images responsive - dimension flezible etc:
+bootstrap 4 images responsive - dimension flexible etc:
 ```
 <img src="images/food1.jpg" class="img-fluid">
 ```
