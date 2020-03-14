@@ -35,5 +35,8 @@ id11.href = "Javascript%20Lessons/11%20TODO%20Workbox/redirect.html";
 const id12 = document.getElementById("JS12");
 id12.href = "Javascript%20Lessons/12%20Regex/index.html";
 
+const id17 = document.getElementById("JS17");
+id17.href = "https://boiling-reaches-35811.herokuapp.com/";
+
 
 

@@ -74,7 +74,8 @@ heroku git:remote -a name-app-numbers
 ```
 5. to commit any modifications and deploy
 ```
-git add .                                   git a
+heroku login
+git add .                                   
 git commit -am "make it better"
 git push heroku master
 heroku ps:scale web=1
