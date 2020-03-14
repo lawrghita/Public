@@ -36,7 +36,7 @@ router.get('/', function(request, res, next) {
             console.log("Error:", err)
         } else {
             /* GET all gallerys list page . */
-            res.render('gallery.ejs', { title: 'gallery', url: request.baseUrl, pictures: pictures });
+            res.render('gallery.ejs', { title: 'My gallery', url: request.baseUrl, pictures: pictures });
         }
     });
 });
@@ -65,48 +65,29 @@ module.exports = router;
 //************************************************************ */
 
 
-//insert2Pictures();           //populate database with 2 defined wells
-function insert2Pictures() {
+insertPictures();           //populate database with 2 defined wells
+function insertPictures() {
+    Gallery.collection.drop();
     Gallery.create([{
-        name: "Alamo Meek",
+        name: "Detaliu tablou",
         image: "../images/2012.jpg",
-        description:"My head Grigorescu picture"
+        description:"Detaliu reproducere tablou în ulei Nicolae Grigorescu"
     },{
-        name: "Alamo Meek",
-        image: "../images/2012.jpg",
-        description:"My head Grigorescu picture"
+        name: "Arcaș",
+        image: "../images/arcas76nd_2_.jpg",
+        description:"Studiu concept arc desenat cu tabletă în programul Artrage"
     },{
-        name: "Alamo Meek",
-        image: "../images/2012.jpg",
-        description:"My head Grigorescu picture"
+        name: "Concept oraș",
+        image: "../images/askyriver1.jpg",
+        description:"Digital desenat cu tabletă cu programul Artrage"
     },{
-        name: "Alamo Meek",
-        image: "../images/2012.jpg",
-        description:"My head Grigorescu picture"
+        name: "Avatar",
+        image: "../images/avatar800_copy.jpg",
+        description:"Desen în creion schiță de afiș"
     },{
-        name: "Alamo Meek",
-        image: "../images/2012.jpg",
-        description:"My head Grigorescu picture"
-    },{
-        name: "Alamo Meek",
-        image: "../images/2012.jpg",
-        description:"My head Grigorescu picture"
-    },{
-        name: "Alamo Meek",
-        image: "../images/2012.jpg",
-        description:"My head Grigorescu picture"
-    },{
-        name: "Alamo Meek",
-        image: "../images/2012.jpg",
-        description:"My head Grigorescu picture"
-    },{
-        name: "Alamo Meek",
-        image: "../images/2012.jpg",
-        description:"My head Grigorescu picture"
-    }, {
-        name: "Balmo Geek",
-        image: "../images/cata.jpg",
-        description:"My son photo"
+        name: "Coperta",
+        image: "../images/AvionulNazdravan1979859-0.jpeg",
+        description:"Toate ilustrațiile din interior și coperțile cărții făcute în Artrage "
     }], function callBack(err, gallery) {
         if (err) {
             console.log("Error on create:", err);
