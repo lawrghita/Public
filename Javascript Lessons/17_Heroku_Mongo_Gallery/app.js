@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+var galleryRouter = require('./routes/gallery');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 console.log("http://127.0.0.1:3000"," 4 the application in ",__dirname);
 app.use('/', indexRouter);
+app.use('/gallery', galleryRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
