@@ -8,14 +8,3 @@
  <li>Visual Studio Code
  <li>GitHub + Gitpod.io
  <li>Git™ Version Control
- <li>Web Developer Bootcamp
-
-
- # Various discoveries:
- - To start a server for files (index.html)
-    get a terminal command at the files location:
-    ```
-    python3 -m http.server 9000
-    ```
-    then just go to http://localhost:9000 or http://127.0.0.1:9000/
- 
