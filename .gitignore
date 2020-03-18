@@ -15,3 +15,7 @@ Javascript Lessons/15_Node_Heroku_App/debug.log
 /.theia/*
 /.vs/*
 /.vscode/*
+.idea/*
+.theia/*
+.vs/*
+.vscode/*
