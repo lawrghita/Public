@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f9c0d011-701b-4b00-8343-0047e04c101c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javascript Lessons/13_node_mongo_js/facebookexamplepassport/express-4.x-facebook-example/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript Lessons/13_node_mongo_js/facebookexamplepassport/express-4.x-facebook-example/README.md" afterDir="false" />
+    </list>
+    <list id="e6905c74-83d5-4e09-b8dd-1f357fcc17fc" name="Revert &quot;try another path for production&quot;" comment="Revert &quot;try another path for production&quot;&#10;&#10;This reverts commit bd99b291" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Public" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>/Javascript Lessons/09 TODO list/</find>
+      <find>Math.random()*(256)</find>
+      <find>images</find>
+      <find>Javascript Lessons/10 Sound Demo/</find>
+      <find>mp3</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>code</replace>
+      <replace>icons</replace>
+      <replace />
+      <replace>mp3&quot;,</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Javascript Lessons/09 TODO list/assets/css/todo.css" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/09 TODO list/manifest.json" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/09 TODO list/sw.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/09 TODO list/index.html" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/09 TODO list/todo.css" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/09 TODO list/assets/js/todo.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/09 TODO list/assets/images/calendar-times-regular.svg" />
+        <option value="$PROJECT_DIR$/index.css" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/assets/js/lib/jquery-3.4.1.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/sound.css" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/temp/sound.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/temp/index.html" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/assets/css/sound.css" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/index.html" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/package.json" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/404.html" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/offline.html" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/redirect.html" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/build/index.html" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/README.md" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/workbox-config.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/src/sw.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/build/install.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/build/sw.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/build/manifest.json" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/src/install.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/build/index.html" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/src/index.html" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/build/manifest.json" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/src/manifest.json" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/todo.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/workbox-config.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/sw.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/index.html" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/assets/js/lib/howler.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/assets/js/lib/a.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/assets/js/sound.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/temp/devdocs.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/temp/devdocs.css" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/12 Regex/index.html" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/12 Regex/regex.css" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/12 Regex/regex.js" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/index.html" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/manifest.json" />
+        <option value="$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/sw.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="407" />
+    <option name="width" value="1235" />
+    <option name="height" value="1067" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="Javascript Lessons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="Javascript Lessons" type="462c0819:PsiDirectoryNode" />
+              <item name="00 WorkboxTemplate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="Javascript Lessons" type="462c0819:PsiDirectoryNode" />
+              <item name="00 WorkboxTemplate" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="Javascript Lessons" type="462c0819:PsiDirectoryNode" />
+              <item name="00 WorkboxTemplate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="Javascript Lessons" type="462c0819:PsiDirectoryNode" />
+              <item name="11 TODO Workbox" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="Javascript Lessons" type="462c0819:PsiDirectoryNode" />
+              <item name="11 TODO Workbox" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\11 TODO Workbox\src\images\icons" />
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\11 TODO Workbox\src\icons" />
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\11 TODO Workbox\src\images" />
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\11 TODO Workbox\src" />
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\00 WorkboxTemplate\src\images\icons" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\11 TODO Workbox\src\images" />
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\images" />
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\11 TODO Workbox\src\images\icons" />
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\11 TODO Workbox" />
+      <recent name="C:\Users\Ghita\WebstormProjects\Public\images\icons" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229" restartOnDisconnect="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Public/Javascript Lessons/10 Sound Demo/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Public/Javascript Lessons/12 Regex/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (3)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Public/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Public/Javascript Lessons/11 TODO Workbox/src/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="redirect.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Public/Javascript Lessons/11 TODO Workbox/redirect.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="JavaScript Debug.index.html (2)" />
+        <item itemvalue="JavaScript Debug.index.html (3)" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.redirect.html (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Ghita\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9c0d011-701b-4b00-8343-0047e04c101c" name="Default Changelist" comment="" />
+      <created>1568317392614</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568317392614</updated>
+      <workItem from="1568317397484" duration="6335000" />
+      <workItem from="1568395367483" duration="4148000" />
+      <workItem from="1568400630968" duration="14864000" />
+      <workItem from="1568415672286" duration="1357000" />
+      <workItem from="1568550345045" duration="9586000" />
+      <workItem from="1568664059946" duration="6979000" />
+      <workItem from="1568824353589" duration="7070000" />
+      <workItem from="1568911367115" duration="6064000" />
+      <workItem from="1569054657285" duration="951000" />
+      <workItem from="1569055717831" duration="27000" />
+      <workItem from="1569091590341" duration="366000" />
+      <workItem from="1569092857557" duration="9664000" />
+      <workItem from="1569135268102" duration="26591000" />
+      <workItem from="1569165932060" duration="797000" />
+      <workItem from="1569247719338" duration="522000" />
+      <workItem from="1569248397699" duration="6432000" />
+      <workItem from="1569259313307" duration="187000" />
+      <workItem from="1569262630039" duration="8470000" />
+      <workItem from="1569344922936" duration="11094000" />
+      <workItem from="1569417756839" duration="1206000" />
+      <workItem from="1569430509569" duration="4988000" />
+      <workItem from="1569523280073" duration="599000" />
+      <workItem from="1569776932947" duration="5598000" />
+      <workItem from="1569864291979" duration="599000" />
+      <workItem from="1570037421606" duration="817000" />
+      <workItem from="1570040267673" duration="558000" />
+      <workItem from="1570048291470" duration="634000" />
+      <workItem from="1572193292470" duration="209000" />
+      <workItem from="1572275831605" duration="457000" />
+      <workItem from="1572279821870" duration="969000" />
+      <workItem from="1584024395940" duration="557000" />
+    </task>
+    <task id="LOCAL-00001" summary="Adapt for webstorm localhost correct light audit">
+      <created>1568323028344</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568323028344</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Finalize my todo">
+      <created>1568415357501</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568415357501</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Main index.">
+      <created>1568416667080</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568416667080</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Main index.">
+      <created>1568563745029</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568563745029</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Main index. &amp; sound demo">
+      <created>1568572637863</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568572637863</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Sound Demo refresh">
+      <created>1568671028794</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568671028794</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Paper.js library">
+      <created>1568836408463</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1568836408463</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Random generation color hex code new method:">
+      <created>1568916236169</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568916236170</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Workbox template">
+      <created>1569101907476</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569101907476</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Workbox PWA template finalized">
+      <created>1569144121651</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569144121651</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Readme.md for template">
+      <created>1569146756320</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1569146756320</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Lighthouse requirements">
+      <created>1569147393274</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1569147393274</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Lighthouse requirements">
+      <created>1569147870189</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1569147870189</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Lighthouse start_url">
+      <created>1569148458011</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1569148458011</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Lighthouse start_url">
+      <created>1569149733770</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1569149733770</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Lighthouse   &quot;start_url&quot;: &quot;./index.html&quot;,&#10;             &quot;scope&quot;: &quot;./&quot;,">
+      <created>1569150055141</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1569150055141</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Lighthouse    &quot;start_url&quot;: &quot;Javascript Lessons/00 WorkboxTemplate/build/index.html&quot;,&#10;               &quot;scope&quot;: &quot;Javascript Lessons/00 WorkboxTemplate/build&quot;,">
+      <created>1569150662822</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1569150662822</updated>
+    </task>
+    <task id="LOCAL-00018" summary="  Manifest: &quot;start_url&quot;: &quot;index.html&quot;,&#10;  &quot;scope&quot;: &quot;/&quot;,">
+      <created>1569151489821</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1569151489821</updated>
+    </task>
+    <task id="LOCAL-00019" summary="removed 144x144">
+      <created>1569152269831</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1569152269831</updated>
+    </task>
+    <task id="LOCAL-00020" summary="removed 144x144">
+      <created>1569152642761</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1569152642761</updated>
+    </task>
+    <task id="LOCAL-00021" summary="local host functional">
+      <created>1569153579305</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1569153579305</updated>
+    </task>
+    <task id="LOCAL-00022" summary="local host functional">
+      <created>1569153837253</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1569153837253</updated>
+    </task>
+    <task id="LOCAL-00023" summary="local host functional &#10; &quot;start_url&quot;: &quot;index.html&quot;,&#10;  &quot;scope&quot;: &quot;/&quot;,">
+      <created>1569154280593</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1569154280593</updated>
+    </task>
+    <task id="LOCAL-00024" summary="local host functional">
+      <created>1569155386482</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1569155386482</updated>
+    </task>
+    <task id="LOCAL-00025" summary=" https://site/images/icons/icon-152x152.png (Download error or resource isn't a valid image)">
+      <created>1569156130343</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1569156130343</updated>
+    </task>
+    <task id="LOCAL-00026" summary="try another path for production">
+      <created>1569157129301</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1569157129301</updated>
+    </task>
+    <task id="LOCAL-00027" summary="The path on manifest for icons must found at site root the images">
+      <created>1569157894981</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1569157894981</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Install Button check on production">
+      <created>1569159335959</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1569159335959</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Install Button check on production">
+      <created>1569159357986</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1569159357986</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Readme.md actualization">
+      <created>1569161448048</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1569161448048</updated>
+    </task>
+    <task id="LOCAL-00031" summary="11 TODO refresh">
+      <created>1569163819876</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1569163819876</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Clear related application">
+      <created>1569166660344</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1569166660345</updated>
+    </task>
+    <task id="LOCAL-00033" summary="11 No index.html cache from memory">
+      <created>1569259487495</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1569259487495</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Random sounds">
+      <created>1569270975789</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1569270975789</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Regex">
+      <created>1569360021406</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1569360021406</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Regex">
+      <created>1569782116880</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1569782116880</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="138695000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49784482" visible="true" weight="0.30874604" />
+      <window_info id="Structure" order="1" sideWeight="0.5021552" side_tool="true" weight="0.25330397" />
+      <window_info id="Favorites" order="2" sideWeight="0.5021552" side_tool="true" weight="0.25330397" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.70348835" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34068358" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.27478448" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3297414" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="GraphQL" order="8" weight="0.32876712" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.31895572" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49894625" visible="true" weight="0.33076924" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50105375" side_tool="true" visible="true" weight="0.33076924" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286638" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Remote Host" order="4" weight="0.32985073" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49784482" visible="true" weight="0.2726603" />
+      <window_info id="Structure" order="1" sideWeight="0.5021552" side_tool="true" weight="0.25330397" />
+      <window_info id="Favorites" order="2" sideWeight="0.5021552" side_tool="true" weight="0.25330397" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.70348835" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34068358" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.27478448" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3297414" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="GraphQL" order="8" weight="0.32876712" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3196347" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49925706" weight="0.33255813" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007429" side_tool="true" weight="0.2956621" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286638" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Remote Host" order="4" weight="0.32985073" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Main index. &amp; sound demo" />
+    <MESSAGE value="Sound Demo refresh" />
+    <MESSAGE value="Paper.js library" />
+    <MESSAGE value="Random generation color hex code new method:" />
+    <MESSAGE value="Workbox template" />
+    <MESSAGE value="Workbox PWA template finalized" />
+    <MESSAGE value="Readme.md for template" />
+    <MESSAGE value="Lighthouse requirements" />
+    <MESSAGE value="Lighthouse start_url" />
+    <MESSAGE value="Lighthouse   &quot;start_url&quot;: &quot;./index.html&quot;,&#10;             &quot;scope&quot;: &quot;./&quot;," />
+    <MESSAGE value="Lighthouse    &quot;start_url&quot;: &quot;Javascript Lessons/00 WorkboxTemplate/build/index.html&quot;,&#10;               &quot;scope&quot;: &quot;Javascript Lessons/00 WorkboxTemplate/build&quot;," />
+    <MESSAGE value="  Manifest: &quot;start_url&quot;: &quot;index.html&quot;,&#10;  &quot;scope&quot;: &quot;/&quot;," />
+    <MESSAGE value="removed 144x144" />
+    <MESSAGE value="local host functional &#10; &quot;start_url&quot;: &quot;index.html&quot;,&#10;  &quot;scope&quot;: &quot;/&quot;," />
+    <MESSAGE value="local host functional" />
+    <MESSAGE value=" https://site/images/icons/icon-152x152.png (Download error or resource isn't a valid image)" />
+    <MESSAGE value="try another path for production" />
+    <MESSAGE value="The path on manifest for icons must found at site root the images" />
+    <MESSAGE value="Install Button check on production" />
+    <MESSAGE value="Readme.md actualization" />
+    <MESSAGE value="11 TODO refresh" />
+    <MESSAGE value="Clear related application" />
+    <MESSAGE value="11 No index.html cache from memory" />
+    <MESSAGE value="Random sounds" />
+    <MESSAGE value="Regex" />
+    <option name="LAST_COMMIT_MESSAGE" value="Regex" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Public$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1568323584324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/src/sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1464">
+          <caret line="75" column="9" lean-forward="true" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/src/images/icons/icon-144x144.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17906" column="17" selection-start-line="17906" selection-start-column="17" selection-end-line="17906" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/build/install.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/build/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/src/install.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/redirect.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="340">
+            <caret line="176" column="92" selection-start-line="176" selection-start-column="92" selection-end-line="176" selection-end-column="92" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/workbox-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/server.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/redirect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/offline.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/07 RGB Color/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/07 RGB Color/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/00 WorkboxTemplate/src/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/install.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/images/icons/icon-144x144.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="120">
+            <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="18" selection-end-column="60" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/workbox-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/manifest.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/build/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/build/sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1296" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/todo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/assets/js/lib/a" />
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/assets/js/lib/a.js" />
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/Ghita/WebstormProjects/Public/Javascript Lessons/10 Sound Demo/assets/sounds">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/assets/sounds</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="494.0" y="398.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/assets/js/lib/howler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="3148" selection-start-line="3148" selection-end-line="3148" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/assets/js/sound.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" selection-start-line="3" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31056">
+          <caret line="1307" column="4" selection-start-line="1307" selection-start-column="4" selection-end-line="1307" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/temp/devdocs.css" />
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/temp/devdocs.js" />
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/09 TODO list/sw.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/11 TODO Workbox/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/12 Regex/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/10 Sound Demo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/12 Regex/regex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript Lessons/12 Regex/regex.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
