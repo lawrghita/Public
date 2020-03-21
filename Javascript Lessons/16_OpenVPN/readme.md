@@ -102,17 +102,21 @@ iroute 192.168.182.0 255.255.255.0
 # disable     //when you need this client disabled uncomment
 ```
 
+#now client side
 copy from the server ca.crt ClientVPN.\* ta.key on the config folder from the client
 Here also create client.ovpn
+But IP dynamic and connection from the same network as at home its very hard to setup
 
 ```
 remote 172.29.227.1    //ip extern of the server, first showing on ipconfig.exe
+;remote 192.168.1.106   #IP local for checking if the keys public/private are working
+
 
 client
 
 port 12345
 
-proto tcp-4-client
+proto tcp4-client
 
 dev tun
 
@@ -142,5 +146,15 @@ mute 20
 
 ```
 
-To enable ping testing enable routing and remote access
+To enable ping testing enable routing and remote access on both server and client
 regedit to IPEnableRouter from 0 to 1
+
+To Remote connect from inside network... found on connections the IPv4 Address
+example my desktop is 192.168.1.106, So remote connect from laptop to this address
+
+If google my ip show a IPv6 address set the router to just use IPv4
+now we have an external address
+
+on Router LAN interface static/reserve a DHCP address ..106 and MAC memorized as MyDesktop
+then forward the ports on ...106:12345 to external 12345
+also Windows Firewalls must open those on both computers
