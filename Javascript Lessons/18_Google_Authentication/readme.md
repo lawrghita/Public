@@ -11,3 +11,4 @@ npm install passport-google-oauth
 ```
 
 User is a personal object must be defined
+.gitignore
