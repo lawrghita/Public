@@ -152,9 +152,8 @@ regedit to IPEnableRouter from 0 to 1
 To Remote connect from inside network... found on connections the IPv4 Address
 example my desktop is 192.168.1.106, So remote connect from laptop to this address
 
-If google my ip show a IPv6 address set the router to just use IPv4
-now we have an external address
+If google my ip show a IPv6 address set the router to just use IPv4 now we have an external address
 
 on Router LAN interface static/reserve a DHCP address ..106 and MAC memorized as MyDesktop
 then forward the ports on ...106:12345 to external 12345
-also Windows Firewalls must open those on both computers
+also in Windows Firewalls I must open those on both computers
