@@ -41,6 +41,7 @@ to verify on mongo shell if the database server have the data:
 in shell:
 ```
 $mongo "mongodb+srv://cluster0-8s7vx.gcp.mongodb.net/test" --username mylawrusername
+        > show dbs
         > use test
         > show collections
 ```
