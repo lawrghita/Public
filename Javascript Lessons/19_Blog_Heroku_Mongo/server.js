@@ -6,7 +6,10 @@ const parola = process.env['PAROLA'];
 const mongodb = require('mongodb');
 const http = require('http');
 const nconf = require('nconf');
-let uri = `mongodb+srv://${utilizator}:${parola}@cluster0-8s7vx.gcp.mongodb.net/gallery?retryWrites=true&w=majority`;
+
+const mydatabase="blogherokumongo";      //my database name
+
+let uri = `mongodb+srv://${utilizator}:${parola}@cluster0-8s7vx.gcp.mongodb.net/${mydatabase}?retryWrites=true&w=majority`;
 if (nconf.get('mongoDatabase')) {
     uri = `${uri}/${nconf.get('mongoDatabase')}`;
 }
@@ -27,7 +30,7 @@ mongodb.MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: tr
             res.end();
             return;
         }
-        let db = client.db('test');
+        let db = client.db(mydatabase);                   // chose the database f
         const collection = db.collection('Messages');
         var datetime = new Date();
         const msg = {

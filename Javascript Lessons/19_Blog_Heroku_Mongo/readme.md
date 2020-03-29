@@ -19,7 +19,11 @@ nodemon start
 ```
 npm install mongodb --save
 npm install mongoose --save              //package to easy the mongodb access
+npm install dotenv --save
+npm install nconf --save
 ```
+
+# Testing connection running the backend server.js to mongo
 There must be 2 servers active, one is node and another is mongodb
 for the node we use the app.js
 for the mongo we use the server.js
@@ -28,17 +32,26 @@ I server.js the uri request an utilizator and a parola set up as an environment 
 Make a file .env on root with this content (keep it secret):
 and check server.js for new dependencies and install them
 ```
-npm install dotenv --save
-npm install nconf --save
 node server.js                      // to access the mongo server who is running in another separate instance with a test 
 ```
 http://127.0.0.1:8080/ entry point for mongodb server
 
 shell to my remote database from https://www.mongodb.com/
+to verify on mongo shell if the database server have the data:
+in shell:
 ```
-mongo "mongodb+srv://cluster0-8s7vx.gcp.mongodb.net/gallery" --username mylawrusername
+$mongo "mongodb+srv://cluster0-8s7vx.gcp.mongodb.net/test" --username mylawrusername
+        > use test
+        > show collections
 ```
 the server.js test app can be deleted after we set a personalized javascript connection for this app to mongo cluster
+
+
+# Now on my application itself the connection to database will be in index.js
+```
+let uri = `mongodb+srv://${utilizator}:${parola}@cluster0-8s7vx.gcp.mongodb.net/${mydatabase}?retryWrites=true&w=majority`;
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+```
 
 to run the main application 
 ```
@@ -48,7 +61,10 @@ to run the main application
 
 
 
-# Deploy this one to Heroku:
+
+
+
+# Deploy all this application one to Heroku after testing on local:
 You must set first an account at heroku site then follow:
 https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
 like this:
