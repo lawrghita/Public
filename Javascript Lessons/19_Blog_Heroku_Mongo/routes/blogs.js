@@ -20,12 +20,11 @@ var blogSchema = new mongoose.Schema({
   created:{type: Date, default: Date.now}
 }); 
 var Blog =mongoose.model("Blog", blogSchema);
-createBlog();
-console.log(Blog.findOne());
+//createBlog();  // to fill the ba
 
 /* GET home page for blogs route.   NOT /blogs - this route is defined outside in app */
 router.get('/', function (req, res, next) {
-  console.log(req.params.path);
+ // console.log(__filename, "\n", req);
   res.render('blogs.ejs', { title: 'Express Blogs Mongo' });
 });
 
@@ -38,7 +37,7 @@ module.exports = router;
 function createBlog(){
   Blog.create({
     title:"First post",
-    image:"Image post",
+    image:"../images/favicon.ico",
     body:"text body",
     created: Date.now()
   })

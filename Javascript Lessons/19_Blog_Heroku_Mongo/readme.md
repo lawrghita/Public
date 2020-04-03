@@ -1,3 +1,4 @@
+Terminal to root :
 # Setting Up the app skeleton
 ```
 npm init 
@@ -44,6 +45,7 @@ $mongo "mongodb+srv://cluster0-8s7vx.gcp.mongodb.net/test" --username mylawruser
         > show dbs
         > use test
         > show collections
+        > db.collection.find()
 ```
 the server.js test app can be deleted after we set a personalized javascript connection for this app to mongo cluster
 
