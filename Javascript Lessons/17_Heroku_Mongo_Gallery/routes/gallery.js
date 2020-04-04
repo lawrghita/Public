@@ -25,6 +25,9 @@ var gallerySchema = new mongoose.Schema({
     description: String
 });
 var Gallery = new mongoose.model('gallerycollection', gallerySchema); //singular name, in database is at plural gallerycollectionS
+
+// watch the database changes
+
 Gallery.watch({ fullDocument: 'updateLookup' }).on('change', function callBackChange(change) {
     console.log("updateLookup of Change :\n", change);   //just to see any operations done to database
 });

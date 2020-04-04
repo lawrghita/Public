@@ -62,8 +62,12 @@ to run the main application
 ```
 
 
-
-
+# Function to see all updates on a database defined mongoose model
+```
+Model.watch({ fullDocument: 'updateLookup' }).on('change', function callBackChange(change) {
+  console.log("updateLookup of Change :\n", change);   //just to see any operations done to database
+});
+```
 
 
 
