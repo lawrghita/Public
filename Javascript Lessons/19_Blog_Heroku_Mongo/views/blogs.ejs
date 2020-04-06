@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <% blogs.forEach(function (blog){%>
-        
-    <%}) %>
-  </body>
-</html>
+<%- include('./partials/header.ejs') %>
+
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <% blogs.forEach(function (blog){%>
+  <div>
+    <h2><%= blog.title%></h2>
+   
+    <img src="<%=blog.image%>" alt="<%=blog.image%>" >
+  <div><%= blog.body%></div>
+  <span><%= blog.created%></span>
+  </div>
+
+  <% }) %>
+  <%- include("./partials/footer.ejs") %>

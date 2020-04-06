@@ -53,7 +53,7 @@ module.exports = router;
 function createBlog() {
   Blog.create({
     title: "First post",
-    image: "../images/favicon.ico",
+    image: "/images/favicon.ico",
     body: "text body",
     created: Date.now(),
   });
