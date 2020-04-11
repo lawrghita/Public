@@ -115,6 +115,21 @@ heroku open
 heroku logs --tail
 ```
 
+# Semantic-ui npm package
+```
+npm install semantic-ui --save
+npm update
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
