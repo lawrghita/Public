@@ -1,0 +1,13 @@
+<%- include('./partials/header.ejs') %>
+<div class="ui main text container segment">
+    <div class="ui huge header">
+        <%= title %>
+        <form action="/blogs" method="post">
+        <input type="text" name="blog[title]" placeholder="title" >
+            <input type="text" name="blog[image]" placeholder="image" >
+            <input type="text" name="blog[body]" placeholder="blog body content here" >
+            <input type="submit">
+        </form>
+    </div>
+</div>
+<%- include("./partials/footer.ejs") %>
