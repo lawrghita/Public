@@ -40,7 +40,7 @@ Blog.watch({fullDocument: "updateLookup"}).on(
 
 /* GET home page for blogs route.   NOT /blogs - this route is defined outside in app */
 // IP:3000/blogs
-
+///////////////////////////////////////////////////////////
 // INDEX ROUTE display all
 router.get("/", function (req, res, next) {
     console.log(__filename, "\n");
@@ -52,16 +52,16 @@ router.get("/", function (req, res, next) {
             posts.forEach(function (post) {
                 console.log(post.title);
             });
-            res.render("blogs.ejs", {title: "Express Blogs 1Mongo", blogs: posts});
+            res.render("blogs.ejs", {title: "Express Blogs Mongo", blogs: posts});
         }
     });
 });
-
+/////////////////////////////////////////////////////////////////////
 // NEW ROUTE /blogs/new
 router.get("/new", function callbackNew(request, result) {
     result.render("new.ejs", {title: "New Post"})
 });
-
+////////////////////////////////////////////////////////////////////
 //  CREATE  /blogs            POST    add a new well in database
 router.post("/", function callbackPost(request, result) {
         // create blog
@@ -69,7 +69,7 @@ router.post("/", function callbackPost(request, result) {
         // image: "/images/favicon.ico",
         // body: "text body",
 
-        var dataFromPost = {title:"create2", image:"/images/favicon.ico", body:"created body"};
+    var dataFromPost = {title:request.body['blog[title]'], image:request.body['blog[image]'], body:request.body['blog[body]']};
 
         Blog.create(dataFromPost, function (err, newBLog) {
             if (err){
@@ -77,14 +77,14 @@ router.post("/", function callbackPost(request, result) {
             }
         });
         //redirect
-        result.redirect("/")
+        result.redirect("/blogs")
     }
 );
 
 
 module.exports = router;
 
-////////// garbage
+////////// garbage //////////////////////////////////
 function createBlog() {
     Blog.create({
         title: "First post",
