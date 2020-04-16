@@ -19,7 +19,7 @@ var blogSchema = new mongoose.Schema({
     created: {type: Date, default: Date.now},
 });
 var Blog = mongoose.model("Blog", blogSchema);
-//createBlog();  // to fill the databasr
+//createBlog();  // to fill the database
 
 //just to see any operations done to database
 Blog.watch({fullDocument: "updateLookup"}).on(
@@ -45,7 +45,7 @@ Blog.watch({fullDocument: "updateLookup"}).on(
 router.get("/", function (req, res, next) {
     console.log(__filename, "\n");
     // verify connection
-    Blog.find({},null,{sort:{created:"descending"}}, function (err, posts) {
+    Blog.find({}, null, {sort: {created: "descending"}}, function (err, posts) {
         if (err) {
             console.log(err);
         } else {
@@ -69,15 +69,27 @@ router.post("/", function callbackPost(request, result) {
         // image: "/images/favicon.ico",
         // body: "text body",
 
-    var dataFromPost = {title:request.body['blog[title]'], image:request.body['blog[image]'], body:request.body['blog[body]']};
+        var dataFromPost = {
+            title: request.body['blog[title]'],
+            image: request.body['blog[image]'],
+            body: request.body['blog[body]']
+        };
 
-        Blog.create(dataFromPost, function (err, newBLog) {
-            if (err){
-                console.log(err);
-            }
-        });
-        //redirect
-        result.redirect("/blogs")
+        //// normal is just:
+        //// Blog.create(dataFromPost, function (err, newBLog) {result.redirect("/blogs");});
+        /////// but if is in public domain (production) I must
+        /////// temporary deleting the oldest post so the database is not filled by bots
+        /// and also put a wait timer for 4 seconds to slow the submit speed click exploit
+        ////.... the display is refreshed before redirect
+        setTimeout(function(){
+            Blog.create(dataFromPost, function (err, newBLog) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    deleteOldestPostAndRedirect(result);
+                }
+            });
+        }, 4000);
     }
 );
 
@@ -91,5 +103,18 @@ function createBlog() {
         image: "/images/favicon.ico",
         body: "text body",
         created: Date.now(),
+    });
+}
+
+///////////////
+function deleteOldestPostAndRedirect(result) {
+    Blog.findOneAndRemove({},{sort: {'created_at': 1}}, function(err, post) {
+        if(!err){
+            console.log( "Deleted:", post.title );
+            //redirect
+            result.redirect("/blogs");
+        } else {
+            console.log( "Deleted error:", err );
+        }
     });
 }
