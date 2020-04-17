@@ -1,6 +1,22 @@
 var express = require("express");
 var router = express.Router();
 
+
+ const loremIpsum = require("lorem-ipsum").loremIpsum;
+
+const LoremIpsum = require("lorem-ipsum").LoremIpsum;
+const lorem = new LoremIpsum({
+    sentencesPerParagraph: {
+        max: 4,
+        min: 2
+    },
+    wordsPerSentence: {
+        max: 16,
+        min: 4
+    }
+});
+
+
 ("use strict");
 require("dotenv").config();
 var mongoose = require("mongoose");
@@ -59,7 +75,10 @@ router.get("/", function (req, res, next) {
 /////////////////////////////////////////////////////////////////////
 // NEW ROUTE /blogs/new
 router.get("/new", function callbackNew(request, result) {
-    result.render("new.ejs", {title: "New Post"})
+    // Put some random value to see exactly the use of space
+    const title = loremIpsum();
+    const body = lorem.generateParagraphs(3);
+    result.render("new.ejs", {title: title, body: body})
 });
 ////////////////////////////////////////////////////////////////////
 //  CREATE  /blogs            POST    add a new well in database
