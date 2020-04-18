@@ -1,9 +1,8 @@
 var express = require("express");
 var router = express.Router();
 
-
- const loremIpsum = require("lorem-ipsum").loremIpsum;
-
+//// random area fillers
+const loremIpsum = require("lorem-ipsum").loremIpsum;
 const LoremIpsum = require("lorem-ipsum").LoremIpsum;
 const lorem = new LoremIpsum({
     sentencesPerParagraph: {
@@ -15,6 +14,8 @@ const lorem = new LoremIpsum({
         min: 4
     }
 });
+const coolImages = require("cool-images");
+
 
 
 ("use strict");
@@ -60,14 +61,14 @@ Blog.watch({fullDocument: "updateLookup"}).on(
 // INDEX ROUTE display all
 router.get("/", function (req, res, next) {
     console.log(__filename, "\n");
-    // verify connection
+    // verify connection , show the post with the newest on top
     Blog.find({}, null, {sort: {created: "descending"}}, function (err, posts) {
         if (err) {
             console.log(err);
         } else {
-            posts.forEach(function (post) {
-                console.log(post.title);
-            });
+            // posts.forEach(function (post) {
+            //     console.log(post.title);
+            // });
             res.render("blogs.ejs", {title: "Express Blogs Mongo", blogs: posts});
         }
     });
@@ -77,23 +78,18 @@ router.get("/", function (req, res, next) {
 router.get("/new", function callbackNew(request, result) {
     // Put some random value to see exactly the use of space
     const title = loremIpsum();
+    const image = coolImages.one(); // 'https://unsplash.it/300/500?image=125'
     const body = lorem.generateParagraphs(3);
-    result.render("new.ejs", {title: title, body: body})
+    result.render("new.ejs", {title: title, image: image,  body: body})
 });
 ////////////////////////////////////////////////////////////////////
 //  CREATE  /blogs            POST    add a new well in database
 router.post("/", function callbackPost(request, result) {
-        // create blog
-        // title: "First post",
-        // image: "/images/favicon.ico",
-        // body: "text body",
-
         var dataFromPost = {
             title: request.body['blog[title]'],
             image: request.body['blog[image]'],
             body: request.body['blog[body]']
         };
-
         //// normal is just:
         //// Blog.create(dataFromPost, function (err, newBLog) {result.redirect("/blogs");});
         /////// but if is in public domain (production) I must
@@ -111,6 +107,23 @@ router.post("/", function callbackPost(request, result) {
         }, 4000);
     }
 );
+
+//  SHOW    /blogs/:id        GET     show info about one element in database
+router.get("/:id", function callBackID(request, result) {
+    console.log(request.params.id);
+        Blog.findOne({_id: request.params.id}, null, {}, function (err, blog) {
+        if (err) {
+            console.log(err);
+        } else {
+             console.log("Show: \n",blog._id, blog.title, blog.image, blog.body);
+             result.render("show.ejs", {title: blog.title, image: blog.image,  body: blog.body, created: blog.created});
+
+        }
+    });
+//result.status("200").send("request.params: "+request.params.id);
+
+});
+
 
 
 module.exports = router;

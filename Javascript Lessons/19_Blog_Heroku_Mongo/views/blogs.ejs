@@ -1,18 +1,24 @@
 <%- include('./partials/header.ejs') %>
-
-
-<div class="ui main text container segment">
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <hr>
+<div class="ui main text container ">
     <% blogs.forEach(function (blog){ %>
-        <div>
+        <div class="ui text segment">
             <h2><%= blog.title %></h2>
-            <img src="<%= blog.image %>" alt="<%= blog.image %>">
-            <div><%= blog.body %></div>
+            <div class="ui segment">
+                <img src="<%= blog.image %>" alt="<%= blog.image %>" class="ui medium image left floated image">
+                <div><%= blog.body.slice(0, 400) %>
+                    <a href="/blogs/<%= blog._id %>">
+                        <div class="ui animated mini button" tabindex="0">
+                            <div class="visible content"> ...
+                            </div>
+                            <div class="hidden content">
+                                &#8594;
+                            </div>
+                        </div>
+                    </a></div>
+            </div>
             <span><%= blog.created %></span>
-            <hr>
         </div>
     <% }) %>
 </div>
+
 <%- include("./partials/footer.ejs") %>

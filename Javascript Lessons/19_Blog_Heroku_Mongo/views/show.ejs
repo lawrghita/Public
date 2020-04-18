@@ -1,0 +1,20 @@
+<%- include('./partials/header.ejs') %>
+<div class="ui main text container">
+    <div>
+        <h2><%= title %></h2>
+        <img src="<%= image %>" alt="<%= image %>" class="ui medium image left floated image">
+        <div><%= body %></div>
+        <span><%= created %></span>
+
+        <a href="/">
+            <div class="ui animated right floated right button" tabindex="0">
+                <div class="visible content">Back</div>
+                <div class="hidden content">
+                    &#8592;
+                </div>
+            </div>
+        </a>
+
+    </div>
+</div>
+<%- include("./partials/footer.ejs") %>

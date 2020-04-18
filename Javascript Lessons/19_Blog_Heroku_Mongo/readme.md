@@ -68,6 +68,8 @@ Model.watch({ fullDocument: 'updateLookup' }).on('change', function callBackChan
   console.log("updateLookup of Change :\n", change);   //just to see any operations done to database
 });
 ```
+# Semnatic ui install on site
+Download from https://github.com/Semantic-Org/Semantic-UI-CSS and put in css directory
 
 
 
