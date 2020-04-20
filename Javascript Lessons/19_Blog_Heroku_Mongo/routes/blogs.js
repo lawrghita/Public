@@ -16,8 +16,6 @@ const lorem = new LoremIpsum({
 });
 const coolImages = require("cool-images");
 
-
-
 ("use strict");
 require("dotenv").config();
 var mongoose = require("mongoose");
@@ -27,19 +25,19 @@ const parola = process.env["PAROLA"];
 const mydatabase = "blogherokumongo";
 
 let uri = `mongodb+srv://${utilizator}:${parola}@cluster0-8s7vx.gcp.mongodb.net/${mydatabase}?retryWrites=true&w=majority`;
-mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 var blogSchema = new mongoose.Schema({
     title: String,
     image: String,
     body: String,
-    created: {type: Date, default: Date.now},
+    created: { type: Date, default: Date.now },
 });
 var Blog = mongoose.model("Blog", blogSchema);
 //createBlog();  // to fill the database
 
 //just to see any operations done to database
-Blog.watch({fullDocument: "updateLookup"}).on(
+Blog.watch({ fullDocument: "updateLookup" }).on(
     "change",
     function callBackChange(change) {
         console.log("updateLookup of Change :\n", change);
@@ -59,17 +57,17 @@ Blog.watch({fullDocument: "updateLookup"}).on(
 // IP:3000/blogs
 ///////////////////////////////////////////////////////////
 // INDEX ROUTE display all
-router.get("/", function (req, res, next) {
+router.get("/", function(req, res, next) {
     console.log(__filename, "\n");
     // verify connection , show the post with the newest on top
-    Blog.find({}, null, {sort: {created: "descending"}}, function (err, posts) {
+    Blog.find({}, null, { sort: { created: "descending" } }, function(err, posts) {
         if (err) {
             console.log(err);
         } else {
             // posts.forEach(function (post) {
             //     console.log(post.title);
             // });
-            res.render("blogs.ejs", {title: "Express Blogs Mongo", blogs: posts});
+            res.render("blogs.ejs", { title: "Express Blogs Mongo", blogs: posts });
         }
     });
 });
@@ -80,47 +78,46 @@ router.get("/new", function callbackNew(request, result) {
     const title = loremIpsum();
     const image = coolImages.one(); // 'https://unsplash.it/300/500?image=125'
     const body = lorem.generateParagraphs(3);
-    result.render("new.ejs", {title: title, image: image,  body: body})
+    result.render("new.ejs", { title: title, image: image, body: body })
 });
 ////////////////////////////////////////////////////////////////////
 //  CREATE  /blogs            POST    add a new well in database
 router.post("/", function callbackPost(request, result) {
-        var dataFromPost = {
-            title: request.body['blog[title]'],
-            image: request.body['blog[image]'],
-            body: request.body['blog[body]']
-        };
-        //// normal is just:
-        //// Blog.create(dataFromPost, function (err, newBLog) {result.redirect("/blogs");});
-        /////// but if is in public domain (production) I must
-        /////// temporary deleting the oldest post so the database is not filled by bots
-        /// and also put a wait timer for 4 seconds to slow the submit speed click exploit
-        ////.... the display is refreshed before redirect
-        setTimeout(function(){
-            Blog.create(dataFromPost, function (err, newBLog) {
-                if (err) {
-                    console.log(err);
-                } else {
-                    deleteOldestPostAndRedirect(result);
-                }
-            });
-        }, 4000);
-    }
-);
+    var dataFromPost = {
+        title: request.body['blog[title]'],
+        image: request.body['blog[image]'],
+        body: request.body['blog[body]']
+    };
+    //// normal is just:
+    //// Blog.create(dataFromPost, function (err, newBLog) {result.redirect("/blogs");});
+    /////// but if is in public domain (production) I must
+    /////// temporary deleting the oldest post so the database is not filled by bots
+    /// and also put a wait timer for 4 seconds to slow the submit speed click exploit
+    ////.... the display is refreshed before redirect
+    setTimeout(function() {
+        Blog.create(dataFromPost, function(err, newBLog) {
+            if (err) {
+                console.log(err);
+            } else {
+                deleteOldestPostAndRedirect(result);
+            }
+        });
+    }, 4000);
+});
 
 //  SHOW    /blogs/:id        GET     show info about one element in database
 router.get("/:id", function callBackID(request, result) {
     console.log(request.params.id);
-        Blog.findOne({_id: request.params.id}, null, {}, function (err, blog) {
+    Blog.findOne({ _id: request.params.id }, null, {}, function(err, blog) {
         if (err) {
             console.log(err);
         } else {
-             console.log("Show: \n",blog._id, blog.title, blog.image, blog.body);
-             result.render("show.ejs", {title: blog.title, image: blog.image,  body: blog.body, created: blog.created});
+            console.log("Show: \n", blog._id, blog.title, blog.image, blog.body);
+            result.render("show.ejs", { title: blog.title, image: blog.image, body: blog.body, created: blog.created });
 
         }
     });
-//result.status("200").send("request.params: "+request.params.id);
+    //result.status("200").send("request.params: "+request.params.id);
 
 });
 
@@ -140,13 +137,13 @@ function createBlog() {
 
 ///////////////
 function deleteOldestPostAndRedirect(result) {
-    Blog.findOneAndRemove({},{sort: {'created_at': 1}}, function(err, post) {
-        if(!err){
-            console.log( "Deleted:", post.title );
+    Blog.findOneAndRemove({}, { sort: { 'created_at': 1 } }, function(err, post) {
+        if (!err) {
+            console.log("Deleted:", post.title);
             //redirect
             result.redirect("/blogs");
         } else {
-            console.log( "Deleted error:", err );
+            console.log("Deleted error:", err);
         }
     });
 }

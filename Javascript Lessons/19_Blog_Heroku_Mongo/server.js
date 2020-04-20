@@ -2,13 +2,12 @@
 require('dotenv').config();
 const utilizator = process.env['UTILIZATOR'];
 const parola = process.env['PAROLA'];
-//console.log(process.env, utilizator,parola);
+console.log(process.env, "utilizator", utilizator, parola);
 const mongodb = require('mongodb');
 const http = require('http');
 const nconf = require('nconf');
 
-const mydatabase="blogherokumongo";      //my database name
-
+const mydatabase = "blogherokumongo"; //my database name
 let uri = `mongodb+srv://${utilizator}:${parola}@cluster0-8s7vx.gcp.mongodb.net/${mydatabase}?retryWrites=true&w=majority`;
 if (nconf.get('mongoDatabase')) {
     uri = `${uri}/${nconf.get('mongoDatabase')}`;
@@ -30,7 +29,7 @@ mongodb.MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: tr
             res.end();
             return;
         }
-        let db = client.db(mydatabase);                   // chose the database f
+        let db = client.db(mydatabase); // chose the database f
         const collection = db.collection('Messages');
         var datetime = new Date();
         const msg = {
