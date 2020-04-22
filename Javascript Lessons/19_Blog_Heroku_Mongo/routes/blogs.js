@@ -73,7 +73,7 @@ router.get("/", function(req, res, next) {
                  post.body=post.body.slice(0, 400)+"..."+closedTAGs;
                  console.log("For Each:", post.body);
              });
-
+//TODO Return on top button
             res.render("blogs.ejs", { title: "Express Blogs Mongo", blogs: posts });
         }
     });
