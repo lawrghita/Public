@@ -1,6 +1,10 @@
 var express = require("express");
 var router = express.Router();
 
+
+const expressSanitizer = require('express-sanitizer');
+router.use(expressSanitizer());
+
 //// random area fillers
 const loremIpsum = require("lorem-ipsum").loremIpsum;
 const LoremIpsum = require("lorem-ipsum").LoremIpsum;
@@ -78,15 +82,18 @@ router.get("/new", function callbackNew(request, result) {
     const title = loremIpsum();
     const image = coolImages.one(); // 'https://unsplash.it/300/500?image=125'
     const body = lorem.generateParagraphs(3);
-    result.render("new.ejs", { title: title, image: image, body: body })
+    result.render("new.ejs", { title: title, image: image, body: body})
 });
 ////////////////////////////////////////////////////////////////////
 //  CREATE  /blogs            POST    add a new well in database
 router.post("/", function callbackPost(request, result) {
+    const sanitizedBody =request.sanitize(request.body['blog[body]']);
+    console.log("Sanitize NEW: \n",sanitizedBody);
+
     var dataFromPost = {
         title: request.body['blog[title]'],
         image: request.body['blog[image]'],
-        body: request.body['blog[body]']
+        body: sanitizedBody
     };
     //// normal is just:
     //// Blog.create(dataFromPost, function (err, newBLog) {result.redirect("/blogs");});
@@ -113,7 +120,9 @@ router.get("/:id", function callBackID(request, result) {
             console.log(err);
         } else {
             console.log("Show: \n", blog._id, blog.title, blog.image, blog.body);
-            result.render("show.ejs", { title: blog.title, image: blog.image, body: blog.body, created: blog.created });
+            const sanitizedBody = request.sanitize(blog.body);
+            console.log("Sanitize: \n",sanitizedBody);
+                result.render("show.ejs", { title: blog.title, image: blog.image, body: sanitizedBody , created: blog.created });
 
         }
     });

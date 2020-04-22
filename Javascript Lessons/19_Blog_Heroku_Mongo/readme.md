@@ -122,7 +122,19 @@ heroku logs --tail
 npm install semantic-ui --save
 npm update
 ```
+# to sanitize (eliminate script)
+ from HTML code inside input text and use <%- %> instead <%= %> to use HTML
+```
+npm install --save express-sanitizer 
 
+
+const expressSanitizer = require('express-sanitizer');
+router.use(expressSanitizer());
+
+const sanitizedBody = request.sanitize(blog.body);
+...
+const sanitizedBody =request.sanitize(request.body['blog[body]']);   //in POST
+```
 
 
 

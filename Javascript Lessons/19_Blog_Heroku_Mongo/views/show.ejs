@@ -1,11 +1,16 @@
 <%- include('./partials/header.ejs') %>
-<div class="ui main text container">
-    <div>
-        <h2><%= title %></h2>
-        <img src="<%= image %>" alt="<%= image %>" class="ui medium image left floated image">
-        <div><%= body %></div>
-        <span><%= created %></span>
-
+<hr>
+<hr>
+<hr>
+<hr>
+<div class="ui main text container segment">
+    <h2><%= title %></h2>
+    <div class="segment">
+        <img src="<%= image %>" alt="<%= image %>" class="ui rounded centered image">
+        <hr>
+        <div><%- body %></div>
+        <hr>
+        <span><%= created.toUTCString(); %></span>
         <a href="/">
             <div class="ui animated right floated right button" tabindex="0">
                 <div class="visible content">Back</div>
@@ -14,7 +19,7 @@
                 </div>
             </div>
         </a>
-
     </div>
+</div>
 </div>
 <%- include("./partials/footer.ejs") %>

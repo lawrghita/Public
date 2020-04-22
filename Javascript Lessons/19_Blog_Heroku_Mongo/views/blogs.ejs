@@ -2,10 +2,10 @@
 <div class="ui main text container ">
     <% blogs.forEach(function (blog){ %>
         <div class="ui text segment">
-            <h2><%= blog.title %></h2>
+            <div class="ui header"><%= blog.title %></div>
             <div class="ui segment">
-                <img src="<%= blog.image %>" alt="<%= blog.image %>" class="ui medium image left floated image">
-                <div><%= blog.body.slice(0, 400) %>
+                <img src="<%= blog.image %>" alt="<%= blog.image %>" class="ui medium left floated image">
+                <div><%- blog.body.slice(0, 400) %>
                     <a href="/blogs/<%= blog._id %>">
                         <div class="ui animated mini button" tabindex="0">
                             <div class="visible content"> ...
@@ -16,7 +16,7 @@
                         </div>
                     </a></div>
             </div>
-            <span><%= blog.created %></span>
+            <span><%= blog.created.toUTCString(); %></span>
         </div>
     <% }) %>
 </div>

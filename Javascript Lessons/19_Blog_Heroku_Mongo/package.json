@@ -12,6 +12,7 @@
     "dotenv": "^8.2.0",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-sanitizer": "^1.0.5",
     "http-errors": "~1.6.3",
     "lorem-ipsum": "^2.0.3",
     "mongodb": "^3.5.5",
