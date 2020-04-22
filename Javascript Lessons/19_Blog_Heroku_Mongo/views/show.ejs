@@ -11,15 +11,15 @@
         <div><%- body %></div>
         <hr>
         <span><%= created.toUTCString(); %></span>
-        <a href="/">
-            <div class="ui animated right floated right button" tabindex="0">
-                <div class="visible content">Back</div>
-                <div class="hidden content">
-                    &#8592;
-                </div>
-            </div>
-        </a>
     </div>
+    <a href="/#<%= id %>">
+        <div class="ui animated right floated button" tabindex="0">
+            <div class="visible content">Back</div>
+            <div class="hidden content">
+                &#8592;
+            </div>
+        </div>
+    </a>
 </div>
 </div>
 <%- include("./partials/footer.ejs") %>

@@ -1,20 +1,21 @@
 <%- include('./partials/header.ejs') %>
 <div class="ui main text container ">
     <% blogs.forEach(function (blog){ %>
-        <div class="ui text segment">
+        <div id="<%= blog._id %>" class="ui text segment">
             <div class="ui header"><%= blog.title %></div>
             <div class="ui segment">
                 <img src="<%= blog.image %>" alt="<%= blog.image %>" class="ui medium left floated image">
-                <div><%- blog.body.slice(0, 400) %>
+                <div><%- blog.body %></div>
                     <a href="/blogs/<%= blog._id %>">
-                        <div class="ui animated mini button" tabindex="0">
+                        <div class="ui animated right floated button" tabindex="0">
                             <div class="visible content"> ...
                             </div>
                             <div class="hidden content">
                                 &#8594;
                             </div>
                         </div>
-                    </a></div>
+                    </a>
+
             </div>
             <span><%= blog.created.toUTCString(); %></span>
         </div>

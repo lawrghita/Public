@@ -1,6 +1,8 @@
 var express = require("express");
 var router = express.Router();
 
+//used to close forgotten end tags on posts so do not flow the styles in subsequent posts
+const closedTAGs="</p></h1></h2></h3></h4></h5></h6></a></img></pre></blockquote></i></b></tt></em></strong></tt></cite></ol></ul></li></dl></table></tr></td>";
 
 const expressSanitizer = require('express-sanitizer');
 router.use(expressSanitizer());
@@ -22,12 +24,11 @@ const coolImages = require("cool-images");
 
 ("use strict");
 require("dotenv").config();
-var mongoose = require("mongoose");
 
+var mongoose = require("mongoose");
 const utilizator = process.env["UTILIZATOR"];
 const parola = process.env["PAROLA"];
 const mydatabase = "blogherokumongo";
-
 let uri = `mongodb+srv://${utilizator}:${parola}@cluster0-8s7vx.gcp.mongodb.net/${mydatabase}?retryWrites=true&w=majority`;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -68,9 +69,11 @@ router.get("/", function(req, res, next) {
         if (err) {
             console.log(err);
         } else {
-            // posts.forEach(function (post) {
-            //     console.log(post.title);
-            // });
+             posts.forEach(function (post) {
+                 post.body=post.body.slice(0, 400)+"..."+closedTAGs;
+                 console.log("For Each:", post.body);
+             });
+
             res.render("blogs.ejs", { title: "Express Blogs Mongo", blogs: posts });
         }
     });
@@ -122,7 +125,7 @@ router.get("/:id", function callBackID(request, result) {
             console.log("Show: \n", blog._id, blog.title, blog.image, blog.body);
             const sanitizedBody = request.sanitize(blog.body);
             console.log("Sanitize: \n",sanitizedBody);
-                result.render("show.ejs", { title: blog.title, image: blog.image, body: sanitizedBody , created: blog.created });
+                result.render("show.ejs", { id: blog._id , title: blog.title, image: blog.image, body: sanitizedBody , created: blog.created  });
 
         }
     });
