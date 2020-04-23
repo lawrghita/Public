@@ -1,5 +1,7 @@
 <%- include('./partials/header.ejs') %>
+
 <div class="ui main text container">
+
     <div class="ui huge header">
         New Random Post
         <form action="/blogs" method="post" class="ui form">
@@ -14,5 +16,12 @@
             </div>
         </form>
     </div>
+    <div class="ui message">
+        <div class="header">
+            Disclaimer :
+        </div>
+        <p><%- welcomeMESSAGE %></p>
+    </div>
 </div>
+
 <%- include("./partials/footer.ejs") %>

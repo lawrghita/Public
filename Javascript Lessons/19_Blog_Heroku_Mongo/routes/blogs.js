@@ -4,9 +4,11 @@ var express = require("express");
 var router = express.Router();
 
 //used to close forgotten end tags on posts so do not flow the styles in subsequent posts
+const closedTAGs = "</p></h1></h2></h3></h4></h5></h6></a></img></pre></blockquote></i></u></b></tt></em></strong></tt></cite></ol></ul></li></dl></table></tr></td>";
+
+// fixed date to keep my old posts
 const dateAfterDelete = new Date(2020, 4 - 1, 23, 12 + 3, 30, 30);
-const closedTAGs = "</p></h1></h2></h3></h4></h5></h6></a></img></pre></blockquote></i></b></tt></em></strong></tt></cite></ol></ul></li></dl></table></tr></td>";
-let welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts , your posts are deleted after some time. <p> Html accepted on post body. Perfect mobile & navigation.";
+let welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation.";
 
 
 const expressSanitizer = require('express-sanitizer');
@@ -71,19 +73,21 @@ router.get("/", function (req, res, next) {
     //  console.log(__filename, "\n", welcomeMESSAGE);
     // verify connection , show the post with the newest on top
     Blog.deleteMany({$and: [{created: {$lte: userFirstNow}}, {created: {$gte: dateAfterDelete}}]}, function callBackAfterDeletion() {
-        //     console.log("Date comparision", Date.now(),  dateAfterDelete);
+        //  console.log("Date comparision", Date.now(),  dateAfterDelete);
     });
     Blog.find({}, null, {sort: {created: "descending"}}, function (err, posts) {
         if (err) {
             console.log(err);
         } else {
             posts.forEach(function (post) {
-                post.body = post.body.slice(0, 400) + "..." + closedTAGs;
-                // console.log("For Each:", post.body);
-                //     console.log("For Created:", userFirstNow, post.created, dateAfterDelete);
+                // cleaning the post <div>s   and closing eventually open HTML TAGs
+                const regex = /<div>|<\/div>/gm;
+                post.body = post.body.slice(0, 400).replace(regex,'') + "..." + closedTAGs;
+                //  console.log("For Each:", post.body);
+                //  console.log("For Created:", userFirstNow, post.created, dateAfterDelete);
             });
 
-            res.render("blogs.ejs", {title: "Express Blogs Mongo", welcomeMESSAGE: welcomeMESSAGE, blogs: posts});
+            res.render("blogs.ejs", {title: "Express Blogs Mongo", blogs: posts});
         }
     });
 });
@@ -95,7 +99,7 @@ router.get("/new", function callbackNew(request, result) {
     const image = coolImages.one(); // 'https://unsplash.it/300/500?image=125'
     const body = lorem.generateParagraphs(3);
     setTimeout(function () {
-    result.render("new.ejs", {title: title, image: image, body: body})
+    result.render("new.ejs", {title: title, welcomeMESSAGE: welcomeMESSAGE, image: image, body: body})
     }, 4000);
 });
 ////////////////////////////////////////////////////////////////////
@@ -123,14 +127,14 @@ router.post("/", function callbackPost(request, result) {
             if (err) {
                 console.log("Eroare", err);
             } else {
-                // Memorize first post and delete everything from 5 minutes before till my  "Veniam magna... " post
-                console.log("App userFirstEntryOnServerX", userFirstNow );
-                if (userFirstNow.toString() === 'Thu Jan 01 1970 02:00:00 GMT+0200 (GMT+02:00)') {
+               // Memorize first post and delete everything from 5 minutes before till my  "Veniam magna... " post
+               // console.log("App userFirstEntryOnServerX", userFirstNow, userFirstNow.toString().slice(0,15));
+               // if (userFirstNow.toString().slice(0,15) === 'Thu Jan 01 1970') {
                     userFirstNow = newBLog.created;
                     userFirstNow.setMinutes(userFirstNow.getMinutes() - 5);
                   //  console.log("App userFirstEntryOnServerD", userFirstNow, Date(0), userFirstNow.toString(), userFirstNow.toUTCString());
-                  //  welcomeMESSAGE = welcomeMESSAGE + " <p> Delete between (" + userFirstNow.toUTCString() + " and " + dateAfterDelete.toUTCString() + ")";
-                }
+                    welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation." + " <p> Delete between (" + userFirstNow.toUTCString().slice(0,25) + " and " + dateAfterDelete.toUTCString().slice(0,25) + ")";
+               // }
                 result.redirect("/blogs");
                 //deleteOldestPostAndRedirect(result);
             }
@@ -145,7 +149,7 @@ router.get("/:id", function callBackID(request, result) {
         if (err) {
             console.log(err);
         } else {
-            console.log("Show: \n", blog._id, blog.title, blog.image, blog.body);
+           // console.log("Show: \n", blog._id, blog.title, blog.image, blog.body);
             const sanitizedBody = request.sanitize(blog.body);
             //  console.log("Sanitize: \n", sanitizedBody);
             result.render("show.ejs", {
