@@ -1,21 +1,38 @@
 <%- include('./partials/header.ejs') %>
+<hr id="top">
 <div class="ui main text container ">
     <% blogs.forEach(function (blog){ %>
-        <div id="<%= blog._id %>" class="ui text segment">
-            <div class="ui header"><%= blog.title %></div>
-            <div class="ui segment">
-                <img src="<%= blog.image %>" alt="<%= blog.image %>" class="ui medium left floated image">
-                <div><%- blog.body %></div>
-                    <a href="/blogs/<%= blog._id %>">
-                        <div class="ui animated right floated button" tabindex="0">
-                            <div class="visible content"> ...
-                            </div>
-                            <div class="hidden content">
-                                &#8594;
-                            </div>
-                        </div>
-                    </a>
 
+
+        <div class="ui  raised text segment">
+
+            <div id="<%= blog._id %>" class="ui header"><%= blog.title %></div>
+
+            <div class="ui segment">
+
+                <img src="<%= blog.image %>" alt="<%= blog.image %>" class="ui big rounded centered image">
+
+                <div class="ui basic justified"><%- blog.body %></div>
+                <a href="#top">
+                    <div class="ui animated right floated button" tabindex="0" style="margin-right: 1rem">
+                        <div class="visible content">
+                            &#8679; <!--//up arrow-->
+                        </div>
+                        <div class="ui header hidden content">
+                            Top
+                        </div>
+                    </div>
+                </a>
+                <a href="/blogs/<%= blog._id %>">
+                    <div class="ui animated right floated button" tabindex="0">
+                        <div class="visible content">
+                            &#8680; <!--//left arrow-->
+                        </div>
+                        <div class="ui header  hidden content ">
+                            More
+                        </div>
+                    </div>
+                </a>
             </div>
             <span><%= blog.created.toUTCString(); %></span>
         </div>

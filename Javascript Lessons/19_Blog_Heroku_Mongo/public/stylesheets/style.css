@@ -1,6 +1,14 @@
-i.icon {
-  font-size: xx-large;
+.ui.basic.justified {
+    font-size: 1.1rem;
+    text-align: justify;
+    text-indent: 3rem;
 }
+
 .container.main {
-  margin-top: 7.0em;
+    margin-top: 3.0em;
+}
+
+p {
+    text-indent: 3rem;
+    line-height: inherit;
 }

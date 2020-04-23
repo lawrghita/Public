@@ -1,22 +1,20 @@
 <%- include('./partials/header.ejs') %>
 <hr>
 <hr>
-<hr>
-<hr>
 <div class="ui main text container segment">
     <h2><%= title %></h2>
     <div class="segment">
-        <img src="<%= image %>" alt="<%= image %>" class="ui rounded centered image">
+        <img src="<%= image %>" alt="<%= image %>" class="ui rounded huge centered image">
         <hr>
-        <div><%- body %></div>
+        <div class="ui basic justified"><%- body %></div>
         <hr>
         <span><%= created.toUTCString(); %></span>
     </div>
     <a href="/#<%= id %>">
         <div class="ui animated right floated button" tabindex="0">
-            <div class="visible content">Back</div>
-            <div class="hidden content">
-                &#8592;
+            <div class="visible content"> &#8678;</div>
+            <div class="ui header hidden content">
+                Back
             </div>
         </div>
     </a>
