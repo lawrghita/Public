@@ -1,6 +1,5 @@
- global.userFirstNow = new Date(Date.now());
-
-console.log("Start server:",userFirstNow.toUTCString());
+ //global.userFirstNow = new Date(Date.now());
+// console.log("Start server:",userFirstNow.toUTCString());
 
 var createError = require('http-errors');
 var express = require('express');
