@@ -1,3 +1,7 @@
+ global.userFirstNow = new Date(Date.now());
+
+console.log("Start server:",userFirstNow.toUTCString());
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -41,5 +45,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', req.params);
 });
-
 module.exports = app;
+
+//
+// exports.userFirstNow = userFirstNow;
+// var m = require('./routes/blogs.js');

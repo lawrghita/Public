@@ -1,8 +1,11 @@
+console.log("App userfirstnowe", userFirstNow);
 var express = require("express");
 var router = express.Router();
 
 //used to close forgotten end tags on posts so do not flow the styles in subsequent posts
+const dateAfterDelete = new Date (2020, 4-1, 23, 12+3, 30,30);
 const closedTAGs="</p></h1></h2></h3></h4></h5></h6></a></img></pre></blockquote></i></b></tt></em></strong></tt></cite></ol></ul></li></dl></table></tr></td>";
+const welcomeMESSAGE = 'Bot protection: All your posts are deleted on new connection & 4 seconds timeout on new post. Html accepted on post body. Perfect mobile & navigation.'
 
 const expressSanitizer = require('express-sanitizer');
 router.use(expressSanitizer());
@@ -63,18 +66,22 @@ Blog.watch({ fullDocument: "updateLookup" }).on(
 ///////////////////////////////////////////////////////////
 // INDEX ROUTE display all
 router.get("/", function(req, res, next) {
-    console.log(__filename, "\n");
+    console.log(__filename, "\n", welcomeMESSAGE);
     // verify connection , show the post with the newest on top
+    Blog.deleteMany({ $and:  [{created: {$lte: userFirstNow }},{created: {$gte: dateAfterDelete }}] }, function callBackAfterDeletion() {
+   //     console.log("Date comparision", Date.now(),  dateAfterDelete);
+    });
     Blog.find({}, null, { sort: { created: "descending" } }, function(err, posts) {
         if (err) {
             console.log(err);
         } else {
              posts.forEach(function (post) {
                  post.body=post.body.slice(0, 400)+"..."+closedTAGs;
-                 console.log("For Each:", post.body);
+                // console.log("For Each:", post.body);
+                 console.log("For Created:", userFirstNow, post.created, dateAfterDelete);
              });
-//TODO Return on top button
-            res.render("blogs.ejs", { title: "Express Blogs Mongo", blogs: posts });
+
+            res.render("blogs.ejs", { title: "Express Blogs Mongo", welcomeMESSAGE: welcomeMESSAGE, blogs: posts });
         }
     });
 });
@@ -109,7 +116,8 @@ router.post("/", function callbackPost(request, result) {
             if (err) {
                 console.log(err);
             } else {
-                deleteOldestPostAndRedirect(result);
+                result.redirect("/blogs");
+                //deleteOldestPostAndRedirect(result);
             }
         });
     }, 4000);
