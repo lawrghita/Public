@@ -5,9 +5,10 @@
 <div class="ui main text container ">
     <% blogs.forEach(function (blog){ %>
 
-
         <div class="ui  raised text segment">
-
+            <a class="ui red right corner label">
+                <i class="delete icon"></i>
+            </a>
             <div id="<%= blog._id %>" class="ui header"><%= blog.title %></div>
 
             <div class="ui segment">
@@ -15,6 +16,7 @@
                 <img src="<%= blog.image %>" alt="<%= blog.image %>" class="ui big rounded centered image">
 
                 <div class="ui basic justified"><%- blog.body %></div>
+
                 <a href="#top">
                     <div class="ui animated right floated button" tabindex="0" style="margin-right: 1rem">
                         <div class="visible content">
@@ -28,10 +30,20 @@
                 <a href="/blogs/<%= blog._id %>">
                     <div class="ui animated right floated button" tabindex="0">
                         <div class="visible content">
-                            &#8680; <!--//left arrow-->
+                            &#8943;
                         </div>
                         <div class="ui header  hidden content ">
                             More
+                        </div>
+                    </div>
+                </a>
+                <a href="/blogs/<%= blog._id %>/edit" >
+                    <div class="ui animated right floated button" tabindex="0" style="margin-right: 1rem">
+                        <div class="visible content">
+                            &#128221;
+                        </div>
+                        <div class="ui header hidden content">
+                            Edit
                         </div>
                     </div>
                 </a>

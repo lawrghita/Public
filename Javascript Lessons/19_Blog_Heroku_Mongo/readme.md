@@ -8,6 +8,11 @@ npm install express-generator --global      //no need to be in production
 express --view=ejs                          // generate the express skeleton app
 npm install
 ```
+for working PUT request  we use method override
+```javascript
+npm install method-override
+```
+
 for running on 127.0.0.1/3000:
 ```
 DEBUG=19-blog-heroku-mongo:* npm start

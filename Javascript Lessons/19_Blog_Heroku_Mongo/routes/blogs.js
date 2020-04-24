@@ -1,3 +1,14 @@
+//  REST ROUTES on /gallery:
+//  name       url              route VERB        description
+//  =============================================
+//  INDEX   /blogs or /       GET     display all
+//  NEW     /blogs/ne         GET     form to interrogate for a new blog post
+//  CREATE  /blogs            POST    add a new well in database
+//  SHOW    /blogs/:id        GET     show info about one element in database
+//  EDIT    /blogs/:id/edit   GET     show edit form for one post
+// UPDATE   /blogs/:id        PUT   Update a post with a particularly id
+
+
 var userFirstNow = new Date(0);
 console.log("App userFirstEntryOnServer Empty", userFirstNow.toUTCString());
 var express = require("express");
@@ -56,14 +67,6 @@ Blog.watch({fullDocument: "updateLookup"}).on(
     }
 );
 
-//  REST ROUTES on /gallery:
-//  name       url              route VERB        description
-//  =============================================
-//  INDEX   /blogs or /       GET     display all
-//  NEW     /blogs/ne         GET     form to interrogate for a new blog post
-//  CREATE  /blogs            POST    add a new well in database
-//  SHOW    /blogs/:id        GET     show info about one element in database
-
 
 /* GET home page for blogs route.   NOT /blogs - this route is defined outside in app */
 // IP:3000/blogs
@@ -82,7 +85,7 @@ router.get("/", function (req, res, next) {
             posts.forEach(function (post) {
                 // cleaning the post <div>s   and closing eventually open HTML TAGs
                 const regex = /<div>|<\/div>/gm;
-                post.body = post.body.slice(0, 400).replace(regex,'') + "..." + closedTAGs;
+                post.body = post.body.slice(0, 400).replace(regex, '') + "..." + closedTAGs;
                 //  console.log("For Each:", post.body);
                 //  console.log("For Created:", userFirstNow, post.created, dateAfterDelete);
             });
@@ -98,50 +101,47 @@ router.get("/new", function callbackNew(request, result) {
     const title = loremIpsum();
     const image = coolImages.one(); // 'https://unsplash.it/300/500?image=125'
     const body = lorem.generateParagraphs(3);
+    /// and also put a wait timer for 4 seconds to slow the submit speed click exploit
     setTimeout(function () {
-    result.render("new.ejs", {title: title, welcomeMESSAGE: welcomeMESSAGE, image: image, body: body})
+        result.render("new.ejs", {title: title, welcomeMESSAGE: welcomeMESSAGE, image: image, body: body})
     }, 4000);
 });
 ////////////////////////////////////////////////////////////////////
-//  CREATE  /blogs            POST    add a new well in database
+//  CREATE  /blogs            POST    add a new post in database
 router.post("/", function callbackPost(request, result) {
+    // 'blog[body]'  is the name of the DOM
+    const sanitizedBody = request.sanitize(request.body['blog[body]']);
+    // console.log("Sanitize NEW: \n", sanitizedBody);
+    var dataFromPost = {
+        title: request.body['blog[title]'],
+        image: request.body['blog[image]'],
+        body: sanitizedBody,
+        created: Date.now()
+    };
+    //// normal is just:
+    //// Blog.create(dataFromPost, function (err, newBLog) {result.redirect("/blogs");});
+    /////// but if is in public domain (production) I must
+    /////// temporary deleting the oldest post so the database is not filled by bots
 
-        const sanitizedBody = request.sanitize(request.body['blog[body]']);
-        // console.log("Sanitize NEW: \n", sanitizedBody);
-        var dataFromPost = {
-            title: request.body['blog[title]'],
-            image: request.body['blog[image]'],
-            body: sanitizedBody,
-            created: Date.now()
-        };
-
-
-        //// normal is just:
-        //// Blog.create(dataFromPost, function (err, newBLog) {result.redirect("/blogs");});
-        /////// but if is in public domain (production) I must
-        /////// temporary deleting the oldest post so the database is not filled by bots
-        /// and also put a wait timer for 4 seconds to slow the submit speed click exploit
-        ////.... the display is refreshed before redirect
-
-        Blog.create(dataFromPost, function (err, newBLog) {
-            if (err) {
-                console.log("Eroare", err);
-            } else {
-               // Memorize first post and delete everything from 5 minutes before till my  "Veniam magna... " post
-               // console.log("App userFirstEntryOnServerX", userFirstNow, userFirstNow.toString().slice(0,15));
-               // if (userFirstNow.toString().slice(0,15) === 'Thu Jan 01 1970') {
-                    userFirstNow = newBLog.created;
-                    userFirstNow.setMinutes(userFirstNow.getMinutes() - 5);
-                  //  console.log("App userFirstEntryOnServerD", userFirstNow, Date(0), userFirstNow.toString(), userFirstNow.toUTCString());
-                    welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation." + " <p> Delete between (" + userFirstNow.toUTCString().slice(0,25) + " and " + dateAfterDelete.toUTCString().slice(0,25) + ")";
-               // }
-                result.redirect("/blogs");
-                //deleteOldestPostAndRedirect(result);
-            }
-        });
+    ////.... the display is refreshed before redirect
+    Blog.create(dataFromPost, function (err, newBLog) {
+        if (err) {
+            console.log("Eroare", err);
+        } else {
+            // Memorize first post and delete everything from 5 minutes before till my  "Veniam magna... " post
+            // console.log("App userFirstEntryOnServerX", userFirstNow, userFirstNow.toString().slice(0,15));
+            // if (userFirstNow.toString().slice(0,15) === 'Thu Jan 01 1970') {
+            userFirstNow = newBLog.created;
+            userFirstNow.setMinutes(userFirstNow.getMinutes() - 5);
+            //  console.log("App userFirstEntryOnServerD", userFirstNow, Date(0), userFirstNow.toString(), userFirstNow.toUTCString());
+            welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation." + " <p> Delete between (" + userFirstNow.toUTCString().slice(0, 25) + " and " + dateAfterDelete.toUTCString().slice(0, 25) + ")";
+            // }
+            result.redirect("/blogs");
+            //deleteOldestPostAndRedirect(result);
+        }
+    });
 
 });
-
 //  SHOW    /blogs/:id        GET     show info about one element in database
 router.get("/:id", function callBackID(request, result) {
     console.log(request.params.id);
@@ -149,7 +149,7 @@ router.get("/:id", function callBackID(request, result) {
         if (err) {
             console.log(err);
         } else {
-           // console.log("Show: \n", blog._id, blog.title, blog.image, blog.body);
+            // console.log("Show: \n", blog._id, blog.title, blog.image, blog.body);
             const sanitizedBody = request.sanitize(blog.body);
             //  console.log("Sanitize: \n", sanitizedBody);
             result.render("show.ejs", {
@@ -163,6 +163,56 @@ router.get("/:id", function callBackID(request, result) {
         }
     });
     //result.status("200").send("request.params: "+request.params.id);
+});
+
+//  EDIT    /blogs/:id/edit   GET     show edit form for one post
+router.get("/:id/edit", function callBackID(request, response) {
+    console.log(request.params.id);
+    Blog.findOne({_id: request.params.id}, null, {}, function (err, foundedBlog) {
+        if (err) {
+            console.log(err);
+            response.redirect("/");
+        } else {
+            const title = foundedBlog.title;
+            const image = foundedBlog.image;
+            const body = foundedBlog.body;
+            welcomeMESSAGE = "Edit post ";
+            response.render("edit.ejs", {id: request.params.id , title: title, image: image, body: body, welcomeMESSAGE: welcomeMESSAGE});
+        }
+    });
+});
+
+// UPDATE   /blogs/:id        PUT   Update a post with a particularly id
+router.put("/:id", function callbackPost(request, result) {
+    // 'blog[body]'  is the name of the DOM
+    const sanitizedBody = request.sanitize(request.body['blog[body]']);
+    // console.log("Sanitize NEW: \n", sanitizedBody);
+        title= request.body['blog[title]'];
+        image= request.body['blog[image]'];
+        body= sanitizedBody;
+
+    Blog.findOne({_id: request.params.id}, null, {}, function (err, updatedBlog) {
+        if (err) {
+            console.log(err);
+            response.redirect("/");
+        } else {
+            updatedBlog.title = "*"+title;
+            updatedBlog.image = image;
+            const edited = new Date();
+            updatedBlog.body = body //+ "<hr><i><footer>Edited in "+ edited.toLocaleString();+"</footer></i>";
+            updatedBlog.save();
+            result.render("show.ejs", {
+                id: request.params.id,
+                title: title,
+                image: image,
+                body: body,
+                created: updatedBlog.created
+            });
+
+
+        }
+    });
+
 
 });
 

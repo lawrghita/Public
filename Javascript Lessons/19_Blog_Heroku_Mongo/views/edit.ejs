@@ -1,0 +1,33 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="ui main text container">
+
+    <div class="ui huge header">
+        Edit the post
+        <form action="/blogs/<%= id %>?_method=PUT" method="POST" class="ui form">
+            <div class="field">
+                <label>Title</label>
+                <input type="text" name="blog[title]" value="<%= title %>">
+                <label>Image address</label>
+                <input type="text" name="blog[image]" value="<%= image %>">
+                <label>Post</label>
+                <textarea name="blog[body]"><%= body %></textarea>
+                <input type="submit" value="Submit" class="ui grey primary button">
+                <div class="ui button">Cancel</div>
+            </div>
+        </form>
+    </div>
+    <div class="ui message">
+        <div class="header">
+            Disclaimer :
+        </div>
+        <p><%- welcomeMESSAGE %></p>
+    </div>
+</div>
+<script>$('.ui.clear.button').on('click',
+        function () {
+            $('form').form('reset');
+        }
+    );
+</script>
+<%- include("./partials/footer.ejs") %>

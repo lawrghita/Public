@@ -1,5 +1,6 @@
  //global.userFirstNow = new Date(Date.now());
 // console.log("Start server:",userFirstNow.toUTCString());
+var methodOverride = require("method-override");
 
 var createError = require('http-errors');
 var express = require('express');
@@ -13,6 +14,7 @@ var usersRouter = require('./routes/users.js');
 
 var app = express();
 
+app.use(methodOverride("_method"));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
