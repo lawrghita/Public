@@ -15,5 +15,20 @@ p {
     line-height: inherit;
 }
 .ui.animated.right{
- color: #0d7bdc
+ color: #0d7bdc;
+    font-size: inherit;
+}
+
+button.delete{
+    color: yellow;
+    background: indianred;
+}
+.ui.column.grid{
+    padding: 0,0,0,0;
+    margin: 0,0,0,0;
+}
+.floated.ui.column{
+    margin: 0,0,0,0;
+    padding: 0,0,0,0;
+    margin-bottom: 0px;
 }

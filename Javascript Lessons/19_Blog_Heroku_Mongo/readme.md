@@ -76,6 +76,13 @@ Model.watch({ fullDocument: 'updateLookup' }).on('change', function callBackChan
 # Semnatic ui install on site
 Download from https://github.com/Semantic-Org/Semantic-UI-CSS and put in css directory
 
+To activate Semantic popups you must put a scripts on the html 
+where you define the popup
+```javascript
+<script>
+    $('a.ui.red.right.corner.label').popup({});
+</script>
+```
 
 
 # Deploy all this application one to Heroku after testing on local:

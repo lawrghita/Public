@@ -4,19 +4,17 @@
 <hr>
 <div class="ui main text container ">
     <% blogs.forEach(function (blog){ %>
-
-        <div class="ui  raised text segment">
-            <a class="ui red right corner label">
-                <i class="delete icon"></i>
-            </a>
-            <div id="<%= blog._id %>" class="ui header"><%= blog.title %></div>
+        <div class="ui raised text segment ">
+            <div class="ui column grid content">
+            <div  id="<%= blog._id %>" class="ui left floated fourteen wide column header"><%= blog.title %></div>
+            <form class="ui mini form right floated one wide column " action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" >
+               <button class="ui field delete" data-content="You can't delete the old posts!" type="submit">X</button>
+            </form>
+            </div>
 
             <div class="ui segment">
-
                 <img src="<%= blog.image %>" alt="<%= blog.image %>" class="ui big rounded centered image">
-
                 <div class="ui basic justified"><%- blog.body %></div>
-
                 <a href="#top">
                     <div class="ui animated right floated button" tabindex="0" style="margin-right: 1rem">
                         <div class="visible content">
@@ -37,7 +35,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="/blogs/<%= blog._id %>/edit" >
+                <a href="/blogs/<%= blog._id %>/edit">
                     <div class="ui animated right floated button" tabindex="0" style="margin-right: 1rem">
                         <div class="visible content">
                             &#128221;
@@ -52,5 +50,7 @@
         </div>
     <% }) %>
 </div>
-
+<script>
+    $('button.ui.delete').popup({});
+</script>
 <%- include("./partials/footer.ejs") %>

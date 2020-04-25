@@ -7,6 +7,7 @@
 //  SHOW    /blogs/:id        GET     show info about one element in database
 //  EDIT    /blogs/:id/edit   GET     show edit form for one post
 // UPDATE   /blogs/:id        PUT   Update a post with a particularly id
+// DELETE   /blogs/:id      DELETE  Delete a post with id
 
 
 var userFirstNow = new Date(0);
@@ -75,9 +76,15 @@ Blog.watch({fullDocument: "updateLookup"}).on(
 router.get("/", function (req, res, next) {
     //  console.log(__filename, "\n", welcomeMESSAGE);
     // verify connection , show the post with the newest on top
-    Blog.deleteMany({$and: [{created: {$lte: userFirstNow}}, {created: {$gte: dateAfterDelete}}]}, function callBackAfterDeletion() {
-        //  console.log("Date comparision", Date.now(),  dateAfterDelete);
-    });
+
+    // Memorize first post and delete everything from 5 minutes before till my  "Veniam magna... " post
+    // console.log("App userFirstEntryOnServerX", userFirstNow, userFirstNow.toString().slice(0,15));
+    if (userFirstNow.toString().slice(0, 15) !== 'Thu Jan 01 1970') {
+        Blog.deleteMany({$and: [{created: {$lte: userFirstNow}}, {created: {$gte: dateAfterDelete}}]}, function callBackAfterDeletion() {
+            //  console.log("Date comparision", Date.now(),  dateAfterDelete);
+        });
+    }
+
     Blog.find({}, null, {sort: {created: "descending"}}, function (err, posts) {
         if (err) {
             console.log(err);
@@ -103,6 +110,11 @@ router.get("/new", function callbackNew(request, result) {
     const body = lorem.generateParagraphs(3);
     /// and also put a wait timer for 4 seconds to slow the submit speed click exploit
     setTimeout(function () {
+        if (userFirstNow.toString().slice(0, 15) !== 'Thu Jan 01 1970') {
+        welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation." + " <p> Delete between (" + userFirstNow.toUTCString().slice(0, 25) + " and " + dateAfterDelete.toUTCString().slice(0, 25) + ")";
+        }else{
+            welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation.";
+        }
         result.render("new.ejs", {title: title, welcomeMESSAGE: welcomeMESSAGE, image: image, body: body})
     }, 4000);
 });
@@ -128,13 +140,11 @@ router.post("/", function callbackPost(request, result) {
         if (err) {
             console.log("Eroare", err);
         } else {
-            // Memorize first post and delete everything from 5 minutes before till my  "Veniam magna... " post
-            // console.log("App userFirstEntryOnServerX", userFirstNow, userFirstNow.toString().slice(0,15));
-            // if (userFirstNow.toString().slice(0,15) === 'Thu Jan 01 1970') {
+
             userFirstNow = newBLog.created;
             userFirstNow.setMinutes(userFirstNow.getMinutes() - 5);
             //  console.log("App userFirstEntryOnServerD", userFirstNow, Date(0), userFirstNow.toString(), userFirstNow.toUTCString());
-            welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation." + " <p> Delete between (" + userFirstNow.toUTCString().slice(0, 25) + " and " + dateAfterDelete.toUTCString().slice(0, 25) + ")";
+
             // }
             result.redirect("/blogs");
             //deleteOldestPostAndRedirect(result);
@@ -177,43 +187,55 @@ router.get("/:id/edit", function callBackID(request, response) {
             const image = foundedBlog.image;
             const body = foundedBlog.body;
             welcomeMESSAGE = "Edit post ";
-            response.render("edit.ejs", {id: request.params.id , title: title, image: image, body: body, welcomeMESSAGE: welcomeMESSAGE});
+            response.render("edit.ejs", {
+                id: request.params.id,
+                title: title,
+                image: image,
+                body: body,
+                welcomeMESSAGE: welcomeMESSAGE
+            });
         }
     });
 });
 
 // UPDATE   /blogs/:id        PUT   Update a post with a particularly id
 router.put("/:id", function callbackPost(request, result) {
+    // it can be easy by using code same as in delete REST
     // 'blog[body]'  is the name of the DOM
     const sanitizedBody = request.sanitize(request.body['blog[body]']);
     // console.log("Sanitize NEW: \n", sanitizedBody);
-        title= request.body['blog[title]'];
-        image= request.body['blog[image]'];
-        body= sanitizedBody;
+    title = request.body['blog[title]'];
+    image = request.body['blog[image]'];
+    body = sanitizedBody;
 
     Blog.findOne({_id: request.params.id}, null, {}, function (err, updatedBlog) {
         if (err) {
             console.log(err);
-            response.redirect("/");
+            result.redirect("/");
         } else {
-            updatedBlog.title = "*"+title;
+            updatedBlog.title = "*" + title;
             updatedBlog.image = image;
-            const edited = new Date();
-            updatedBlog.body = body //+ "<hr><i><footer>Edited in "+ edited.toLocaleString();+"</footer></i>";
+            //const edited = new Date();
+            updatedBlog.body = body;    //+ "<hr><i><footer>Edited in "+ edited.toLocaleString();+"</footer></i>";
             updatedBlog.save();
-            result.render("show.ejs", {
-                id: request.params.id,
-                title: title,
-                image: image,
-                body: body,
-                created: updatedBlog.created
-            });
-
-
+            result.redirect("/blogs/" + request.params.id);
         }
     });
 
 
+});
+
+
+router.delete("/:id", function callbackPost(request, result) {
+// delete just the new one after the dateAfterDelete
+    Blog.deleteOne({$and: [{_id: request.params.id}, {created: {$lte: Date.now()}}, {created: {$gte: dateAfterDelete}}]}, function callBackAfterDeletion(err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("Deleted",request.params.id);
+        }
+        result.redirect("/");
+    });
 });
 
 
