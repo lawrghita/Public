@@ -116,7 +116,7 @@ router.get("/new", function callbackNew(request, result) {
             welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation.";
         }
         result.render("new.ejs", {title: title, welcomeMESSAGE: welcomeMESSAGE, image: image, body: body})
-    }, 4000);
+    }, 1000);
 });
 ////////////////////////////////////////////////////////////////////
 //  CREATE  /blogs            POST    add a new post in database
