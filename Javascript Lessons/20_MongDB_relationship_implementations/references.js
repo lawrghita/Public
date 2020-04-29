@@ -3,40 +3,21 @@ var mongoose = require("mongoose");
 let uri = `mongodb://localhost/blog_relat`;
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 
-// POST - title, content
-var postSchema = new mongoose.Schema({
-    title: String,
-    content: String
-});
-var Post = mongoose.model("Post", postSchema);
-//newPost();
+var Post = require("./models/posts");
+var User = require("./models/users");
 
-
-// USER - email, name
-var userSchema = new mongoose.Schema({
-    email: String,
-    name: String,
-    posts: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Post"
-        }
-    ]        // array of posts
-});
-var User = mongoose.model("User", userSchema);
 
 //Find User
 //fina all posts
-// pupulate take all the posts and put in the user object
-User.findOne({email:"Law@haoo.com"}).populate("posts").exec(function (err,user) {
-    console.log(user);
+// populate take all the posts and put in the user object
+User.findOne({email: "Law@haoo.com"}).populate("posts").exec(function (err, user) {
+ //   console.log(user);
 });
 
 
-/*
-Post.create({
-    title: "3. How to cook the",
-    content: "3. ASfsa safdASDF afsDASdaaf fasf"
+/*Post.create({
+    title: "4. How to cook the",
+    content: "4. ASfsa safdASDF afsDASdaaf fasf"
 }, function (err, postCreated) {
     User.findOne({email: "Law@haoo.com"}, function (err, foundUser) {
         foundUser.posts.push(postCreated);
@@ -44,8 +25,8 @@ Post.create({
             console.log(data);
         });
     });
-});
-*/
+});*/
+
 
 //newUser();
 /*User.create({
@@ -54,25 +35,28 @@ Post.create({
 });
 console.log(User);*/
 
+Post.findOne({
+    _id : "5ea47ff52e958f2fdc4466e1"
+}, function (err, postfounded) {
+    User.findOne({email: "Bold@haoo.com"}, function (err, foundUser) {
+        foundUser.posts.push(postfounded);
+        foundUser.save(function (err, data) {
+            console.log(data);
+        });
+    });
+});
 
-/*
-User.findOne({name:"Brown"}, function callBackUserFindOne(err, user) {
+
+
+
+User.findOne({email: "Bold@haoo.com"}, function callBackUserFindOne(err, user) {
     if (err) {
         console.log(err);
     } else {
-        user.posts.push({title:"Second post",
-            content:"Content for 2 post"
-        });
-        user.save(function (err, user) {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log(user, user.posts.toString());
-            }
-        });
-   }
+        user.populate("posts");
+        console.log(user, "Bolon", user.posts.toString());
+    }
 });
-*/
 
 
 /////////////////////////////////

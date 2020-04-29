@@ -1,9 +1,11 @@
+// this use both databases inside one, posts are embedded in users base
+
 var mongoose = require("mongoose");
 
 let uri = `mongodb://localhost/blog_demo`;
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 
-// POST - title, content
+// POST - title, content defined before the user because this must be declared before the use
 var postSchema = new mongoose.Schema({
     title: String,
     content: String
