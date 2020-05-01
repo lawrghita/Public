@@ -1,0 +1,3 @@
+C:\Users\Ghita\source\repos\lawrghita\Public\Javascript Lessons\ExpressNodeYelp\ExpressNodeYelp\obj\Debug\ExpressNodeYelp.njsprojAssemblyReference.cache
+C:\Users\Ghita\source\repos\lawrghita\Public\Javascript Lessons\ExpressNodeYelp\ExpressNodeYelp\obj\Debug\ExpressNodeYelp.njsproj.CoreCompileInputs.cache
+C:\Users\Ghita\source\repos\lawrghita\Public\Javascript Lessons\ExpressNodeYelp\ExpressNodeYelp\bin\Microsoft.NodejsTools.WebRole.dll
