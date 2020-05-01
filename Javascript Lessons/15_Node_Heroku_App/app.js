@@ -19,6 +19,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+console.log("Go to http://127.0.0.1:3000/");
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
