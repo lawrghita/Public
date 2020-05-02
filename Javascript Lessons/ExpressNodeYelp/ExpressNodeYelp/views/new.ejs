@@ -1,0 +1,27 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="ui main text container">
+
+    <div class="ui huge header">
+        New Random Post
+        <form action="/campgrounds" method="post" class="ui form">
+            <div class="field">
+                <label>Title</label>
+            <input type="text" name="blog[title]" value="<%= title %>" >
+                <label>Image address</label>
+            <input type="text" name="blog[image]" value="<%= image %>" >
+                <label>Post</label>
+                <textarea name="blog[body]" ><%= body %></textarea>
+            <input type="submit" >
+            </div>
+        </form>
+    </div>
+    <div class="ui message">
+        <div class="header">
+            Disclaimer :
+        </div>
+        <p><%- welcomeMESSAGE %></p>
+    </div>
+</div>
+
+<%- include("./partials/footer.ejs") %>
