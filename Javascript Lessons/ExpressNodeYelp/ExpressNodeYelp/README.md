@@ -1,6 +1,6 @@
 # ExpressNodeYelp
 
-# You will see in the web heroku account a personal name-app-numbers 
+You will see in the web heroku account a personal name-app-numbers 
 for that app you run on his directory:
 ```
 heroku create
