@@ -1,13 +1,19 @@
 <%- include("partials/header") %>
 <div class="card">
-		<div class="card-header"><%=picture.name%></div>
+		<div class="card-header">
+		    <%=picture.name%>
+		</div>
 
 		<div class="card-body">
-			<div class="card-text"><%- picture.description%></div>
+			<div class="card-text">
+				<%- picture.description%>
+		    </div>
 			<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=picture.id%>">Back</a>
 		</div>
-	
-		<a class="card-img-top text-center" href="<%=url%>#<%=picture.id%>"><img  src="<%=picture.image%>"  alt="<%=picture.name%>"></a>
-
+		<a  href="<%=url%>#<%=picture.id%>">
+				<img class="card-img-bottom img-fluid text-center"  src="<%=picture.image%>"  alt="<%=picture.name%>">
+			</a>
+		
+		
 </div>
 	<%- include("partials/footer") %>
