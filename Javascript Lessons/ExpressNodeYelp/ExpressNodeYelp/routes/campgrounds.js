@@ -92,8 +92,6 @@ router.delete("/:id", function callbackPost(request, result) {
 });
 
 
-
-
 // Error Cast to ObjectId failed for value "any value" at path "_id" for model "Campground"
 // because /:id route must be the last route processed
 //  SHOW    /campgrounds/:id        GET     show more info info about one element in database
@@ -136,7 +134,6 @@ router.post("/", function callbackPost(request, result) {
            // userFirstNow = newCamp.created;
            // userFirstNow.setMinutes(userFirstNow.getMinutes() - 5);
            //  console.log("App userFirstEntryOnServerD", userFirstNow, Date(0), userFirstNow.toString(), userFirstNow.toUTCString());
-
             // }
             console.log("/campgrounds#" + newCamp.id);
             result.redirect("/campgrounds#" + newCamp.id);
