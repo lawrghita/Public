@@ -17,9 +17,15 @@
                 <img  src="<%=picture.image%>" class="img-fluid" alt="<%=picture.name%>">
             </button>
             <div class="card-body">
-            <div class="card-title"><%=picture.name%></div>
-                 <a class="btn btn-outline-info" role="button" href="<%=url+"/"+picture.id%>" >Info</a>
+                <div class="card-title"><%=picture.name%></div>
+                <div class="row ">
+                 <a class="btn btn-outline-info col-auto mr-auto" role="button" href="<%=url+"/"+picture.id%>" >Info</a>
+                 <form class="col-auto" action="/campgrounds/<%= picture._id %>?_method=DELETE" method="POST" >
+                    <button class="btn btn-outline-danger" type="submit">Delete</button>
+                </form>
+                </div>
             </div>
+
             </div>
     </div>
         <div id="id<%=picture.id%>" class="modal fade" role="dialog" aria-labelledby="<%=picture.name%>" aria-hidden="true">

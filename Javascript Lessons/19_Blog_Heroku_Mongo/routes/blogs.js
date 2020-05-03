@@ -225,7 +225,7 @@ router.put("/:id", function callbackPost(request, result) {
 
 });
 
-
+// DELETE   /blogs/:id      DELETE  Delete a post with id
 router.delete("/:id", function callbackPost(request, result) {
 // delete just the new one after the dateAfterDelete
     Blog.deleteOne({$and: [{_id: request.params.id}, {created: {$lte: Date.now()}}, {created: {$gte: dateAfterDelete}}]}, function callBackAfterDeletion(err) {

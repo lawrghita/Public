@@ -78,9 +78,24 @@ router.get("/new", function callbackNew(request, result) {
 });
 
 
+// DELETE   /blogs/:id      DELETE  Delete a post with id
+router.delete("/:id", function callbackPost(request, result) {
+    // delete just the new one after the dateAfterDelete
+    Campground.deleteOne({ _id: request.params.id }, function callBackAfterDeletion(err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("Deleted", request.params.id);
+        }
+        result.redirect("/campgrounds");
+    });
+});
+
+
+
+
 // Error Cast to ObjectId failed for value "any value" at path "_id" for model "Campground"
 // because /:id route must be the last route processed
-
 //  SHOW    /campgrounds/:id        GET     show more info info about one element in database
 router.get("/:id", function callBackShowId(request, response, next) {
     //  console.log("Request baseUrl:", request);
