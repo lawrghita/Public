@@ -1,24 +1,27 @@
 <%- include("partials/header") %>
 <div class="container">
-<header class="jumbotron" style="padding:0.1rem 0 0.1rem 0">
+<header class="fixed-top jumbotron" style="padding:0.1rem 0 0.1rem 0">
     <div class="container text-center">
         <h1><%= title %></h1>
         <a class="btn btn-outline-info" role="button" href="/campgrounds/new">Add a new Camp</a>
     </div>
 </header>
    <hr>
-<div class="row d-flex justify-content-around">
+   <hr>
+<div class="card-columns">
      <%pictures.forEach(function (picture){%>
-        <div class="col-md-3 col-sm-6 img-thumbnail text-center mt-1" >  
-            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#id<%=picture.id%>"> 
+    <div class="card">
+
+        <div id="<%= picture.id%>" class="card-img-top" >  
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#id<%=picture.id%>" aria-label="Zoom"> 
                 <img  src="<%=picture.image%>" class="img-fluid" alt="<%=picture.name%>">
             </button>
-                <div class="name"><%=picture.name%></div>
-                <div class="figure-caption">
-                    <!-- <div class="description"><%=picture.description%></div> -->
-                    <a class="btn btn-outline-info" role="button" href="<%=url+"/"+picture.id%>">Info</a>
-                </div>
-        </div>
+            <div class="card-body">
+            <div class="card-title"><%=picture.name%></div>
+                 <a class="btn btn-outline-info" role="button" href="<%=url+"/"+picture.id%>" >Info</a>
+            </div>
+            </div>
+    </div>
         <div id="id<%=picture.id%>" class="modal fade" role="dialog" aria-labelledby="<%=picture.name%>" aria-hidden="true">
             <div class="modal-dialog text-center modal-xl modal-dialog-centered">
                     <div class="modal-content d-inline-block bg-transparent border-0 hei" data-dismiss="modal">
@@ -26,6 +29,8 @@
                     </div>
             </div>
         </div>
+
+
   <%});%>
 </div>
 <hr> 

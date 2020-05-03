@@ -3,7 +3,21 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require("mongoose");
 var Campground = require('../models/campgroundSchema');
+
 var RandomDataObject = require('../middleware/randomdata');
+const loremIpsum = require("lorem-ipsum").loremIpsum;
+const LoremIpsum = require("lorem-ipsum").LoremIpsum;
+const lorem = new LoremIpsum({
+    sentencesPerParagraph: {
+        max: 4,
+        min: 2
+    },
+    wordsPerSentence: {
+        max: 16,
+        min: 4
+    }
+});
+const coolImages = require("cool-images");
 
 
 const expressSanitizer = require('express-sanitizer');
@@ -37,20 +51,35 @@ router.get('/', function (request, res, next) {
 
 router.get("/new", function callbackNew(request, result) {
     // Put some random value to see exactly the use of space
-    const title = RandomDataObject.title;
-    const image = RandomDataObject.image; // 'https://unsplash.it/300/500?image=125'
-    const body = RandomDataObject.body;
-    /// and also put a wait timer for 4 seconds to slow the submit speed click exploit
+
     setTimeout(function () {
-       const welcomeMESSAGE = "New random camp"
+        const height = Math.floor(Math.random() * 800) + 300; // returns a random integer from 1 to 100
+        const width = Math.floor(Math.random() * 1024) + 400;
+        var RandomDataObject = {
+            name: loremIpsum(),
+            image: coolImages.one(height, width), // 'https://unsplash.it/300/500?image=125'
+            description: lorem.generateParagraphs(3),
+        }
+
+
+        var name = RandomDataObject.name;
+        var image = RandomDataObject.image;
+        var description = RandomDataObject.description;
+        /// and also put a wait timer for 4 seconds to slow the submit speed click exploit
+        console.log("Random", name);
+        const welcomeMESSAGE = "New random camp"
         //if (userFirstNow.toString().slice(0, 15) !== 'Thu Jan 01 1970') {
         //    welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation." + " <p> Delete between (" + userFirstNow.toUTCString().slice(0, 25) + " and " + dateAfterDelete.toUTCString().slice(0, 25) + ")";
         //} else {
         //    welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation.";
         //}
-        result.render("new.ejs", { title: title, image: image, body: body, welcomeMESSAGE: welcomeMESSAGE })
+        result.render("new.ejs", { title:' Insert New', name: name, image: image, description: description, welcomeMESSAGE: welcomeMESSAGE })
     }, 3000);
 });
+
+
+// Error Cast to ObjectId failed for value "any value" at path "_id" for model "Campground"
+// because /:id route must be the last route processed
 
 //  SHOW    /campgrounds/:id        GET     show more info info about one element in database
 router.get("/:id", function callBackShowId(request, response, next) {
@@ -67,15 +96,16 @@ router.get("/:id", function callBackShowId(request, response, next) {
 });
 
 
+
+
 router.post("/", function callbackPost(request, result) {
-    // 'blog[body]'  is the name of the DOM
-    const sanitizedBody = request.sanitize(request.body['blog[body]']);
-    // console.log("Sanitize NEW: \n", sanitizedBody);
+    // 'Campground[body]'  is the name of the DOM element
+    const sanitizedBody = request.sanitize(request.body['Campground[description]']);
+     console.log("Sanitize NEW: \n", sanitizedBody);
     var dataFromPost = {
-        title: request.body['blog[title]'],
-        image: request.body['blog[image]'],
-        body: sanitizedBody,
-        created: Date.now()
+        name: request.body['Campground[name]'],
+        image: request.body['Campground[image]'],
+        description: sanitizedBody
     };
     //// normal is just:
     //// Blog.create(dataFromPost, function (err, newBLog) {result.redirect("/blogs");});
@@ -83,17 +113,18 @@ router.post("/", function callbackPost(request, result) {
     /////// temporary deleting the oldest post so the database is not filled by bots
 
     ////.... the display is refreshed before redirect
-    Blog.create(dataFromPost, function (err, newBLog) {
+    Campground.create(dataFromPost, function (err, newCamp) {
         if (err) {
-            console.log("Eroare", err);
+            console.log("Error ", err);
         } else {
-
-            userFirstNow = newBLog.created;
-            userFirstNow.setMinutes(userFirstNow.getMinutes() - 5);
-            //  console.log("App userFirstEntryOnServerD", userFirstNow, Date(0), userFirstNow.toString(), userFirstNow.toUTCString());
+            console.log(newCamp);
+           // userFirstNow = newCamp.created;
+           // userFirstNow.setMinutes(userFirstNow.getMinutes() - 5);
+           //  console.log("App userFirstEntryOnServerD", userFirstNow, Date(0), userFirstNow.toString(), userFirstNow.toUTCString());
 
             // }
-            result.redirect("/blogs");
+            console.log("/campgrounds#" + newCamp.id);
+            result.redirect("/campgrounds#" + newCamp.id);
             //deleteOldestPostAndRedirect(result);
         }
     });

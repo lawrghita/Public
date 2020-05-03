@@ -1,27 +1,36 @@
-<%- include('./partials/header.ejs') %>
+<%- include(    './partials/header.ejs') %>
 
-<div class="ui main text container">
+<div class="container">
+       <h1> New Random Post</h1>
 
-    <div class="ui huge header">
-        New Random Post
-        <form action="/campgrounds" method="post" class="ui form">
-            <div class="field">
-                <label>Title</label>
-            <input type="text" name="blog[title]" value="<%= title %>" >
-                <label>Image address</label>
-            <input type="text" name="blog[image]" value="<%= image %>" >
-                <label>Post</label>
-                <textarea name="blog[body]" ><%= body %></textarea>
-            <input type="submit" >
+        <form action="/campgrounds" method="post" >
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" class="form-control" type="text" name="Campground[name]" value="<%= name %>" >
             </div>
+
+            <div class="form-group">
+                 <label for="imageURL">Image address</label>
+                 <input id="imageURL" class="form-control" type="text" name="Campground[image]" value="<%= image %>" >
+            </div>
+
+            <div class="form-group">
+                <label for="description">Post</label>
+                <textarea id="description" class="form-control" name="Campground[description]" rows="4"><%= description %></textarea>
+               
+            </div>
+             
+            <input type="submit" class="btn btn-primary">
+        
         </form>
-    </div>
+    
+
     <div class="ui message">
         <div class="header">
             Disclaimer :
         </div>
         <p><%- welcomeMESSAGE %></p>
     </div>
-</div>
 
+</div>
 <%- include("./partials/footer.ejs") %>
