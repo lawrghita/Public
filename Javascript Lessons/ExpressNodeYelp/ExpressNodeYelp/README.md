@@ -8,7 +8,7 @@ heroku create
 
 ```
 git init
-heroku git:remote -a name-app-numbers
+heroku git:remote -a gentle-hamlet-99340
 ```
  to commit any modifications and deploy
 ```

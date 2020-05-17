@@ -1,4 +1,6 @@
-'use strict';
+"use strict";
+const cTitle="Compgrounds X";
+
 var express = require('express');
 var router = express.Router();
 var mongoose = require("mongoose");
@@ -32,26 +34,26 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 //console.log(RandomDataObject.title, RandomDataObject.image, RandomDataObject.body);
 
-/* GET home page. */
-
 Campground.watch({ fullDocument: 'updateLookup' }).on('change', function callBackChange(change) {
     console.log("updateLookup of Change :\n", change);   //just to see any operations done to database
 });
 
+
+/* GET home page. */
 router.get('/', function (request, res, next) {
     Campground.find({}, function callBackAll(err, campgrounds) {
         if (err) {
-            console.log("Error:", err)
+            console.log("Error:", err);np
         } else {
             /* GET all  page . */
-            res.render('campgrounds.ejs', { title: 'Campgrounds', url: request.baseUrl, pictures: campgrounds });
+            res.render('campgrounds.ejs', { title: cTitle, url: request.baseUrl, pictures: campgrounds });
         }
     });
 });
 
 router.get("/new", function callbackNew(request, result) {
-    // Put some random value to see exactly the use of space
 
+    // Put some random value to see exactly the use of space
     setTimeout(function () {
         const height = Math.floor(Math.random() * 800) + 300; // returns a random integer from 1 to 100
         const width = Math.floor(Math.random() * 1024) + 400;
@@ -59,21 +61,20 @@ router.get("/new", function callbackNew(request, result) {
             name: loremIpsum(),
             image: coolImages.one(height, width), // 'https://unsplash.it/300/500?image=125'
             description: lorem.generateParagraphs(3),
-        }
-
+        };
 
         var name = RandomDataObject.name;
         var image = RandomDataObject.image;
         var description = RandomDataObject.description;
         /// and also put a wait timer for 4 seconds to slow the submit speed click exploit
         console.log("Random", name);
-        const welcomeMESSAGE = "New random camp"
+        const welcomeMESSAGE = "New random camp";
         //if (userFirstNow.toString().slice(0, 15) !== 'Thu Jan 01 1970') {
         //    welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation." + " <p> Delete between (" + userFirstNow.toUTCString().slice(0, 25) + " and " + dateAfterDelete.toUTCString().slice(0, 25) + ")";
         //} else {
         //    welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation.";
         //}
-        result.render("new.ejs", { title:' Insert New', name: name, image: image, description: description, welcomeMESSAGE: welcomeMESSAGE })
+        result.render("new.ejs", { title:' Insert New', name: name, image: image, description: description, welcomeMESSAGE: welcomeMESSAGE });
     }, 3000);
 });
 
