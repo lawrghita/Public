@@ -30,7 +30,14 @@ require('dotenv').config();
 const utilizator = process.env['UTILIZATOR'];
 const parola = process.env['PAROLA'];
 let uri = `mongodb+srv://${utilizator}:${parola}@cluster0-8s7vx.gcp.mongodb.net/campgrounds?retryWrites=true&w=majority`;
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }, function check(err){
+    if (err) {
+        console.log(err);
+        throw(err);
+    }
+});
+
 
 //console.log(RandomDataObject.title, RandomDataObject.image, RandomDataObject.body);
 

@@ -18,9 +18,9 @@
             </button>
             <div class="card-body">
                 <div class="card-title"><%=picture.name%></div>
-                <div class="row ">
-                 <a class="btn btn-outline-info col-auto mr-auto" role="button" href="<%=url+"/"+picture.id%>" >Info</a>
-                 <form class="col-auto" action="/campgrounds/<%= picture._id %>?_method=DELETE" method="POST" >
+                <div class="row justify-content-between">
+                 <a class="btn btn-outline-info col-auto " role="button" href="<%=url+"/"+picture.id%>" >Info</a>
+                 <form class="" action="/campgrounds/<%= picture._id %>?_method=DELETE" method="POST" >
                     <button class="btn btn-outline-danger" type="submit">Delete</button>
                 </form>
                 </div>

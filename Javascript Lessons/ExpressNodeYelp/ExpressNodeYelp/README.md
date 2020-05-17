@@ -1,18 +1,18 @@
 # ExpressNodeYelp
 
 You will see in the web heroku account a personal name-app-numbers 
-for that app you run on his directory:
+for that app you run:
 ```
+heroku login
 heroku create
 ```
 
 ```
 git init
-heroku git:remote -a gentle-hamlet-99340
+heroku git:remote -a aqueous-eyrie-81055
 ```
  to commit any modifications and deploy
 ```
-heroku login
 git add .                                   
 git commit -am "make it better"
 git push heroku master
@@ -29,3 +29,4 @@ heroku open
 heroku logs --tail
 ```
 
+# must put .env at least once git push heroku master for production 
