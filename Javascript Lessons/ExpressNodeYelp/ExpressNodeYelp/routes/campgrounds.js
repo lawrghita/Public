@@ -4,7 +4,8 @@ const cTitle="Compgrounds X";
 var express = require('express');
 var router = express.Router();
 var mongoose = require("mongoose");
-var Campground = require('../models/campgroundSchema');
+var Campground = require('../models/campgroundSchema.js');
+var Comment = require('../models/comments.js')
 
 var RandomDataObject = require('../middleware/randomdata');
 const loremIpsum = require("lorem-ipsum").loremIpsum;
@@ -138,6 +139,17 @@ router.post("/", function callbackPost(request, result) {
         if (err) {
             console.log("Error ", err);
         } else {
+            Comment.create(
+                {text:"Empty comment",author: "Empty Author" }, 
+                function callBackCommentInit(err, comment){
+                    if (err) {
+                        console.log('Callbackcommenterr',err);
+                    } else {
+                        newCamp.comments.push(comment);
+                        newCamp.save();
+                    }
+                }
+            );
             console.log(newCamp);
            // userFirstNow = newCamp.created;
            // userFirstNow.setMinutes(userFirstNow.getMinutes() - 5);
