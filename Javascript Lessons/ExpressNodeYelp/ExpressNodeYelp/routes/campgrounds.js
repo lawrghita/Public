@@ -107,12 +107,12 @@ router.delete("/:id", function callbackPost(request, result) {
 router.get("/:id", function callBackShowId(request, response, next) {
     //  console.log("Request baseUrl:", request);
     const vbaseUrl = request.baseUrl;
-    Campground.findById(request.params.id, function callBackAll(err, foundpicture) {
+    Campground.findById(request.params.id, function callBackAll(err,foundCamp) {
         if (err) {
             console.log("Error:", request.params.id, err)
         } else {
             /* show what well we found with that Id . */
-            response.render('show.ejs', { title: 'Found well', url: vbaseUrl, picture: foundpicture });
+            response.render('show.ejs', { title: 'Found well', url: vbaseUrl, camp:foundCamp });
         }
     });
 });

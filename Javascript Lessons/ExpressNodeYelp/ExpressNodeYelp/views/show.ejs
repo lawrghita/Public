@@ -1,17 +1,34 @@
 <%- include("partials/header") %>
 <div class="card">
 		<div class="card-header">
-		    <%=picture.name%>
+		    <%=camp.name%>
 		</div>
 
 		<div class="card-body">
 			<div class="card-text">
-				<%- picture.description%>
+				<%- camp.description%>
 		    </div>
-			<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=picture.id%>">Back</a>
+			<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
 		</div>
-		<a  href="<%=url%>#<%=picture.id%>">
-				<img class="card-img-bottom img-fluid text-center"  src="<%=picture.image%>"  alt="<%=picture.name%>">
+		<div class="card-header">
+			Comments:
+		  </div>
+		
+		<%camp.comments.forEach(function (comment){%>
+			<ul class="list-group list-group-flush">
+			
+				<li class="list-group-item">
+					<div class="font-italic"><%= comment.text%></div>
+					<div class="font-italic"><%= comment.author%></div>
+				</li>
+			  </ul>
+
+			
+			
+
+		<%})%>
+		<a  href="<%=url%>#<%=camp.id%>">
+				<img class="card-img-bottom img-fluid text-center"  src="<%=camp.image%>"  alt="<%=camp.name%>">
 			</a>
 		
 		
