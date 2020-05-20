@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 
 let uri = `mongodb://localhost/blog_relat`;
-mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 var Post = require("./models/posts");
 var User = require("./models/users");
@@ -10,37 +10,41 @@ var User = require("./models/users");
 //Find User
 //fina all posts
 // populate take all the posts and put in the user object
-User.findOne({email: "Law@haoo.com"}).populate("posts").exec(function (err, user) {
- //   console.log(user);
+User.findOne({ email: "Law@haoo.com" }).populate("posts").exec(function(err, user) {
+    //   console.log(user);
 });
 
-
-/*Post.create({
-    title: "4. How to cook the",
-    content: "4. ASfsa safdASDF afsDASdaaf fasf"
-}, function (err, postCreated) {
-    User.findOne({email: "Law@haoo.com"}, function (err, foundUser) {
+User.create({
+    email: "Law@haoo.com",
+    name: "Bsdsolon Laurgu"
+});
+console.log(User);
+Post.create({
+    title: "1. How to cook the",
+    content: "2. ASfsa safdASDF afsDASdaaf fasf"
+}, function(err, postCreated) {
+    User.findOne({ email: "Law@haoo.com" }, function(err, foundUser) {
         foundUser.posts.push(postCreated);
-        foundUser.save(function (err, data) {
+        foundUser.save(function(err, data) {
             console.log(data);
         });
     });
-});*/
+});
 
 
 //newUser();
-/*User.create({
+User.create({
     email: "Bold@haoo.com",
     name: "Bolon Laurgu"
 });
-console.log(User);*/
+console.log(User);
 
 Post.findOne({
-    _id : "5ea47ff52e958f2fdc4466e1"
-}, function (err, postfounded) {
-    User.findOne({email: "Bold@haoo.com"}, function (err, foundUser) {
+    _id: "5ea9b609dac1041368e748e0"
+}, function(err, postfounded) {
+    User.findOne({ email: "Bold@haoo.com" }, function(err, foundUser) {
         foundUser.posts.push(postfounded);
-        foundUser.save(function (err, data) {
+        foundUser.save(function(err, data) {
             console.log(data);
         });
     });
@@ -49,7 +53,7 @@ Post.findOne({
 
 
 
-User.findOne({email: "Bold@haoo.com"}, function callBackUserFindOne(err, user) {
+User.findOne({ email: "Bold@haoo.com" }, function callBackUserFindOne(err, user) {
     if (err) {
         console.log(err);
     } else {
@@ -95,4 +99,3 @@ function newPost() {
     });
 
 }
-
