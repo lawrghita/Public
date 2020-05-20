@@ -20,6 +20,18 @@ const lorem = new LoremIpsum({
         min: 4
     }
 });
+const authorRandom = new LoremIpsum({
+    sentencesPerParagraph: {
+        max: 1,
+        min: 1
+    },
+    wordsPerSentence: {
+        max: 1,
+        min: 1
+    }
+});
+
+
 const coolImages = require("cool-images");
 
 
@@ -89,7 +101,7 @@ router.get("/new", function callbackNew(request, result) {
 
 // DELETE   /blogs/:id      DELETE  Delete a post with id
 router.delete("/:id", function callbackPost(request, result) {
-    // delete just the new one after the dateAfterDelete
+    //TODO Delete also all the comments associated ?
     Campground.deleteOne({ _id: request.params.id }, function callBackAfterDeletion(err) {
         if (err) {
             console.log(err);
@@ -127,7 +139,7 @@ router.post("/", function callbackPost(request, result) {
     var dataFromPost = {
         name: request.body['Campground[name]'],
         image: request.body['Campground[image]'],
-        description: sanitizedBody
+        description: sanitizedBody,
     };
     //// normal is just:
     //// Blog.create(dataFromPost, function (err, newBLog) {result.redirect("/blogs");});
@@ -137,19 +149,22 @@ router.post("/", function callbackPost(request, result) {
     ////.... the display is refreshed before redirect
     Campground.create(dataFromPost, function (err, newCamp) {
         if (err) {
-            console.log("Error ", err);
+            console.log("xxx Error Create Camp: ", err);
         } else {
+            
             Comment.create(
-                {text:"Empty comment",author: "Empty Author" }, 
+                {text: loremIpsum(), author: "By "+authorRandom.generateParagraphs(1) }, 
                 function callBackCommentInit(err, comment){
                     if (err) {
                         console.log('Callbackcommenterr',err);
                     } else {
+                        //Filling the new created camp with this random post for testing
                         newCamp.comments.push(comment);
                         newCamp.save();
                     }
                 }
             );
+            
             console.log(newCamp);
            // userFirstNow = newCamp.created;
            // userFirstNow.setMinutes(userFirstNow.getMinutes() - 5);
