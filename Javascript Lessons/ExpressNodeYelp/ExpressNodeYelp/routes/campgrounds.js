@@ -155,6 +155,7 @@ router.delete("/:id", function callbackPost(request, result) {
 
 // Error Cast to ObjectId failed for value "any value" at path "_id" for model "Campground"
 // because /:id route must be the last route processed
+
 //  SHOW    /campgrounds/:id        GET     show more info info about one element in database
 router.get("/:id", function callBackShowId(request, response, next) {
   //  console.log("Request baseUrl:", request);
@@ -163,14 +164,17 @@ router.get("/:id", function callBackShowId(request, response, next) {
     if (err) {
       console.log("Error:", request.params.id, err);
     } else {
-      /* show what well we found with that Id . */
+      // populate the camp with data from comments
+     
+      console.log(foundCamp.populated('comments'), foundCamp);
+      /* show what camp we found with that Id . */
       response.render("show.ejs", {
         title: "Found well",
         url: vbaseUrl,
         camp: foundCamp,
       });
     }
-  });
+  }).populate('comments');   //populate work just for queries
 });
 
 router.post("/", function callbackPost(request, result) {

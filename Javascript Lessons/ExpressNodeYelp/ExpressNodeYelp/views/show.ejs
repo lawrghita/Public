@@ -13,10 +13,15 @@
 
 
 		<% if (camp.comments.length !== 0) {%>
-		<div class="card">
-			<div class="card-header">
-			Comments:
-		  	</div>
+		<div class="card" id="accordion">
+			
+			<div class="card-header" id="headingOne">
+				
+				<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					 Comments(<%=camp.comments.length %>):
+				  </button>
+			</div>
+			<div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">  
 			<%camp.comments.forEach(function (comment){%>
 				<ul class="list-group list-group-flush">
 				
@@ -26,6 +31,7 @@
 					</li>
 				</ul>
 			<%})%>
+			</div>
 		</div>
 		<%}%>
 
