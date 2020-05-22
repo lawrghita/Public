@@ -1,0 +1,41 @@
+<%- include("partials/header") %>
+<div class="card">
+	<div class="card-header">
+		<%=camp.name%>
+	</div>
+	<a href="<%=url%>#<%=camp.id%>">
+		<img class="card-img-bottom img-fluid text-center" src="<%=camp.image%>" alt="<%=camp.name%>" />
+		</a>
+	<div class="card-body">
+		<div class="card-text">
+			<%- camp.description%>
+		</div>
+		<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
+	</div>
+
+	<% if (camp.comments.length !== 0) {%>
+	<div class="card" id="accordion">
+
+		<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+		
+			<%camp.comments.forEach(function (comment){%>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">
+					<div class="font-weight-light"><%= comment.text%></div>
+					<div class="font-italic"><%= comment.author%></div>
+				</li>
+			</ul>
+			<%})%>
+
+			<%- include("partials/formComment") %>
+
+		</div>
+
+	</div>
+	<%}else{%>
+		<%- include("partials/formComment") %>
+		<%}%>
+
+
+</div>
+<%- include("partials/footer") %>

@@ -1,0 +1,11 @@
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">
+        <form action="/campgrounds/<%=camp.id%>/newcomment" method="post">
+            <label for="text">Comment:</label>
+            <input id="text" class="form-control" type="text" name="Comments[text]" value="<%= text %>" />
+            <label for="author">Author:</label>
+            <input id="author" class="form-control" type="text" name="Comments[author]" value="<%= author %>" />
+            <input id="submitButton" type="submit" class="btn btn-primary">
+        </form>
+    </li>
+</ul>

@@ -3,25 +3,27 @@
 		<div class="card-header">
 		    <%=camp.name%>
 		</div>
-
+		<a  href="<%=url%>#<%=camp.id%>">
+			<img class="card-img-bottom img-fluid text-center"  src="<%=camp.image%>"  alt="<%=camp.name%>">
+		</a>
+	
 		<div class="card-body">
 			<div class="card-text">
 				<%- camp.description%>
-		    </div>
+			</div>
+		</div>	
+		<div class="card-body">
 			<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
+			<a class="btn btn-outline-secondary" role="button" href="<%=url%>/<%=camp.id%>/newcomment#submitButton">New Comment</a>
+			<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				Comments(<%=camp.comments.length %>):
+			 </button>
 		</div>
 
 
 		<% if (camp.comments.length !== 0) {%>
 		<div class="card" id="accordion">
-			
-			<div class="card-header" id="headingOne">
-				
-				<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-					 Comments(<%=camp.comments.length %>):
-				  </button>
-			</div>
-			<div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">  
+			<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">  
 			<%camp.comments.forEach(function (comment){%>
 				<ul class="list-group list-group-flush">
 				
@@ -34,11 +36,19 @@
 			</div>
 		</div>
 		<%}%>
+	<div id="lastComment"></div>	
+	
+	<% if (camp.comments.length >= 10) {%>
+	
+		<div class="card-body">
+		<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
+		<a class="btn btn-outline-secondary" role="button" href="<%=url%>/<%=camp.id%>/newcomment#submitButton">New Comment</a>
+		<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			Comments(<%=camp.comments.length %>):
+		</button>
+	</div>
 
-		<a  href="<%=url%>#<%=camp.id%>">
-				<img class="card-img-bottom img-fluid text-center"  src="<%=camp.image%>"  alt="<%=camp.name%>">
-			</a>
-		
-		
+	<%}%>
+
 </div>
 	<%- include("partials/footer") %>

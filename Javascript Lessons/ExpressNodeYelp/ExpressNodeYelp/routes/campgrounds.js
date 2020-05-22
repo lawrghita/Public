@@ -84,6 +84,7 @@ router.get("/", function (request, res, next) {
   });
 });
 
+// NEW define FORM for new campground
 router.get("/new", function callbackNew(request, result) {
   // Put some random value to see exactly the use of space
   setTimeout(function () {
@@ -118,7 +119,6 @@ router.get("/new", function callbackNew(request, result) {
 
 // DELETE   /blogs/:id      DELETE  Delete a post with id
 router.delete("/:id", function callbackPost(request, result) {
-  //TODO Delete also all the comments associated ?
   const deleteId = request.params.id;
   Campground.findOne({ _id: deleteId }, function callBackAfterFinding(
     err,
@@ -138,7 +138,6 @@ router.delete("/:id", function callbackPost(request, result) {
           }
         });
       });
-
       Campground.deleteOne({ _id: deleteId }, function callBackAfterDeletion(
         err
       ) {
@@ -165,10 +164,9 @@ router.get("/:id", function callBackShowId(request, response, next) {
       console.log("Error:", request.params.id, err);
     } else {
       // populate the camp with data from comments
-     
-      console.log(foundCamp.populated('comments'), foundCamp);
+      //console.log(foundCamp.populated('comments'), foundCamp);
       /* show what camp we found with that Id . */
-      response.render("show.ejs", {
+        response.render("show.ejs", {
         title: "Found well",
         url: vbaseUrl,
         camp: foundCamp,
@@ -176,6 +174,65 @@ router.get("/:id", function callBackShowId(request, response, next) {
     }
   }).populate('comments');   //populate work just for queries
 });
+
+//  SHOW    /campgrounds/:id/newcomment        GET     show info with form for nw comment // reload show.ejs but with form integrated
+router.get("/:id/newcomment", function callBackShowId(request, response, next) {
+  //  console.log("Request baseUrl:", request);
+  const vbaseUrl = request.baseUrl;
+  Campground.findById(request.params.id, function callBackAll(err, foundCamp) {
+    if (err) {
+      console.log("Error:", request.params.id, err);
+    } else {
+      // populate the camp with data from comments for display
+      //console.log(foundCamp.populated('comments'), foundCamp);
+      /* show what camp we found with that Id . */
+      const randText = loremIpsum();
+      const randAuthor = "By " + authorRandom.generateParagraphs(1);
+
+      response.render("shownewcomment.ejs", {
+        title: "Found well",
+        url: vbaseUrl,
+        camp: foundCamp,
+        text:randText,
+        author: randAuthor
+      });
+    }
+  }).populate('comments');   //populate work just for queries
+});
+
+
+//capture the data from newcomment FORM
+router.post("/:id/newcomment", function callbackPost(request, result) {
+  // 'Comments[text]'  is the name of the DOM element
+  var dataFromPost = {
+    text: request.body["Comments[text]"],
+    author: request.body["Comments[author]"],
+  };
+  console.log("Request comment \n", request, dataFromPost);
+
+  ////.... the display is refreshed before redirect
+  Comment.create(dataFromPost, function (err, newComment) {
+    if (err) {
+      console.log("xxx Error Create Comment: ", err);
+    } else {
+      //TODO link comment to camp
+      Campground.findById(request.params.id, function callBackAll(err, foundCamp) {
+        if (err) {
+          console.log("Error:", request.params.id, err);
+        } else {
+          foundCamp.comments.push(newComment);
+
+          foundCamp.save(function aftersave(){
+           // this callback of save will execute aftersave
+            result.redirect("/campgrounds/" + request.params.id+"#lastComment");
+          });
+        }
+      });
+    }
+  });
+});
+
+
 
 router.post("/", function callbackPost(request, result) {
   // 'Campground[body]'  is the name of the DOM element
@@ -188,60 +245,22 @@ router.post("/", function callbackPost(request, result) {
     image: request.body["Campground[image]"],
     description: sanitizedBody,
   };
-  //// normal is just:
-  //// Blog.create(dataFromPost, function (err, newBLog) {result.redirect("/blogs");});
-  /////// but if is in public domain (production) I must
-  /////// temporary deleting the oldest post so the database is not filled by bots
-
   ////.... the display is refreshed before redirect
-
   Campground.create(dataFromPost, function (err, newCamp) {
     if (err) {
       console.log("xxx Error Create Camp: ", err);
     } else {
-      Comment.create(
-        {
-          text: loremIpsum(),
-          author: "By " + authorRandom.generateParagraphs(1),
-        },
-        function callBackCommentInit(err, comment) {
-          if (err) {
-            console.log("Callbackcommenterr", err);
-          } else {
-            //Filling the new created camp with this random post for testing
-            newCamp.comments.push(comment);
-          }
-          Comment.create(
-            {
-              text: loremIpsum(),
-              author: "by " + authorRandom.generateParagraphs(1),
-            },
-            function callBackCommentInit(err, comment) {
-              if (err) {
-                console.log("Callbackcommenterr", err);
-              } else {
-                //Filling the new created camp with this random post for testing
-                newCamp.comments.push(comment);
-                newCamp.save();
-/// CALLBACK HELL 4
-              }
-            }
-          );
-        }
-      );
-      //    console.log("x Added comments on:", newCamp);
-      // userFirstNow = newCamp.created;
-      // userFirstNow.setMinutes(userFirstNow.getMinutes() - 5);
-      //  console.log("App userFirstEntryOnServerD", userFirstNow, Date(0), userFirstNow.toString(), userFirstNow.toUTCString());
-      // }
+      //adding2RandomComments(newCamp);
+      //  console.log("x Added comments on:", newCamp);
       //  console.log("/campgrounds#" + newCamp.id);
       result.redirect("/campgrounds#" + newCamp.id);
-      //deleteOldestPostAndRedirect(result);
     }
   });
 });
 
 module.exports = router;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //insertPictures();           //populate database with one camp
 function insertPictures() {
@@ -260,6 +279,45 @@ function insertPictures() {
       } else {
         console.log("Create: \n", campgrounds);
       }
+    }
+  );
+}
+
+
+function adding2RandomComments(newCamp) {
+  Comment.create(
+    {
+      text: loremIpsum(),
+      author: "By " + authorRandom.generateParagraphs(1),
+    },
+    function callBackCommentInit(err, comment) {
+      if (err) {
+        console.log("Callbackcommenterr", err);
+      } else {
+        //Filling the new created camp with this random post for testing
+        newCamp.comments.push(comment);
+      }
+      Comment.create(
+        {
+          text: loremIpsum(),
+          author: "by " + authorRandom.generateParagraphs(1),
+        },
+        function callBackCommentInit(err, comment) {
+          if (err) {
+            console.log("Callbackcommenterr", err);
+          } else {
+            //Filling the new created camp with this random post for testing
+            newCamp.comments.push(comment);
+            newCamp.save( function callback(params) {
+            //You can stop and wait do the save with a callback in save
+            });
+            /// CALLBACK HELL 4
+
+            
+
+          }
+        }
+      );
     }
   );
 }
