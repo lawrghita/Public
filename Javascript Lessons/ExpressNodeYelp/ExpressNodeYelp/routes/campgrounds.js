@@ -175,7 +175,7 @@ router.get("/:id", function callBackShowId(request, response, next) {
   }).populate('comments');   //populate work just for queries
 });
 
-//  SHOW    /campgrounds/:id/newcomment        GET     show info with form for nw comment // reload show.ejs but with form integrated
+//  SHOW  GET FORM   /campgrounds/:id/newcomment    GET     show info with form for nw comment // reload show.ejs but with form integrated
 router.get("/:id/newcomment", function callBackShowId(request, response, next) {
   //  console.log("Request baseUrl:", request);
   const vbaseUrl = request.baseUrl;
