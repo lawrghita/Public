@@ -13,8 +13,11 @@ input[type="text"], textarea {
     background-color : #dee9ec; 
  }
  
-
- div.card-columns {
- 
- 
-  }
+.container{
+    padding-left: 2rem;
+    padding-right: 2rem; 
+}
+div.card-body{
+    padding-top: 0%;
+    
+}

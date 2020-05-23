@@ -1,12 +1,23 @@
 <%- include("partials/header") %>
-<div class="container">
+<div class="row">
+<div class="col-3">
+	<div class="lead text-truncate"><%= title %></div>
+	<ul class="list-group">
+		<li class="list-group-item text-truncate active" title="Active item">Active item</li>
+		<li class="list-group-item text-truncate" title="Item">Item</li>
+		<li class="list-group-item text-truncate" title="Disabled item">Disabled item</li>
+	</ul>
+</div>
+
+<div class="col">
 	<div class="card">
-			<div class="card-header">
-				<%=camp.name%>
-			</div>
+
 			<a  href="<%=url%>#<%=camp.id%>">
 				<img class="card-img-bottom img-fluid text-center"  src="<%=camp.image%>"  alt="<%=camp.name%>" title="Back">
 			</a>
+			<div class="caption-full font-weight-bold">
+				<%=camp.name%>
+			</div>
 			<div class="card-body">
 				<div class="card-text">
 					<%- camp.description%>
@@ -48,5 +59,7 @@
 		<%}%>
 
 	</div>
+</div>
+
 </div>
 	<%- include("partials/footer") %>

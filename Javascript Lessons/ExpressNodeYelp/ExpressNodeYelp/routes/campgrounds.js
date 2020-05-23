@@ -5,7 +5,7 @@
 // SHOW 
 
 "use strict";
-const cTitle = "Campgrounds X";
+const cTitle = "Campgrounds";
 
 var express = require("express");
 var router = express.Router();
