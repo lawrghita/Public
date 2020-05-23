@@ -1,43 +1,47 @@
 <%- include("partials/header") %>
-<div class="container">
-<header class="fixed-top jumbotron" style="padding:0.1rem 0 0.1rem 0">
-    <div class="container text-center">
-        <h1><%= title %></h1>
-        <a class="btn btn-outline-info" role="button" href="/campgrounds/new">Add a new Camp</a>
-    </div>
-</header>
-   <hr>
-   <hr>
-<div class="card-columns">
-     <%pictures.forEach(function (picture){%>
-    <div class="card">
 
-        <div id="<%= picture.id%>" class="card-img-top" >  
-            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#id<%=picture.id%>" aria-label="Zoom"> 
-                <img  src="<%=picture.image%>" class="img-fluid" alt="<%=picture.name%>" title="ZOOM">
-            </button>
-            <div class="card-body">
-                <div class="card-title"><%=picture.name%></div>
-                <div class="row justify-content-between">
-                 <a class="btn btn-outline-info col-auto " role="button" href="<%=url+"/"+picture.id%>" >Info</a>
-                 <form class="" action="/campgrounds/<%= picture._id %>?_method=DELETE" method="POST" >
-                    <button class="btn btn-outline-danger" type="submit">Delete</button>
-                </form>
-                </div>
-            </div>
-
-            </div>
-    </div>
-        <div id="id<%=picture.id%>" class="modal fade" role="dialog" aria-labelledby="<%=picture.name%>" aria-hidden="true">
-            <div class="modal-dialog text-center modal-xl modal-dialog-centered">
-                    <div class="modal-content d-inline-block bg-transparent border-0 hei" data-dismiss="modal">
-                        <img class="img-fluid" src="<%=picture.image%>" alt="<%=picture.name%>">
+    <header class="container  fixed-top jumbotron" style="padding:0.1rem 0 0.1rem 0">
+        <div class="text-center">
+            <h1><%= title %></h1>
+            <a class="btn btn-outline-info" role="button" href="/campgrounds/new">Add a new Camp</a>
+        </div>
+    </header>
+    
+    
+    <div class=" card-columns " >
+        <%pictures.forEach(function (picture){%>
+        <div class=" card   ">
+            <div id="<%= picture.id%>" class="card-img-top">
+                <button type="button" class="btn btn-light w-100" data-toggle="modal" data-target="#id<%=picture.id%>"
+                    aria-label="Zoom">
+                    <img src="<%=picture.image%>" class="img-fluid  " alt="<%=picture.name%>" title="ZOOM">
+                </button>
+                <div class="card-body">
+                    <div class="card-text"><%=picture.name%></div>
+                    <div class="row justify-content-between">
+                        <a class="btn btn-outline-info col-auto " role="button" href="<%=url+"/"+picture.id%>">Info</a>
+                        <form class="" action="/campgrounds/<%= picture._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-outline-danger" type="submit">Delete</button>
+                        </form>
                     </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="id<%=picture.id%>" class="modal fade" role="dialog" aria-labelledby="<%=picture.name%>"
+            aria-hidden="true">
+            <div class="modal-dialog text-center modal-xl modal-dialog-centered">
+                <div class="modal-content d-inline-block bg-transparent border-0 hei" data-dismiss="modal">
+                    <img class="img-fluid" src="<%=picture.image%>" alt="<%=picture.name%>">
+                </div>
             </div>
         </div>
 
 
-  <%});%>
+        <%});%>
+    </div>
+
+
 </div>
-<hr> 
+<hr>
 <%- include("partials/footer") %>

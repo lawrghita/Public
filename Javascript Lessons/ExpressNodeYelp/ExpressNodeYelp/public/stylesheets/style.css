@@ -1,9 +1,20 @@
 body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    color:red;
+    padding-top: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
-a {
-    color: #00B7FF;
+
+input[type="text"], textarea {
+    background-color : #dee9ec; 
 }
+
+ textarea {
+    background-color : #dee9ec; 
+ }
+ 
+
+ div.card-columns {
+ 
+ 
+  }

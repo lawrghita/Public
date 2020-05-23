@@ -1,3 +1,9 @@
+// CRUD CreateReadUpdateDelete
+// INDEX
+// NEW 
+// CREATE 
+// SHOW 
+
 "use strict";
 const cTitle = "Campgrounds X";
 
@@ -57,17 +63,17 @@ mongoose.connect(
 Campground.watch({ fullDocument: "updateLookup" }).on(
   "change",
   function callBackChange(change) {
-    console.log("updateLookup of Change :\n", change); //just to see any operations done to database
+    console.log(" \n xxxxxxxxxxxxxxxxxxxxxxxxxxxx \n CAMPGROUND updateLookup of Change :\n", change); //just to see any operations done to database
   }
 );
 Comment.watch({ fullDocument: "updateLookup" }).on(
   "change",
   function callBackChange(change) {
-    console.log("updateLookup of Change :\n", change); //just to see any operations done to database
+    console.log(" \n xxxxxxxxxxxxxxxxxxxxxxxxxxxx \n COMMENT updateLookup of Change :\n", change); //just to see any operations done to database
   }
 );
 
-/* GET home page. */
+/* GET Campground home page. */
 router.get("/", function (request, res, next) {
   Campground.find({}, function callBackAll(err, campgrounds) {
     if (err) {
@@ -83,6 +89,7 @@ router.get("/", function (request, res, next) {
     }
   });
 });
+
 
 // NEW define FORM for new campground
 router.get("/new", function callbackNew(request, result) {
@@ -127,6 +134,8 @@ router.delete("/:id", function callbackPost(request, result) {
     if (err) {
       console.log(err);
     } else {
+
+      // first delete all the comments associated with that campground
       camp.comments.forEach((element) => {
         Comment.deleteOne({ _id: element._id }, function callBackAfterDeletion(
           err
@@ -138,6 +147,8 @@ router.delete("/:id", function callbackPost(request, result) {
           }
         });
       });
+
+      // now finally delete also the campground
       Campground.deleteOne({ _id: deleteId }, function callBackAfterDeletion(
         err
       ) {
@@ -167,7 +178,7 @@ router.get("/:id", function callBackShowId(request, response, next) {
       //console.log(foundCamp.populated('comments'), foundCamp);
       /* show what camp we found with that Id . */
         response.render("show.ejs", {
-        title: "Found well",
+        title: "SHOW campground FORM",
         url: vbaseUrl,
         camp: foundCamp,
       });
@@ -182,40 +193,40 @@ router.get("/:id/newcomment", function callBackShowId(request, response, next) {
   Campground.findById(request.params.id, function callBackAll(err, foundCamp) {
     if (err) {
       console.log("Error:", request.params.id, err);
+      result.redirect("/campgrounds");
     } else {
-      // populate the camp with data from comments for display
       //console.log(foundCamp.populated('comments'), foundCamp);
-      /* show what camp we found with that Id . */
       const randText = loremIpsum();
       const randAuthor = "By " + authorRandom.generateParagraphs(1);
-
+      /* show what camp we found with that _id and attach a FORM for the new comment . */
       response.render("shownewcomment.ejs", {
-        title: "Found well",
+        title: "SHOW comment FORM",
         url: vbaseUrl,
         camp: foundCamp,
         text:randText,
         author: randAuthor
       });
     }
-  }).populate('comments');   //populate work just for queries
+  }).populate('comments'); // populate the camp with data from comments for display, it work just on queries
 });
 
 
-//capture the data from newcomment FORM
+//CREATE / capture the data from newcomment FORM
 router.post("/:id/newcomment", function callbackPost(request, result) {
-  // 'Comments[text]'  is the name of the DOM element
-  var dataFromPost = {
-    text: request.body["Comments[text]"],
-    author: request.body["Comments[author]"],
-  };
-  console.log("Request comment \n", request, dataFromPost);
+  // 'text'  is the name of the DOM element
 
-  ////.... the display is refreshed before redirect
+  var dataFromPost = {
+    text: request.body["text"],
+    author: request.body["author"],
+  };
+  console.log("Request comment \n",dataFromPost);
+
   Comment.create(dataFromPost, function (err, newComment) {
     if (err) {
       console.log("xxx Error Create Comment: ", err);
+      result.redirect("/campgrounds/" + request.params.id+"#lastComment");
     } else {
-      //TODO link comment to camp
+      //link comment to camp
       Campground.findById(request.params.id, function callBackAll(err, foundCamp) {
         if (err) {
           console.log("Error:", request.params.id, err);
@@ -223,6 +234,7 @@ router.post("/:id/newcomment", function callbackPost(request, result) {
           foundCamp.comments.push(newComment);
 
           foundCamp.save(function aftersave(){
+           // so the data is refreshed before redirect display
            // this callback of save will execute aftersave
             result.redirect("/campgrounds/" + request.params.id+"#lastComment");
           });
@@ -233,7 +245,7 @@ router.post("/:id/newcomment", function callbackPost(request, result) {
 });
 
 
-
+//CREATE / capture the data from new FORM
 router.post("/", function callbackPost(request, result) {
   // 'Campground[body]'  is the name of the DOM element
   const sanitizedBody = request.sanitize(
