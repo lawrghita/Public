@@ -11,23 +11,18 @@
 			<div class="card-text">
 				<%- camp.description%>
 			</div>
-			<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
+			
 		</div>
 
 		<% if (camp.comments.length !== 0) {%>
 		<div class="card" id="accordion">
 
 			<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-			
-				<%camp.comments.forEach(function (comment){%>
-				<ul class="list-group list-group-flush">
-					<li class="list-group-item">
-						<div class="font-weight-light"><%= comment.text%></div>
-						<div class="font-italic"><%= comment.author%></div>
-					</li>
-				</ul>
-				<%})%>
+		
+				<%- include("partials/comment") %>
+
 				<span class="d-show">
+					<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
 				<%- include("partials/formComment") %>
 				</span>
 
@@ -35,11 +30,13 @@
 
 		</div>
 		<%}else{%>
-
+			
+			<div class="card-body">
+			<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
+			</div>
 			<%- include("partials/formComment") %>
-
 			<%}%>
-
+		
 
 	</div>
 </div>

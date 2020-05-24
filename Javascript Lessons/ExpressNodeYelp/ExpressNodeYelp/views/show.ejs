@@ -17,10 +17,11 @@
 					title="Back">
 			</a>
 			<hr>
-			<div class="d-flex caption-full justify-content-between font-weight-bold ">
+			<div class="d-flex justify-content-between font-weight-bold">
 				<div class="d-inline"><%=camp.name%></div>
 				<div class="d-inline">$9.99</div>
 			</div>
+			<hr>
 
 			<div class="card-body">
 				<div class="card-text">
@@ -29,34 +30,32 @@
 			</div>
 			<div class="card-body">
 				<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
-				<a class="btn btn-outline-secondary" role="button"
+				<a class="btn btn-outline-primary" role="button"
 					href="<%=url%>/<%=camp.id%>/newcomment#submitButton">New Comment</a>
 				<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
 					aria-controls="collapseOne">
-					Comments(<%=camp.comments.length %>):
+					Comments  <span class="badge badge-primary badge-pill"><%=camp.comments.length %></span>
 				</button>
 			</div>
+			<div class="well">
 			<% if (camp.comments.length !== 0) {%>
 			<div class="card" id="accordion">
 				<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-					<%camp.comments.forEach(function (comment){%>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item">
-							<div class="font-weight-light"><%= comment.text%></div>
-							<div class="font-italic"><%= comment.author%></div>
-						</li>
-					</ul>
-					<%})%>
+					
+					<%- include("partials/comment") %>
+
 				</div>
 			</div>
 			<%}%>
+			</div>
+			
 		<div id="lastComment"></div>	
 		
 		<% if (camp.comments.length >= 10) {%>
 
 			<div class="card-body">
 				<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
-				<a class="btn btn-outline-secondary" role="button"
+				<a class="btn btn-outline-primary" role="button"
 					href="<%=url%>/<%=camp.id%>/newcomment#submitButton">New Comment</a>
 				<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
 					aria-controls="collapseOne">
