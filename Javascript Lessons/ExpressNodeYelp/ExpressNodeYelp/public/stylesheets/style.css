@@ -4,20 +4,24 @@ body {
     padding-right: 2rem;
 }
 
-
-input[type="text"], textarea {
-    background-color : #dee9ec; 
+input[type="text"],
+textarea {
+    background-color: #dee9ec;
 }
 
- textarea {
-    background-color : #dee9ec; 
- }
- 
-.container{
+textarea {
+    background-color: #dee9ec;
+}
+
+.text-responsive {
+    font-size: calc(75% + 1vw);
+}
+
+.container {
     padding-left: 2rem;
-    padding-right: 2rem; 
+    padding-right: 2rem;
 }
-div.card-body{
+
+div.card-body {
     padding-top: 0%;
-    
 }

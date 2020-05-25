@@ -1,15 +1,14 @@
-
 <ul class="list-group list-group-flush">
     <li class="list-group-item bg-light ">
         <form action="/campgrounds/<%=camp.id%>/newcomment" method="post">
             <div class="form-inline ">
-                <label class="col-md-1" for="text">Review:</label>
+                <label class="text-responsive col-md-1" for="text">Review:</label>
                 <textarea id="text" class="form-control col-md w-100" name="text"><%= text %></textarea>
             </div>
             <div class="form-inline">
-            <label class="col-md-1 font-italic" for="author">Author:</label>
-            <input id="author" class="form-control col-md-6 font-italic w-75" type="text" name="author" value="<%= author %>" />
-            <input id="submitButton" type="submit" class="btn btn-primary ">
+                <label class="text-responsive col-md-1 font-italic" for="author">Author:</label>
+                <input id="author" class="form-control col-md-6 font-italic w-75" type="text" name="author" value="<%= author %>" />
+                <input id="submitButton" type="submit" class="btn btn-primary ">
             </div>
 
         </form>

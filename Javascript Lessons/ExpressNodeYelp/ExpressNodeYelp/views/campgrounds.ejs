@@ -2,25 +2,27 @@
 
 
 
-        <div class=" card-columns ">
-            <header class="container  fixed-top jumbotron" style="padding:0.1rem 0 0.1rem 0">
-                <div class="text-center">
-                    <h1><%= title %></h1>
-                    <a class="btn btn-outline-info" role="button" href="/campgrounds/new">Add a new Camp</a>
-                </div>
-            </header>
-            <%pictures.forEach(function (picture){%>
+    <div class=" card-columns ">
+        <header class="container  fixed-top jumbotron" style="padding:0.1rem 0 0.1rem 0">
+            <div class="text-center">
+                <h1>
+                    <%= title %>
+                </h1>
+                <a class="btn btn-outline-info" role="button" href="/campgrounds/new">Add a new Camp</a>
+            </div>
+        </header>
+        <%pictures.forEach(function (picture){%>
             <div class=" card   ">
                 <div id="<%= picture.id%>" class="card-img-top">
-                    <button type="button" class="btn btn-light w-100" style="font-size: 0.75em" data-toggle="modal"
-                        data-target="#id<%=picture.id%>" aria-label="Zoom">
+                    <button type="button" class="btn btn-light w-100" style="font-size: 0.75em" data-toggle="modal" data-target="#id<%=picture.id%>" aria-label="Zoom">
                         <img src="<%=picture.image%>" class="img-fluid " alt="<%=picture.name%>" data-toggle="tooltip"  title="ZOOM">
                     </button>
                     <div class="card-body">
-                        <div class="card-text"><%=picture.name%></div>
+                        <div class="text-responsive">
+                            <%=picture.name%>
+                        </div>
                         <div class="row justify-content-between">
-                            <a class="btn btn-outline-info col-auto btn-sm " role="button"
-                                href="<%=url+"/"+picture.id%>">Info</a>
+                            <a class="btn btn-outline-info col-auto btn-sm " role="button" href="<%=url+'/'+picture.id%>">Info</a>
                             <form class="" action="/campgrounds/<%= picture._id %>?_method=DELETE" method="POST">
                                 <button class="btn btn-outline-danger btn-sm" type="submit">Delete</button>
                             </form>
@@ -29,8 +31,7 @@
 
                 </div>
             </div>
-            <div id="id<%=picture.id%>" class="modal fade" role="dialog" aria-labelledby="<%=picture.name%>"
-                aria-hidden="true">
+            <div id="id<%=picture.id%>" class="modal fade" role="dialog" aria-labelledby="<%=picture.name%>" aria-hidden="true">
                 <div class="modal-dialog text-center modal-xl modal-dialog-centered">
                     <div class="modal-content d-inline-block bg-transparent border-0 hei" data-dismiss="modal">
                         <img class="img-fluid" src="<%=picture.image%>" alt="<%=picture.name%>">
@@ -40,11 +41,11 @@
 
 
             <%});%>
-        </div>
+    </div>
 
 
 
 
 
-<hr>
-<%- include("partials/footer") %>
+    <hr>
+    <%- include("partials/footer") %>

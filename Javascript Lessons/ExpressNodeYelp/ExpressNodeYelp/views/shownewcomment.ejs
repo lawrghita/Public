@@ -1,43 +1,43 @@
 <%- include("partials/header") %>
-<div class="container">
-	<div class="card">
-		<div class="card-header">
-			<%=camp.name%>
-		</div>
-		<a href="<%=url%>#<%=camp.id%>">
+    <div class="container">
+        <div class="card">
+            <div class="text-responsive font-weight-bold card-header">
+                <%=camp.name%>
+            </div>
+            <a href="<%=url%>#<%=camp.id%>">
 			<img class="card-img-bottom img-fluid text-center" src="<%=camp.image%>" alt="<%=camp.name%>" title="Back" />
 			</a>
-		<div class="card-body">
-			<div class="card-text">
-				<%- camp.description%>
-			</div>
-			
-		</div>
+            <div class="card-body">
+                <div class="text-responsive card-text">
+                    <%- camp.description%>
+                </div>
 
-		<% if (camp.comments.length !== 0) {%>
-		<div class="card" id="accordion">
+            </div>
 
-			<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-		
-				<%- include("partials/comment") %>
+            <% if (camp.comments.length !== 0) {%>
+                <div class="card" id="accordion">
 
-				<span class="d-show">
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+
+                        <%- include("partials/comment") %>
+
+                            <span class="d-show">
 					<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
 				<%- include("partials/formComment") %>
 				</span>
 
-			</div>
+                    </div>
 
-		</div>
-		<%}else{%>
-			
-			<div class="card-body">
-			<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
-			</div>
-			<%- include("partials/formComment") %>
-			<%}%>
-		
+                </div>
+                <%}else{%>
 
-	</div>
-</div>
-<%- include("partials/footer") %>
+                    <div class="card-body">
+                        <a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
+                    </div>
+                    <%- include("partials/formComment") %>
+                        <%}%>
+
+
+        </div>
+    </div>
+    <%- include("partials/footer") %>

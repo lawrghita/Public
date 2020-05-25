@@ -1,9 +1,14 @@
 <%camp.comments.forEach(function (comment){%>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">
-            <div class="font-weight-light"><%= comment.text%></div>
-            <div class="font-italic"><%= comment.author%> at <%= new Date().toISOString("en", {year:"numeric", day:"2-digit", month:"2-digit"})%></div>
-        
+            <div class="text-responsive font-weight-light">
+                <%= comment.text%>
+            </div>
+            <div class="text-responsive font-italic">
+                <%= comment.author%> at
+                    <%= new Date().toISOString("en", {year:"numeric", day:"2-digit", month:"2-digit"})%>
+            </div>
+
         </li>
     </ul>
     <%})%>

@@ -1,72 +1,72 @@
 <%- include("partials/header") %>
-<div class="row">
-	<div class="col-3">
-		<div class="lead text-truncate"><%= title %></div>
-		<ul class="list-group">
-			<li class="list-group-item text-truncate active" title="Active item">Active item</li>
-			<li class="list-group-item text-truncate" title="Item">Item</li>
-			<li class="list-group-item text-truncate" title="Disabled item">Disabled item</li>
-		</ul>
-	</div>
+    <div class="row">
+        <div class="col-3">
+            <div class="text-responsive lead text-truncate">
+                <%= title %>
+            </div>
+            <ul class="list-group">
+                <li class="text-responsive list-group-item text-truncate active" title="Active item">Active item</li>
+                <li class="text-responsive list-group-item text-truncate" title="Item">Item</li>
+                <li class="text-responsive list-group-item text-truncate" title="Disabled item">Disabled item</li>
+            </ul>
+        </div>
 
-	<div class="col">
-		<div class="card">
+        <div class="col">
+            <div class="card">
 
-			<a href="<%=url%>#<%=camp.id%>">
+                <a href="<%=url%>#<%=camp.id%>">
 				<img class="card-img-bottom img-fluid text-center" src="<%=camp.image%>" alt="<%=camp.name%>"
 					title="Back">
 			</a>
-			<hr>
-			<div class="d-flex justify-content-between font-weight-bold">
-				<div class="d-inline"><%=camp.name%></div>
-				<div class="d-inline">$9.99</div>
-			</div>
-			<hr>
+                <hr>
+                <div class="d-flex justify-content-between font-weight-bold">
+                    <div class="text-responsive d-inline">
+                        <%=camp.name%>
+                    </div>
+                    <div class="text-responsive d-inline">$9.99</div>
+                </div>
+                <hr>
 
-			<div class="card-body">
-				<div class="card-text">
-					<%- camp.description%>
-				</div>
-			</div>
-			<div class="card-body">
-				<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
-				<a class="btn btn-outline-primary" role="button"
-					href="<%=url%>/<%=camp.id%>/newcomment#submitButton">New Comment</a>
-				<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-					aria-controls="collapseOne">
+                <div class="card-body">
+                    <div class="text-responsive card-text">
+                        <%- camp.description%>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <a class=" btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
+                    <a class="btn btn-outline-primary" role="button" href="<%=url%>/<%=camp.id%>/newcomment#submitButton">New Comment</a>
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 					Comments  <span class="badge badge-primary badge-pill"><%=camp.comments.length %></span>
 				</button>
-			</div>
-			<div class="well">
-			<% if (camp.comments.length !== 0) {%>
-			<div class="card" id="accordion">
-				<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-					
-					<%- include("partials/comment") %>
+                </div>
+                <div class="well">
+                    <% if (camp.comments.length !== 0) {%>
+                        <div class="card" id="accordion">
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 
-				</div>
-			</div>
-			<%}%>
-			</div>
-			
-		<div id="lastComment"></div>	
-		
-		<% if (camp.comments.length >= 10) {%>
+                                <%- include("partials/comment") %>
 
-			<div class="card-body">
-				<a class="btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
-				<a class="btn btn-outline-primary" role="button"
-					href="<%=url%>/<%=camp.id%>/newcomment#submitButton">New Comment</a>
-				<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-					aria-controls="collapseOne">
+                            </div>
+                        </div>
+                        <%}%>
+                </div>
+
+                <div id="lastComment"></div>
+
+                <% if (camp.comments.length >= 10) {%>
+
+                    <div class="card-body">
+                        <a class=" btn btn-outline-secondary" role="button" href="<%=url%>#<%=camp.id%>">Back</a>
+                        <a class=" btn btn-outline-primary" role="button" href="<%=url%>/<%=camp.id%>/newcomment#submitButton">New Comment</a>
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 					Comments(<%=camp.comments.length %>):
 				</button>
-			</div>
+                    </div>
 
-			<%}%>
+                    <%}%>
 
-	</div>
-</div>
+            </div>
+        </div>
 
-</div>
-	<%- include("partials/footer") %>
+    </div>
+    <%- include("partials/footer") %>
