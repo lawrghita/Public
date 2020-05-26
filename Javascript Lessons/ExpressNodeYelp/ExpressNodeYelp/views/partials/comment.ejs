@@ -1,11 +1,19 @@
+
 <%camp.comments.forEach(function (comment){%>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">
+           <form class="" action="<%=camp.id%>/newcomment/<%= comment._id %>?_method=DELETE" method="POST">
+                <button type="submit" class="close text-danger mx-1 " title="Delete <%= comment._id %>" aria-label="Delete">
+               x
+               </button>
+            </form>
+           
             <div class="text-responsive font-weight-light">
                 <%= comment.text%>
             </div>
-            <div class="text-responsive font-italic">
-                <%= comment.author%> at
+            <div class=" row text-responsive font-italic font-weight-light">
+
+                By<div class="  mx-1 font-weight-bold inline"><%= comment.author%></div>at
                     <%= new Date().toISOString("en", {year:"numeric", day:"2-digit", month:"2-digit"})%>
             </div>
 

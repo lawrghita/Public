@@ -121,10 +121,10 @@ router.get("/new", function callbackNew(request, result) {
       description: description,
       welcomeMESSAGE: welcomeMESSAGE,
     });
-  }, 3000);
+  }, 1);
 });
 
-// DELETE   /blogs/:id      DELETE  Delete a post with id
+// DELETE   /campgrounds/:id      DELETE  Delete a post with id
 router.delete("/:id", function callbackPost(request, result) {
   const deleteId = request.params.id;
   Campground.findOne({ _id: deleteId }, function callBackAfterFinding(
@@ -177,8 +177,8 @@ router.get("/:id", function callBackShowId(request, response, next) {
       // populate the camp with data from comments
       //console.log(foundCamp.populated('comments'), foundCamp);
       /* show what camp we found with that Id . */
-        response.render("show.ejs", {
-        title: "SHOW campground FORM",
+      response.render("show.ejs", {
+        title: "Campground:",
         url: vbaseUrl,
         camp: foundCamp,
       });
@@ -197,18 +197,22 @@ router.get("/:id/newcomment", function callBackShowId(request, response, next) {
     } else {
       //console.log(foundCamp.populated('comments'), foundCamp);
       const randText = loremIpsum();
-      const randAuthor = "By " + authorRandom.generateParagraphs(1);
+      const regex = /[^.]+/g;  // delete the . from the end of generated paragraph
+      const randAuthor = regex.exec(authorRandom.generateParagraphs(1));
+
       /* show what camp we found with that _id and attach a FORM for the new comment . */
       response.render("shownewcomment.ejs", {
-        title: "SHOW comment FORM",
+        title: "SHOW comment",
         url: vbaseUrl,
         camp: foundCamp,
-        text:randText,
+        text: randText,
         author: randAuthor
       });
     }
   }).populate('comments'); // populate the camp with data from comments for display, it work just on queries
 });
+
+
 
 
 //CREATE / capture the data from newcomment FORM
@@ -219,30 +223,75 @@ router.post("/:id/newcomment", function callbackPost(request, result) {
     text: request.body["text"],
     author: request.body["author"],
   };
-  console.log("Request comment \n",dataFromPost);
+  console.log("Request comment \n", dataFromPost);
 
-  Comment.create(dataFromPost, function (err, newComment) {
+      //TODO hash the last submit uploaded comment in database and check with actual if are the same
+
+
+  setTimeout(function () {
+    Comment.create(dataFromPost, function (err, newComment) {
+      if (err) {
+        console.log("xxx Error Create Comment: ", err);
+        result.redirect("/campgrounds/" + request.params.id + "#lastComment");
+      } else {
+        //link comment to camp
+        Campground.findById(request.params.id, function callBackAll(err, foundCamp) {
+          if (err) {
+            console.log("Error:", request.params.id, err);
+          } else {
+            foundCamp.comments.push(newComment);
+            foundCamp.save(function aftersave() {
+              // so the data is refreshed before redirect display
+              // this callback of save will execute aftersave
+              result.redirect("/campgrounds/" + request.params.id + "#lastComment");
+            });
+
+          }
+        });
+      }
+    });
+  }, 3000);
+
+});
+
+
+// DELETE   /campgrounds/:id      DELETE  Delete a comment with id
+router.delete("/:id/newcomment/:idcommentdelete", function callbackPost(request, result) {
+  const campId = request.params.id;
+  const commentIdDelete = request.params.idcommentdelete;
+
+  //  console.log(request.params);
+  // positioning on the campground
+  Campground.findOne({ _id: campId }, function callBackAfterFinding(
+    err,
+    camp
+  ) {
     if (err) {
-      console.log("xxx Error Create Comment: ", err);
-      result.redirect("/campgrounds/" + request.params.id+"#lastComment");
+      console.log(err);
     } else {
-      //link comment to camp
-      Campground.findById(request.params.id, function callBackAll(err, foundCamp) {
+      // first delete the comment from the Comment database
+      Comment.deleteOne({ _id: commentIdDelete }, function callBackAfterDeletion(
+        err
+      ) {
         if (err) {
-          console.log("Error:", request.params.id, err);
+          console.log(err);
         } else {
-          foundCamp.comments.push(newComment);
-
-          foundCamp.save(function aftersave(){
-           // so the data is refreshed before redirect display
-           // this callback of save will execute aftersave
-            result.redirect("/campgrounds/" + request.params.id+"#lastComment");
+          console.log("Deleted comment", commentIdDelete);
+          // now finally delete also the anchor to that special comment from campground
+          //             console.log(camp.comments);
+          camp.comments.pull({ _id: commentIdDelete });
+          camp.save(function acterSave() {
+            //          console.log(camp.comments);
+            result.redirect("/campgrounds/" + campId + "#lastComment");
           });
+
         }
       });
+
     }
   });
 });
+
 
 
 //CREATE / capture the data from new FORM
@@ -320,12 +369,12 @@ function adding2RandomComments(newCamp) {
           } else {
             //Filling the new created camp with this random post for testing
             newCamp.comments.push(comment);
-            newCamp.save( function callback(params) {
-            //You can stop and wait do the save with a callback in save
+            newCamp.save(function callback(params) {
+              //You can stop and wait do the save with a callback in save
             });
             /// CALLBACK HELL 4
 
-            
+
 
           }
         }
