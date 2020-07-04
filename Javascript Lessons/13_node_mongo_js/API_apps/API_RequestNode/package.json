@@ -1,9 +1,13 @@
 {
   "scripts": {
-    "start": "nodemon first_request.js"
+    "start": "nodemon first_request.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "request": "^2.88.0",
-    "request-promise": "^4.2.5"
-  }
+    "request-promise": "^4.2.5",
+    "snyk": "^1.360.0"
+  },
+  "snyk": true
 }
