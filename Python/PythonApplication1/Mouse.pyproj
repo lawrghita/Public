@@ -5,7 +5,7 @@
     <ProjectGuid>6fb6c91d-33dc-4933-92c7-7c982b07456e</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Mouse.py</StartupFile>
+    <StartupFile>Mouse1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,10 +22,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Mousex.py" />
     <Compile Include="SendingKey.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Mouse.py" />
+    <Compile Include="Mouse1.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -1,10 +1,9 @@
+import sys
 import pyautogui
 
-w,h = pyautogui.size()
-
-print("Test ",w,h)
 
 import time
+import subprocess
 from winput import *
 
 
@@ -17,6 +16,8 @@ clicks = []
 heads = []
 registerClicks = False
 registerHeads = False
+
+
 
 
 def mouse_callback( event ):
@@ -56,39 +57,43 @@ def keyboard_callback( event ):
         
     print("Reg Clicks ",registerClicks)
     print("Reg Heads ",registerHeads)
-
     
-
+    
+    
     if event.vkCode == VK_V: #  on pressing V
-        registerClicks = False
         registerHeads = False
+        pyautogui.keyDown('v')
         for click in clicks:
             print("Move to ", click.x,click.y) 
-            winput.set_mouse_pos(click.x, click.y)
-            #winput.press_key(VK_V)
-            #pyautogui.click()
+            pyautogui.moveTo(click.x, click.y)
             time.sleep(0.1)
-            #winput.release_key(VK_V)
-            #winput.release_mouse_button(1)
-            
-       
+            pyautogui.doubleClick()
+        pyautogui.keyUp('v')
         for click in heads:
             print("Head ", click.x,click.y) 
-
 
     if event.vkCode == winput.VK_ESCAPE: # quit on pressing escape
         winput.stop()
 
    
 print("Press escape to quit")
-    
-# hook input    
-winput.hook_mouse( mouse_callback )
-winput.hook_keyboard( keyboard_callback )
+w,h = pyautogui.size()
+print("Test ",w,h)
+time.sleep(1)
 
-# enter message loop
-winput.wait_messages()
 
-# remove input hook
-winput.unhook_mouse()
-winput.unhook_keyboard()
+#Activate Image Annotation Tool application window
+windowIAT = pyautogui.getWindowsWithTitle('Image Annotation Tool')  
+fw = windowIAT[0]
+fw.activate()
+
+
+
+pyautogui.keyDown('v')
+pyautogui.moveTo(200, 200)
+print('moveTo200 200')
+time.sleep(0.1)
+pyautogui.click()
+pyautogui.keyUp('v')
+
+

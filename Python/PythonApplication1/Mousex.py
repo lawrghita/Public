@@ -59,21 +59,17 @@ def keyboard_callback( event ):
 
     
 
-    if event.vkCode == VK_V: #  on pressing V
-        registerClicks = False
-        registerHeads = False
+    if event.vkCode == VK_Z: #  on pressing V
+        pyautogui.keyUp('z')
+        pyautogui.keyDown('v')
         for click in clicks:
             print("Move to ", click.x,click.y) 
-            winput.set_mouse_pos(click.x, click.y)
-            #winput.press_key(VK_V)
-            #pyautogui.click()
-            time.sleep(0.1)
-            #winput.release_key(VK_V)
-            #winput.release_mouse_button(1)
-            
-       
-        for click in heads:
-            print("Head ", click.x,click.y) 
+            pyautogui.moveTo(click.x, click.y)
+            #time.sleep(0.1)
+            pyautogui.click()
+        pyautogui.keyUp('v')
+     #   for click in heads:
+     #       print("Head ", click.x,click.y) 
 
 
     if event.vkCode == winput.VK_ESCAPE: # quit on pressing escape
