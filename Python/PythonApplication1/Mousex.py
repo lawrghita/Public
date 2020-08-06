@@ -5,6 +5,7 @@ w,h = pyautogui.size()
 print("Test ",w,h)
 
 import time
+import winput
 from winput import *
 
 
@@ -59,13 +60,15 @@ def keyboard_callback( event ):
 
     
 
-    if event.vkCode == VK_Z: #  on pressing V
+    if event.vkCode == VK_Z: #  on pressing Z
+        time.sleep(1)
         pyautogui.keyUp('z')
+        time.sleep(0.1)
         pyautogui.keyDown('v')
         for click in clicks:
             print("Move to ", click.x,click.y) 
             pyautogui.moveTo(click.x, click.y)
-            #time.sleep(0.1)
+            time.sleep(0.1)
             pyautogui.click()
         pyautogui.keyUp('v')
      #   for click in heads:
@@ -73,6 +76,7 @@ def keyboard_callback( event ):
 
 
     if event.vkCode == winput.VK_ESCAPE: # quit on pressing escape
+        print("ESCAPE ") 
         winput.stop()
 
    

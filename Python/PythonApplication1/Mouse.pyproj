@@ -5,7 +5,7 @@
     <ProjectGuid>6fb6c91d-33dc-4933-92c7-7c982b07456e</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Mouse1.py</StartupFile>
+    <StartupFile>Mousex.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

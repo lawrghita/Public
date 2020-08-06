@@ -57,8 +57,7 @@ def keyboard_callback( event ):
         
     print("Reg Clicks ",registerClicks)
     print("Reg Heads ",registerHeads)
-    
-    
+   
     
     if event.vkCode == VK_V: #  on pressing V
         registerHeads = False
@@ -83,7 +82,9 @@ time.sleep(1)
 
 
 #Activate Image Annotation Tool application window
-windowIAT = pyautogui.getWindowsWithTitle('Image Annotation Tool')  
+#windowIAT = pyautogui.getWindowsWithTitle('Image Annotation Tool')  
+windowIAT = pyautogui.getWindowsWithTitle('Paint')  
+
 fw = windowIAT[0]
 fw.activate()
 
@@ -94,6 +95,7 @@ pyautogui.moveTo(200, 200)
 print('moveTo200 200')
 time.sleep(0.1)
 pyautogui.click()
+pyautogui.dragTo(300,300)
 pyautogui.keyUp('v')
 
 
