@@ -1,6 +1,11 @@
 "use strict";
+//var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+//var xhr = new XMLHttpRequest();
+//global.XMLHttpRequest = require('xhr2');
+//var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 let url = "https://developer.mozilla.org/en-US/docs/Web/Events";
 var xhr = new XMLHttpRequest();
+console.log(xhr);
 let myDiv = document.getElementById('id');
 
 xhr.onload = function () {
