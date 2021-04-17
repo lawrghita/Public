@@ -17,7 +17,7 @@
     "dotenv": "^8.2.0",
     "ejs": "~2.7.4",
     "express": "^4.14.0",
-    "express-sanitizer": "^1.0.5",
+    "express-sanitizer": "^1.0.6",
     "lorem-ipsum": "^2.0.3",
     "method-override": "^3.0.0",
     "mongoose": "^5.10.13",
