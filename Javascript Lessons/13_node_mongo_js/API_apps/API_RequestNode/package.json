@@ -7,7 +7,7 @@
   "dependencies": {
     "request": "^2.88.0",
     "request-promise": "^4.2.5",
-    "snyk": "^1.465.0"
+    "snyk": "^1.611.0"
   },
   "snyk": true
 }
