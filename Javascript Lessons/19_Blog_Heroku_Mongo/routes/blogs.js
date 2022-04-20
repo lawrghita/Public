@@ -91,9 +91,8 @@ router.get("/", function (req, res, next) {
         } else {
             posts.forEach(function (post) {
                 // cleaning the post <div>s   and closing eventually open HTML TAGs
-                const regex = /<div>|<\/div>/gm;
-                post.body = post.body.slice(0, 400).replace(regex, '') + "..." + closedTAGs;
-                //  console.log("For Each:", post.body);
+                //  post.body = post.body.slice(0, 400).replace(regex, '') + "..." + closedTAGs;  // BECAUSE ERROR TypeError: Cannot read property 'slice' of undefined  at C:\Users\Ghita\WebstormProjects\Public\Javascript Lessons\19_Blog_Heroku_Mongo\routes\blogs.js:95:39
+                // console.log("For Each:", post.body);
                 //  console.log("For Created:", userFirstNow, post.created, dateAfterDelete);
             });
 
@@ -111,7 +110,7 @@ router.get("/new", function callbackNew(request, result) {
     /// and also put a wait timer for 4 seconds to slow the submit speed click exploit
     setTimeout(function () {
         if (userFirstNow.toString().slice(0, 15) !== 'Thu Jan 01 1970') {
-        welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation." + " <p> Delete between (" + userFirstNow.toUTCString().slice(0, 25) + " and " + dateAfterDelete.toUTCString().slice(0, 25) + ")";
+        welcomeMESSAGE = "2022: Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation." + " <p> Delete between (" + userFirstNow.toUTCString().slice(0, 25) + " and " + dateAfterDelete.toUTCString().slice(0, 25) + ")";
         }else{
             welcomeMESSAGE = "Bot protection: 4 seconds pause on new posts, your posts are deleted after 5 min. <p> Html accepted on post body. Perfect mobile & navigation.";
         }

@@ -7,8 +7,9 @@ const mongodb = require('mongodb');
 const http = require('http');
 const nconf = require('nconf');
 
-const mydatabase = "blogherokumongo"; //my database name
-let uri = `mongodb+srv://${utilizator}:${parola}@cluster0-8s7vx.gcp.mongodb.net/${mydatabase}?retryWrites=true&w=majority`;
+const mydatabase = "blogherokumongo"; //my database name   
+         //mongodb+srv://             :         @cluster0.8s7vx.gcp.mongodb.net/myFirDatabase?retryWrites=true&w=majority
+let uri = `mongodb+srv://${utilizator}:${parola}@cluster0.8s7vx.gcp.mongodb.net/${mydatabase}?retryWrites=true&w=majority`;
 if (nconf.get('mongoDatabase')) {
     uri = `${uri}/${nconf.get('mongoDatabase')}`;
 }

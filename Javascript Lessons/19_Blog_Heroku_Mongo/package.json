@@ -1,6 +1,6 @@
 {
   "name": "19-blog-heroku-mongo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -12,14 +12,14 @@
     "dotenv": "^8.2.0",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
-    "express-sanitizer": "^1.0.5",
+    "express-sanitizer": "^1.0.6",
     "http-errors": "~1.8.0",
     "lorem-ipsum": "^2.0.3",
     "method-override": "^3.0.0",
     "mongodb": "^3.6.2",
-    "mongoose": "^5.11.7",
+    "mongoose": "^6.3.0",
     "morgan": "~1.9.1",
-    "nconf": "^0.11.0",
+    "nconf": "^0.12.0",
     "nodemon": "^2.0.3"
   }
 }
