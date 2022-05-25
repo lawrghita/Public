@@ -1,11 +1,11 @@
 <%- include("partials/header") %>
 <div class="container">
 	<div class="img-thumbnail text-center mt-1">
-        <a href="<%=url%>"><img  src="<%=picture.image%>" class="img-fluid" alt="<%=picture.name%>"></a>
+        <a href="/"><img  src="<%=picture.image%>" class="img-fluid" alt="<%=picture.name%>"></a>
 		<div class="name"><%=picture.name%></div>
 		<div class="figure-caption">
 			<div class="description"><%=picture.description%></div>
-			<a class="btn btn-outline-secondary" role="button" href="<%=url%>">Back</a>
+			<a class="btn btn-outline-secondary" role="button" href="/">Back</a>
 		</div>
 	</div>
 	<div id="id<%=picture.id%>" class="modal fade" role="dialog" aria-labelledby="<%=picture.name%>">
