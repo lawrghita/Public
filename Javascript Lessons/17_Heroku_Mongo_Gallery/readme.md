@@ -9,7 +9,7 @@ If package.json have dependencies
 ```
 npm install  // for updates
 DEBUG=17-heroku-mongo-gallery:* npm start
-npm start                                               //etc.
+npm start                                               //etc.  IF RETURNING THIS WILL START in this directory
 
 npm i -g nodemon                                        // or install demon for auto start
 nodemon start
@@ -33,7 +33,7 @@ npm install dotenv --save
 npm install nconf --save
 node server.js                      // to access the mongo server who is running in another separate instance with a test 
 ```
-http://127.0.0.1:8080/ entry point for mongodb server
+http://127.0.0.1:8080/ entry poigitnt for mongodb server
 
 shell to my remote database from https://www.mongodb.com/
 ```
