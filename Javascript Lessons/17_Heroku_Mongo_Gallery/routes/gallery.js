@@ -55,7 +55,7 @@ router.get("/:id", function callBackShowId(request, response, next){
             console.log("Error:",request.params.id, err)
         } else {
             /* show what well we found with that Id . */
-            response.render('show.ejs', { title: 'Found well', url: vbaseUrl, picture: foundpicture });
+            response.render('show.ejs', { title: 'Founded', url: vbaseUrl, picture: foundpicture });
         }
     });
 });
