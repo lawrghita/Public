@@ -1,7 +1,16 @@
 # Setting Up the app skeleton
+For deploying in https://fly.io/docs/languages-and-frameworks/node/ 
+flyctl launch
+
+
 ```
 npm init 
 npm install express ejs morgan body-parser --save
+```
+if npm install hangs then 
+dezactivate antivirus who stop creation of node_modules in current directory
+https://sebhastian.com/npm-install-hangs/ mainly npm config get registry && npm config set registry https://registry.npmjs.org
+```
 npm install express-generator  --global                 //no need to be in production
 express --view=ejs                                      // generate the express skeleton app
 ```
@@ -14,6 +23,9 @@ npm start                                               //etc.  IF RETURNING THI
 npm i -g nodemon                                        // or install demon for auto start
 nodemon start
 ```
+If nodemon : File C:\Users\...AppData\Roaming\npm\nodemon.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+Then on a Administrator powershell > C:\\Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 127.0.0.1/3000
 
 # Connecting the mongo database
@@ -33,7 +45,7 @@ npm install dotenv --save
 npm install nconf --save
 node server.js                      // to access the mongo server who is running in another separate instance with a test 
 ```
-http://127.0.0.1:8080/ entry poigitnt for mongodb server
+http://127.0.0.1:8080/ entry point for mongodb server
 
 shell to my remote database from https://www.mongodb.com/
 ```
