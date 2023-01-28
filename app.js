@@ -39,7 +39,7 @@ const id17 = document.getElementById("JS17");
 id17.href = "https://boiling-reaches-35811.fly.dev/";
 
 const id19 = document.getElementById("JS19");
-id19.href = "https://rocky-escarpment-84142.herokuapp.com/";
+id19.href = "https://rocky-escarpment-84142.fly.dev/blogs/";
 
 
 
