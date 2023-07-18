@@ -14,7 +14,7 @@
     "express": "~4.18.2",
     "http-errors": "~1.6.3",
     "mongodb": "^3.5.5",
-    "mongoose": "^5.13.9",
+    "mongoose": "^5.13.20",
     "morgan": "~1.9.1",
     "nconf": "^0.12.0"
   },
