@@ -1,3 +1,6 @@
+# for fly.io 
+In www file must be put explicit '0.0.0.0'  server.listen(port,'0.0.0.0');
+
 Terminal to root :
 # Setting Up the app skeleton
 ```
@@ -348,3 +351,6 @@ bootstrap 4 images responsive - dimension flexible etc:
 ```
 <img src="images/food1.jpg" class="img-fluid">
 ```
+
+# Deploy to fly.dev
+Do (in application app.js directory)>fly launch
