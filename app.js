@@ -39,6 +39,4 @@ const id17 = document.getElementById("JS17");
 id17.href = "https://boiling-reaches-35811.fly.dev/";
 
 const id19 = document.getElementById("JS19");
-id19.href = "https://fly.io/apps/19-blog-heroku-mongo";
-
-
+id19.href = "https://19-blog-heroku-mongo.fly.dev";
